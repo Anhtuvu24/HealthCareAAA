@@ -249,38 +249,6 @@ const CLS = {
   card: "dg-card",
 };
 
-// Logic upload
-const uploadContainer = document.getElementById('uploadContainer');
-const fileInput = document.getElementById('fileInput');
-const uploadLink = document.getElementById('uploadLink');
-const uploadIcon = document.getElementById('uploadIcon');
-
-// Khi click vào khu vực upload hoặc link, mở file input
-uploadContainer.addEventListener('click', () => fileInput.click());
-uploadLink.addEventListener('click', (event) => {
-  event.preventDefault();
-  fileInput.click();
-});
-
-// Xử lý khi người dùng chọn tệp qua input
-fileInput.addEventListener('change', (event) => handleFiles(event));
-
-// Xử lý sự kiện kéo thả
-uploadContainer.addEventListener('dragover', (event) => {
-  event.preventDefault();
-  uploadContainer.classList.add('drag-over');
-});
-
-uploadContainer.addEventListener('dragleave', () => {
-  uploadContainer.classList.remove('drag-over');
-});
-
-uploadContainer.addEventListener('drop', (event) => {
-  event.preventDefault();
-  uploadContainer.classList.remove('drag-over');
-  handleFiles(event);
-});
-
 // Xử lý danh sách câu hỏi/trả lời
 function toggleAnswer(button) {
   const answer = button.nextElementSibling;
@@ -936,3 +904,35 @@ if (window.$ != null) {
       });
   });
 }
+
+// Logic upload
+const uploadContainer = document.getElementById('uploadContainer');
+const fileInput = document.getElementById('fileInput');
+const uploadLink = document.getElementById('uploadLink');
+const uploadIcon = document.getElementById('uploadIcon');
+
+// Khi click vào khu vực upload hoặc link, mở file input
+uploadContainer.addEventListener('click', () => fileInput.click());
+uploadLink.addEventListener('click', (event) => {
+  event.preventDefault();
+  fileInput.click();
+});
+
+// Xử lý khi người dùng chọn tệp qua input
+fileInput.addEventListener('change', (event) => handleFiles(event));
+
+// Xử lý sự kiện kéo thả
+uploadContainer.addEventListener('dragover', (event) => {
+  event.preventDefault();
+  uploadContainer.classList.add('drag-over');
+});
+
+uploadContainer.addEventListener('dragleave', () => {
+  uploadContainer.classList.remove('drag-over');
+});
+
+uploadContainer.addEventListener('drop', (event) => {
+  event.preventDefault();
+  uploadContainer.classList.remove('drag-over');
+  handleFiles(event);
+});

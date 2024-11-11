@@ -165,7 +165,7 @@
         border: 1px solid $secondary-color;
         background: $white-color;
         transition: all 0.3s ease;
-
+        color: $text-color;
         > p {
           text-align: justify;
           span {
@@ -299,6 +299,7 @@
             margin: 0;
             li {
               text-align: justify;
+              margin-bottom: 16px;
             }
           }
         }
@@ -654,6 +655,14 @@
               &:last-child {
                 color: $text-color;
               }
+            }
+          }
+          .note-register {
+            color: $text-color;
+            ul {
+              list-style-type: disc;
+              padding-left: 24px;
+              margin: 0;
             }
           }
         }

@@ -451,6 +451,16 @@ input[required] {
   }
 }
 
+.register-form-wrapper {
+  .dg-input-wrap .input-inner {
+    height: unset !important;
+  }
+  .checkbox-item {
+    display: flex;
+    align-items: center;
+  }
+}
+
 // Button styles
 button {
   font-family: "Open Sans" !important;

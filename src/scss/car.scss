@@ -1,0 +1,73 @@
+@use 'variables' as *;
+@use "./breakpoints" as *;
+
+.banner-wrapper {
+  .banner-container {
+    .quote-info-wrapper {
+      .dg-input-wrap {
+        .car-package-select {
+          min-width: 296px;
+          flex: 1;
+          @media only screen and (max-width: 640px) {
+            min-width: unset;
+          }
+        }
+      }
+    }
+  }
+}
+
+.info-wrapper {
+  .info-container {
+    .car-info-items-wrapper {
+      gap: 40px;
+    }
+  }
+}
+
+.about-wrapper {
+  .about-container {
+    .about-items-wrapper {
+      .about-item {
+        .info-text {
+          .car-about-item-custom-list {
+            li {
+              margin-bottom: 16px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.register-insurance-wrapper {
+  .register-insurance-container {
+    .register-form-content-wrapper {
+      .register-form-wrapper {
+        .content-form {
+          .car-custom-input-wrapper {
+            gap: 32px;
+            .input-inner {
+              flex: unset;
+              width: unset;
+              input {
+                width: unset;
+              }
+            }
+          }
+          .btn-groups {
+            button {
+              &:first-child {
+                color: $white-color !important;
+              }
+            }
+          }
+          .note {
+            color: $text-color;
+          }
+        }
+      }
+    }
+  }
+}
