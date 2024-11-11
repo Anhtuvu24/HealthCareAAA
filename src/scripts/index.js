@@ -390,9 +390,18 @@ function toggleMenu() {
 }
 
 // Input date
-flatpickr("input[type='date']", {
-  // dateFormat: "Y-m-d", // Định dạng ngày tháng (có thể tùy chỉnh)
-  locale: "vn" // Đặt ngôn ngữ là tiếng Việt
+document.querySelectorAll("input[type='date']:not(.dob)").forEach(input => {
+  flatpickr(input, {
+    dateFormat: "Y-m-d",
+    locale: "vn",
+    minDate: "today"
+  });
+});
+
+document.querySelectorAll("input[type='date'].dob").forEach(input => {
+  flatpickr(input, {
+    locale: "vn"
+  });
 });
 
 // Hàm xử lý khi có tệp được chọn hoặc kéo thả vào
