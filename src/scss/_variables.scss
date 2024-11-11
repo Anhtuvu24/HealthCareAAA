@@ -1,0 +1,43 @@
+$max-width: 1140px;
+
+$white-color: #fff;
+$bg-color: #fff;
+$bg-secondary: #F5F6F9;
+
+// main color
+$primary-color: #249748;
+$secondary-color: #C7F9CC;
+$secondary-color-1: #C7F9CC;
+$secondary-color-2: #7AE582;
+$secondary-color-3: #39B54A;
+$secondary-color-4: #006837;
+
+// text color
+$text-color: #212B36;
+$text-color-2: #637381;
+$text-disabled: #919EAB;
+$font-base: 14px;
+
+// gray color
+$gray-1: #E6E6E6;
+$gray-2: #CCCCCC;
+$gray-3: #B3B3B3;
+$gray-4: #999999;
+$gray-5: #666666;
+$gray-5: #4D4D4D;
+
+// status color
+$error-color: #C1272D;
+$pending-color: #FFFF00;
+$success-color: #39B54A;
+
+// icon color
+$icon-color: #637381;
+
+// Border
+$border-color: #919eab3d;
+$border-width: 1px;
+$border-base: $border-width solid $border-color;
+
+$box-shadow: 0px 0px 2px rgba(145, 158, 171, 0.2), 0px 12px 24px -4px rgba(145, 158, 171, 0.12);
+$box-shadow2: 0px 20px 40px -4px rgba(145, 158, 171, 0.16);

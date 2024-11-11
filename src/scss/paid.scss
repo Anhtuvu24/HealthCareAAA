@@ -1,0 +1,351 @@
+@use 'variables' as *;
+@use "./breakpoints" as *;
+
+.register-insurance-wrapper-custom {
+  display: flex;
+  padding: 60px 0;
+  align-items: center;
+  justify-content: center;
+  .register-insurance-container {
+    width: 100%;
+    max-width: $max-width;
+    @media only screen and (max-width: 1155px) {
+      padding: 0 24px;
+    }
+    @media only screen and (max-width: 640px) {
+      padding: 0 16px;
+    }
+    > h4 {
+      color: $primary-color;
+      margin-bottom: 16px;
+    }
+    .paid-content-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      @media only screen and (max-width: 640px) {
+        flex-direction: column;
+      }
+      .register-form-content-wrapper {
+          flex: 1;
+          max-width: 100%;
+        @media only screen and (max-width: 640px) {
+          flex-direction: column;
+        }
+        .register-form-content-container {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          flex-wrap: wrap;
+          .register-form-wrapper {
+            max-width: 100%;
+            @media only screen and (max-width: 1024px) {
+              flex: 1;
+            }
+            .register-form-container {
+              border: 1px solid $secondary-color;
+              border-radius: 16px;
+              background: $white-color;
+              min-width: 584px;
+              box-shadow: 0px 0px 2px 0px rgba(145, 158, 171, 0.20), 0px 12px 24px -4px rgba(145, 158, 171, 0.12);
+              @media only screen and (max-width: 640px) {
+                min-width: unset;
+                max-width: 100%;
+              }
+              .header-form {
+                display: flex;
+                padding: 20px 24px 23px;
+                align-items: center;
+                border-bottom: 1px solid #919EAB3D;
+              }
+              .content-form {
+                padding: 24px;
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                .custom-input-wrapper {
+                  @media only screen and (max-width: 640px) {
+                    flex-direction: row !important;
+                  }
+                  .input-inner {
+                    flex: unset;
+                    flex-grow: unset;
+                    width: unset;
+                  }
+                }
+                .dg-input-wrap {
+                  @media only screen and (max-width: 640px) {
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    gap: 16px;
+                  }
+                }
+                .info-package-wrapper {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  div {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    p {
+                      color: $primary-color;
+                    }
+                  }
+                }
+                .main-interest-wrapper {
+                  .main-interest-title {
+                    margin-bottom: 16px;
+                  }
+                  .main-interest-content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    .main-interest-item {
+                      display: flex;
+                      align-items: center;
+                      gap: 8px;
+                    }
+                  }
+                }
+                .bonus-interest-wrapper {
+                  .bonus-interest-title {
+                    margin-bottom: 16px;
+                  }
+                  .bonus-interest-content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    .bonus-interest-item {
+                      display: flex;
+                      align-items: center;
+                      input[type="checkbox"] {
+                        appearance: none;
+                        -webkit-appearance: none;
+                        background-color: #fff;
+                        border: 1px solid #ccc;
+                        border-radius: 3px;
+                        display: inline-block;
+                        position: relative;
+                        transition: all 0.3s ease;
+                        width: 20px;
+                        height: 20px;
+                      }
+
+                      input[type="checkbox"]:checked {
+                        background-color: $primary-color;
+                        border-color: $primary-color;
+                      }
+
+                      input[type="checkbox"]:checked::after {
+                        content: 'check';
+                        font-family: 'Material Icons';
+                        font-size: 14px;
+                        font-weight: 700;
+                        color: #fff;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                      }
+                    }
+                  }
+                }
+                .btn-groups {
+                  display: flex;
+                  width: 100%;
+                  gap: 8px;
+                  button {
+                    padding: 11px 16px;
+                    flex: 1;
+                    &:first-child {
+                      color: $white-color;
+                    }
+                    &:last-child {
+                      color: $text-color;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .list-registered-wrapper {
+            max-width: 100%;
+            @media only screen and (max-width: 1024px) {
+              flex: 1;
+            }
+            .list-registered-container {
+              border: 1px solid $secondary-color;
+              border-radius: 16px;
+              background: $white-color;
+              display: flex;
+              flex-direction: column;
+              min-width: 402px;
+              box-shadow: 0px 0px 2px 0px rgba(145, 158, 171, 0.20), 0px 12px 24px -4px rgba(145, 158, 171, 0.12);
+              @media only screen and (max-width: 640px) {
+                min-width: unset;
+              }
+              .list-registered-header {
+                padding: 20px 0 20px 18px;
+                border-bottom: 1px solid #919EAB3D;
+              }
+              .list-registered-content {
+                padding: 24px;
+                .list-registered-item {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 24px;
+                  .registered-item {
+                    display: flex;
+                    border-radius: 8px;
+                    flex-direction: column;
+                    padding: 16px;
+                    gap: 8px;
+                    border: 1px dashed #DFE3E8;
+                    .main-content-registered-item {
+                      display: flex;
+                      justify-content: space-between;
+                      @media only screen and (max-width: 375px) {
+                        .list-registered-item-content-left {
+                          margin-right: 8px;
+                        }
+                      }
+                      .list-registered-item-content-left, .list-registered-item-content-mid {
+                        display: flex;
+                        flex-direction: column;
+                        flex: 1;
+                      }
+                    }
+                    .draft-registered-item {
+                      color: $primary-color;
+                      display: flex;
+                      align-items: center;
+                      gap: 8px;
+                      &:hover {
+                        cursor: pointer;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .order-infor-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        @media only screen and (max-width: 1069px) {
+          flex: 1;
+        }
+        .order-infor-container {
+          min-width: 400px;
+          border-radius: 16px;
+          box-shadow: 0px 0px 2px 0px rgba(145, 158, 171, 0.20), 0px 12px 24px -4px rgba(145, 158, 171, 0.12);
+          @media only screen and (max-width: 640px) {
+            min-width: unset;
+          }
+          .order-infor-header {
+            padding: 20px 0 24px 24px;
+            border-bottom: 1px solid #919EAB3D;
+          }
+          .order-infor-content {
+            padding: 24px;
+            .fee, .total-fee {
+              h5 {
+                color: $primary-color;
+                font-family: "Raleway", sans-serif !important;
+              }
+            }
+            .dg-input-wrap {
+              .input-inner__container {
+                small {
+                  margin: 8px 0 0 12px;
+                  color: $text-color-2;
+                }
+                .input-inner {
+                  position: relative;
+                  input {
+                    width: 100%;
+                    padding-right: 105px;
+                  }
+                  .action {
+                    position: absolute;
+                    right: 14px;
+                    z-index: 100;
+                    button {
+                      padding: 6px 16px;
+                      color: $white-color;
+                    }
+                  }
+                }
+              }
+            }
+            .divider {
+              border-bottom: 1px solid #919EAB3D;
+              margin: 16px 0;
+            }
+          }
+        }
+        .checkbox-issue-invoice {
+          display: flex;
+          align-items: center;
+          input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            display: inline-block;
+            position: relative;
+            transition: all 0.3s ease;
+            width: 20px;
+            height: 20px;
+          }
+
+          input[type="checkbox"]:checked {
+            background-color: $primary-color;
+            border-color: $primary-color;
+          }
+
+          input[type="checkbox"]:checked::after {
+            content: 'check';
+            font-family: 'Material Icons';
+            font-size: 14px;
+            font-weight: 700;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+        .infor-invoice {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+        }
+        .btn-groups {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          button {
+            padding: 11px 22px;
+            display: flex;
+            justify-content: center;
+          }
+          .primary-btn {
+            color: $white-color;
+          }
+          .default-btn {
+            color: $text-color;
+            border-color: #919EAB52;
+          }
+        }
+      }
+
+    }
+  }
+}
