@@ -435,6 +435,50 @@ input[required] ~ .title-note:after {
   top: 0.3rem;
 }
 
+.custom-about-items-wrapper {
+  display: flex;
+  gap: 30px !important;
+}
+@media only screen and (max-width: 640px) {
+  .custom-about-items-wrapper {
+    flex-direction: column;
+  }
+}
+.custom-about-items-wrapper .about-group {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 30px;
+}
+@media (max-width: 640px) {
+  .custom-about-items-wrapper .about-group {
+    max-width: 100% !important;
+  }
+}
+.custom-about-items-wrapper .about-group .about-item {
+  width: 100%;
+  max-width: unset !important;
+}
+@media (max-width: 640px) {
+  .custom-about-items-wrapper .about-group .about-item {
+    max-width: 100% !important;
+  }
+}
+.custom-about-items-wrapper > .about-item {
+  flex: 1;
+  max-width: unset !important;
+}
+@media (max-width: 640px) {
+  .custom-about-items-wrapper > .about-item {
+    max-width: 100% !important;
+  }
+}
+@media (max-width: 640px) {
+  .custom-about-items-wrapper > .about-item:nth-child(n+1) {
+    display: none !important;
+  }
+}
+
 .register-form-wrapper .dg-input-wrap .input-inner {
   height: unset !important;
 }

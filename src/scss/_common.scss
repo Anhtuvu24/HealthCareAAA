@@ -451,6 +451,44 @@ input[required] {
   }
 }
 
+// About-custom
+.custom-about-items-wrapper {
+  display: flex;
+  gap: 30px !important;
+  @media only screen and (max-width: 640px) {
+    flex-direction: column;
+  }
+  .about-group {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 30px;
+    @media (max-width: 640px) {
+      max-width: 100% !important;
+    }
+    .about-item {
+      width: 100%;
+      max-width: unset !important;
+      @media (max-width: 640px) {
+        max-width: 100% !important;
+      }
+    }
+  }
+  > .about-item {
+    flex: 1;
+    max-width: unset !important;
+    @media (max-width: 640px) {
+      max-width: 100% !important;
+    }
+  }
+  @media (max-width: 640px) {
+    > .about-item:nth-child(n+1) {
+      display: none !important;
+    }
+  }
+
+}
+
 .register-form-wrapper {
   .dg-input-wrap .input-inner {
     height: unset !important;
