@@ -362,3 +362,74 @@ ol {
   }
 }
 
+
+// test
+.select-container {
+  display: inline-block;
+  border: 1px solid #d1d5db;
+  padding: 8px;
+  border-radius: 8px;
+  width: 300px;
+}
+
+.selected-terms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.selected-term {
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.selected-term span {
+  margin-right: 4px;
+}
+
+.dropdown {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.dropdown-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: auto;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  z-index: 1;
+  overflow-y: auto;
+  max-height: 150px;
+  width: 100%;
+}
+
+.dropdown-content div {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.dropdown-content div:hover {
+  background-color: #f3f4f6;
+}
+
+.show {
+  display: block;
+}
+

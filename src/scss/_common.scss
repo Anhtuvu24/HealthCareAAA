@@ -226,56 +226,56 @@ summary {
   }
 }
 
-.payments-provider {
-  background-color: #919eab14;
-  padding: 14px;
-  border-radius: 8px;
-  width: 100%;
+.payments-provider__wrap {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding-bottom: 0;
-  &__wrap {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 8px !important;
-  }
+  align-items: unset !important;
+  color: $text-color;
 
-  .control {
+  .payments-provider {
+    padding: 14px 14px 0;
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    flex-direction: column;
+    gap: 16px;
 
-    label {
-      background-color: transparent;
-      flex-grow: 1;
-    }
-
-    img {
-      max-width: 40px;
-      height: auto;
-      object-fit: cover;
-    }
-    &:has(input:checked) {
-      ~ .content {
+    .payments-provider__item {
+      .control {
         display: flex;
+        gap: 12px;
+        align-items: center;
+        label {
+          input {
+            width: unset !important;
+          }
+          display: flex;
+          align-items: center;
+        }
+        img {
+          width: 24px;
+        }
+        &:has(input:checked) {
+          ~ .content {
+            display: flex;
+          }
+        }
       }
     }
+
+
+    .content {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 8px;
+      font-size: 14px;
+      background-color: #fff;
+      padding: 10px;
+      margin: 0 -15px;
+      line-height: 22px;
+    }
   }
 
-  .content {
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    row-gap: 8px;
-    font-size: 14px;
-    background-color: #fff;
-    padding: 10px;
-    margin: 0 -15px;
-    line-height: 22px;
-  }
 }
 
 .cam-ket-text {
@@ -359,8 +359,42 @@ input[required] {
         }
       }
     }
-  }
 
+    .dr-package-code {
+      width: 100%;
+      padding: 16px 14px;
+      border: 1px solid #919EAB52;
+      border-radius: 8px;
+      color: #212B36;
+    }
+    .dropdown-list {
+      position: absolute;
+      z-index: 1000;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      max-height: 150px;
+      overflow-y: auto;
+      display: none; /* Ẩn dropdown ban đầu */
+    }
+
+    .dropdown-list li {
+      padding: 8px 14px;
+      cursor: pointer;
+    }
+
+    .dropdown-list li:hover {
+      background-color: #f0f0f0;
+    }
+    .dropdown-list li.hover {
+      background-color: #f0f0f0;
+      color: #333;
+    }
+  }
   .help-text {
     padding: 12px 8px 0;
     span {

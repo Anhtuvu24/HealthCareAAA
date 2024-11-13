@@ -170,7 +170,7 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                        <p class="sub-title-2">Trong 9 tháng đầu năm 2024, cả nước đã xảy ra <span>17.629</span> vụ tai nạn giao thông, làm chết <span>8.045</span> người, bị thương <span>13.167</span> người (Tương đương 1 ngày sẽ có khoảng 64 vụ tai nạn giao thông, làm chết 29 người và bị thương 48 người)</p>
+                        <p class="body-2">Trong 9 tháng đầu năm 2024, cả nước đã xảy ra <span>17.629</span> vụ tai nạn giao thông, làm chết <span>8.045</span> người, bị thương <span>13.167</span> người (Tương đương 1 ngày sẽ có khoảng 64 vụ tai nạn giao thông, làm chết 29 người và bị thương 48 người)</p>
                     </div>
                     <div class="info-item">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
@@ -183,7 +183,7 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                        <p class="sub-title-2">Theo Báo cáo tình hình kinh tế - xã hội quý III và 9 tháng vừa được Tổng cục Thống kê công bố, về tình hình an toàn giao thông so với cùng kỳ năm trước, số vụ tai nạn giao thông tăng <span>7,2%</span>; số người chết giảm <span>9,7%</span>; số người bị thương tăng <span>17,4%</span>.</p>
+                        <p class="body-2">Theo Báo cáo tình hình kinh tế - xã hội quý III và 9 tháng vừa được Tổng cục Thống kê công bố, về tình hình an toàn giao thông so với cùng kỳ năm trước, số vụ tai nạn giao thông tăng <span>7,2%</span>; số người chết giảm <span>9,7%</span>; số người bị thương tăng <span>17,4%</span>.</p>
                     </div>
                     <div class="info-item">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
@@ -196,7 +196,7 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                        <p class="sub-title-2">Người điều khiển xe ô tô, máy kéo và các loại xe tương tự ô tô không có hoặc không mang theo giấy chứng nhận bảo hiểm TNDS còn hiệu lực quy định và được cảnh sát yêu cầu xuất trình để kiểm tra, sẽ bị <span>phạt tiền từ 400.000 đồng đến 600.000 đồng</span>. (Theo khoản 4 điều 21 nghị định 46/2016)</p>
+                        <p class="body-2">Người điều khiển xe ô tô, máy kéo và các loại xe tương tự ô tô không có hoặc không mang theo giấy chứng nhận bảo hiểm TNDS còn hiệu lực quy định và được cảnh sát yêu cầu xuất trình để kiểm tra, sẽ bị <span>phạt tiền từ 400.000 đồng đến 600.000 đồng</span>. (Theo khoản 4 điều 21 nghị định 46/2016)</p>
                     </div>
                     <button class="toggle-btn-info sub-title-2" onclick="toggleItems()">
                         <span class="toggle-text">Xem thêm</span>
@@ -441,8 +441,22 @@
                             <div class="dg-input-wrap">
                                 <div class="input-inner__container">
                                     <div class="input-inner">
-                                        <select name="hang-xe-text" onfocusout="onblurHangXeText()" class="dr-package-code" required id="formObjectCarCompany">
-                                        </select>
+                                        <input
+                                                required
+                                                type="text"
+                                                id="formObjectCarCompany"
+                                                class="dr-package-code"
+                                                placeholder="Hãng xe"
+                                                oninput="filterOptions('formObjectCarCompany', 'car-options')"
+                                                autocomplete="off"
+                                        />
+                                        <ul id="car-options" class="dropdown-list">
+                                            <li onclick="selectOption('Toyota', 'formObjectCarCompany', 'car-options')">Toyota</li>
+                                            <li onclick="selectOption('Ford', 'formObjectCarCompany', 'car-options')">Ford</li>
+                                            <li onclick="selectOption('Honda', 'formObjectCarCompany', 'car-options')">Honda</li>
+                                            <li onclick="selectOption('Hyundai', 'formObjectCarCompany', 'car-options')">Hyundai</li>
+                                            <li onclick="selectOption('Mazda', 'formObjectCarCompany', 'car-options')">Mazda</li>
+                                        </ul>
                                         <label class="title-note" title="Hãng xe">Hãng xe</label>
                                         <span class="input-icon">
                                             <svg width="14"
@@ -462,8 +476,21 @@
 
                                 <div class="input-inner__container">
                                     <div class="input-inner">
-                                        <select name="hieu-xe-text" class="dr-package-code" onfocusout="onblurHieuXeText()" required id="formObjectCarBrand">
-                                        </select>
+                                        <input
+                                                name="hieu-xe-text"
+                                                class="dr-package-code"
+                                                oninput="filterOptions('formObjectCarBrand', 'brand-options')"
+                                                required
+                                                autocomplete="off"
+                                                id="formObjectCarBrand"
+                                        />
+                                        <ul id="brand-options" class="dropdown-list">
+                                            <li onclick="selectOption('Vios', 'formObjectCarBrand', 'brand-options')">Vios</li>
+                                            <li onclick="selectOption('Maybach', 'formObjectCarBrand', 'brand-options')">Maybach</li>
+                                            <li onclick="selectOption('KN', 'formObjectCarBrand', 'brand-options')">KN</li>
+                                            <li onclick="selectOption('Civic', 'formObjectCarBrand', 'brand-options')">Civic</li>
+                                            <li onclick="selectOption('Mazda', 'formObjectCarBrand', 'brand-options')">Mazda</li>
+                                        </ul>
                                         <label class="title-note" title="Hiệu xe">Hiệu xe</label>
                                         <span class="input-icon">
                                             <svg width="14"
@@ -937,7 +964,7 @@
                     <p class="sub-title-1 bold">Để biết thêm chi tiết liên hệ ngay:</p>
                     <div>
                         <img src="../../assets/images/contact-icon.svg" />
-                        <h4 class="bold">1900 54 54 35</h4>
+                        <h4 class="bold">1900.54.54.35</h4>
                     </div>
                 </div>
                 <div class="left-group-2">
@@ -1066,5 +1093,6 @@
         </div>
     </footer>
     <script src="../../scripts/index.js"></script>
+    <script src="../../scripts/car.js"></script>
 </body>
 </html>

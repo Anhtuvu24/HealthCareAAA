@@ -217,41 +217,38 @@ summary::marker, summary::-webkit-details-marker {
   display: none;
 }
 
-.payments-provider {
-  background-color: rgba(145, 158, 171, 0.0784313725);
-  padding: 14px;
-  border-radius: 8px;
+.payments-provider__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: unset !important;
+  color: #212B36;
+}
+.payments-provider__wrap .payments-provider {
+  padding: 14px 14px 0;
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding-bottom: 0;
 }
-.payments-provider__wrap {
-  flex-direction: column !important;
-  align-items: flex-start !important;
-  gap: 8px !important;
-}
-.payments-provider .control {
+.payments-provider__wrap .payments-provider .payments-provider__item .control {
   display: flex;
-  flex-direction: row;
+  gap: 12px;
   align-items: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
 }
-.payments-provider .control label {
-  background-color: transparent;
-  flex-grow: 1;
+.payments-provider__wrap .payments-provider .payments-provider__item .control label {
+  display: flex;
+  align-items: center;
 }
-.payments-provider .control img {
-  max-width: 40px;
-  height: auto;
-  object-fit: cover;
+.payments-provider__wrap .payments-provider .payments-provider__item .control label input {
+  width: unset !important;
 }
-.payments-provider .control:has(input:checked) ~ .content {
+.payments-provider__wrap .payments-provider .payments-provider__item .control img {
+  width: 24px;
+}
+.payments-provider__wrap .payments-provider .payments-provider__item .control:has(input:checked) ~ .content {
   display: flex;
 }
-.payments-provider .content {
+.payments-provider__wrap .payments-provider .content {
   display: none;
   flex-direction: column;
   align-items: flex-start;
@@ -336,6 +333,38 @@ input[required] ~ .title-note:after {
 .dg-input-wrap .input-inner:not(:has(fieldset)) textarea:focus,
 .dg-input-wrap .input-inner:not(:has(fieldset)) textarea:focus-visible {
   outline: 1px solid #249748;
+}
+.dg-input-wrap .input-inner .dr-package-code {
+  width: 100%;
+  padding: 16px 14px;
+  border: 1px solid rgba(145, 158, 171, 0.3215686275);
+  border-radius: 8px;
+  color: #212B36;
+}
+.dg-input-wrap .input-inner .dropdown-list {
+  position: absolute;
+  z-index: 1000;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-height: 150px;
+  overflow-y: auto;
+  display: none; /* Ẩn dropdown ban đầu */
+}
+.dg-input-wrap .input-inner .dropdown-list li {
+  padding: 8px 14px;
+  cursor: pointer;
+}
+.dg-input-wrap .input-inner .dropdown-list li:hover {
+  background-color: #f0f0f0;
+}
+.dg-input-wrap .input-inner .dropdown-list li.hover {
+  background-color: #f0f0f0;
+  color: #333;
 }
 .dg-input-wrap .help-text {
   padding: 12px 8px 0;
@@ -916,6 +945,11 @@ footer .footer-container .footer-left-item .left-group-1 > div {
   align-items: center;
   gap: 24px;
 }
+@media only screen and (max-width: 375px) {
+  footer .footer-container .footer-left-item .left-group-1 > div h4 {
+    font-size: 32px;
+  }
+}
 footer .footer-container .footer-left-item .left-group-2 a {
   padding: 8px;
 }
@@ -1359,8 +1393,8 @@ footer .copyright-wrapper > div > a:hover {
   flex: 1;
   min-width: 200px;
   flex-direction: column;
-  gap: 16px;
-  padding: 24px 16px;
+  gap: 24px;
+  padding: 24px;
   border-radius: 16px;
   border: 1px solid #C7F9CC;
   background: #fff;
@@ -1506,7 +1540,7 @@ footer .copyright-wrapper > div > a:hover {
   padding-left: 24px;
   margin: 0;
 }
-.about-wrapper .about-container .about-items-wrapper .about-item .info-text > ul li {
+.about-wrapper .about-container .about-items-wrapper .about-item .info-text > ul li:not(:last-child) {
   text-align: justify;
   margin-bottom: 16px;
 }
@@ -2089,6 +2123,9 @@ footer .copyright-wrapper > div > a:hover {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+.questions-answers-wrapper .questions-answers-container .questions-answers-content .contact-logos a:hover {
+  cursor: pointer;
 }
 @media only screen and (max-width: 640px) {
   .questions-answers-wrapper .questions-answers-container .questions-answers-content .contact-logos {
@@ -2870,6 +2907,75 @@ ol {
 }
 ::-webkit-scrollbar-track {
   background-color: transparent;
+}
+
+.select-container {
+  display: inline-block;
+  border: 1px solid #d1d5db;
+  padding: 8px;
+  border-radius: 8px;
+  width: 300px;
+}
+
+.selected-terms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.selected-term {
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.selected-term span {
+  margin-right: 4px;
+}
+
+.dropdown {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.dropdown-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: auto;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  z-index: 1;
+  overflow-y: auto;
+  max-height: 150px;
+  width: 100%;
+}
+
+.dropdown-content div {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.dropdown-content div:hover {
+  background-color: #f3f4f6;
+}
+
+.show {
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */
