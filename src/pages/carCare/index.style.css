@@ -1,0 +1,13 @@
+.car-package-select, .number-slot {
+    min-width: 226px !important;
+}
+
+.fee-input {
+    min-width: 226px !important;
+}
+
+@media only screen and (max-width: 640px) {
+    .car-package-select, .number-slot, .fee-input {
+        min-width: unset !important;
+    }
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Du lịch nước ngoài</title>
+    <title>Bảo hiểm nhà tư nhân</title>
     <link rel="stylesheet" href="../../style.css" />
     <link rel="stylesheet" href="./index.style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -58,83 +58,85 @@
 </header>
     <main>
         <section class="banner-wrapper">
-            <img src="../../assets/images/foreign-travel-banner.svg" />
+            <img src="../../assets/images/house-banner.svg" />
             <div class="banner-container">
                 <div class="quote-info-wrapper">
                     <h5 class="bold">Lấy báo giá</h5>
                     <div class="dg-input-wrap custom-input-wrap">
                         <div class="input-inner__container package-select">
                             <div class="input-inner">
-                                <select id="formCaculatorPackage-1">
+                                <select name="dr-package-code" class="dr-package-code" required id="formObjectPackageCode-1">
                                 </select>
-                                <label class="title-note" title="Gói bảo hiểm">Gói bảo hiểm</label>
+                                <label title="Gói bảo hiểm" class="title-note">Gói bảo hiểm</label>
                                 <span class="input-icon">
-                                    <svg
-                                            width="14"
-                                            height="7"
-                                            viewBox="0 0 15 8"
-                                            fill="currentColor"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <path
-                                              d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
-                                              fill="currentColor"
-                                      />
+                                    <svg width="14"
+                                         height="7"
+                                         viewBox="0 0 15 8"
+                                         fill="currentColor"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
+                                              fill="currentColor"></path>
                                     </svg>
                                 </span>
                             </div>
                         </div>
 
-                        <div class="input-inner__container package-select">
+                        <div class="input-inner__container gender-select">
                             <div class="input-inner">
-                                <select required id="formObjectCoverage-1">
+                                <select name="loai-nha" required id="formObjectHouseType-1">
+                                    <option value=1 checked>Chung cư</option>
+                                    <option value=2>Nhà liền kề</option>
+                                    <option value=3>Biệt thự</option>
                                 </select>
-                                <label class="title-note" title="Khu vực đến">Khu vực đến</label>
+                                <label class="title-note" title="Loại nhà">Loại nhà</label>
                                 <span class="input-icon">
-                                    <svg width="14" height="7" viewBox="0 0 15 8" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z" fill="currentColor"></path>
+                                    <svg width="14"
+                                         height="7"
+                                         viewBox="0 0 15 8"
+                                         fill="currentColor"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
+                                              fill="currentColor"></path>
                                     </svg>
                                 </span>
                             </div>
                         </div>
 
-                        <div class="input-inner__container date-select">
+                        <div class="input-inner__container gender-select">
                             <div class="input-inner">
-                                <input class="dob" type="date" lang="vi" id="formCaculatorTravelStartday-1" />
-                                <label class="title-note" title="Ngày đi">Ngày đi</label>
+                                <select name="kieu-so-huu" id="formObjectOwnerType-1">
+                                    <option value=1 checked>Chủ sở hữu</option>
+                                    <option value=2>Người thuê nhà</option>
+                                </select>
+                                <label class="title-note" title="Kiểu sở hữu">Kiểu sở hữu</label>
                                 <span class="input-icon">
-                                    <svg
-                                            width="18"
-                                            height="20"
-                                            viewBox="0 0 18 20"
-                                            fill="currentColor"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <path
-                                              d="M16 2H15V0H13V2H5V0H3V2H2C0.89 2 0 2.9 0 4V18C0 19.1 0.89 20 2 20H16C17.1 20 18 19.1 18 18V4C18 2.9 17.1 2 16 2ZM16 18H2V8H16V18ZM16 6H2V4H16V6ZM4 10H9V15H4V10Z"
-                                              fill="currentColor"
-                                      />
+                                    <svg width="14"
+                                         height="7"
+                                         viewBox="0 0 15 8"
+                                         fill="currentColor"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
+                                              fill="currentColor"></path>
                                     </svg>
                                 </span>
                             </div>
                         </div>
 
-                        <div class="input-inner__container date-select">
+                        <div class="input-inner__container gender-select">
                             <div class="input-inner">
-                                <input class="dob" type="date" lang="vi" id="formCaculatorTravelExitday-1" />
-                                <label class="title-note" title="Ngày về">Ngày về</label>
+                                <select name="md-sd" required id="formObjectBusinessHouseType-1">
+                                    <option value=1 checked>Thương mại</option>
+                                    <option value=2>Dân Cư</option>
+                                </select>
+                                <label title="Mục đích sử dụng">Mục đích sử dụng</label>
                                 <span class="input-icon">
-                                    <svg
-                                            width="18"
-                                            height="20"
-                                            viewBox="0 0 18 20"
-                                            fill="currentColor"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <path
-                                              d="M16 2H15V0H13V2H5V0H3V2H2C0.89 2 0 2.9 0 4V18C0 19.1 0.89 20 2 20H16C17.1 20 18 19.1 18 18V4C18 2.9 17.1 2 16 2ZM16 18H2V8H16V18ZM16 6H2V4H16V6ZM4 10H9V15H4V10Z"
-                                              fill="currentColor"
-                                      />
+                                    <svg width="14"
+                                         height="7"
+                                         viewBox="0 0 15 8"
+                                         fill="currentColor"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
+                                              fill="currentColor"></path>
                                     </svg>
                                 </span>
                             </div>
@@ -142,11 +144,8 @@
 
                         <div class="input-inner__container fee-input">
                             <div class="input-inner">
-                                <input type="text" disabled readonly id="formObjectSumFee-1" />
-                                <label title="Tổng phí bảo hiểm">Tổng phí bảo hiểm</label>
-                                <div hidden class="help-text error" id="invalid_Fee-1">
-                                    <span>Số tiền bảo hiểm không đúng!</span>
-                                </div>
+                                <input readonly disabled class="title-note" id="sumFeePayment">
+                                <label class="label" title="Tổng phí thanh toán">Tổng phí bảo hiểm</label>
                             </div>
                         </div>
 
@@ -174,42 +173,42 @@
                 <div class="info-items-wrapper">
                     <div class="info-item">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <g clip-path="url(#clip0_322_2149)">
-                                <path d="M21 16V14L13 9V3.5C13 2.67 12.33 2 11.5 2C10.67 2 10 2.67 10 3.5V9L2 14V16L10 13.5V19L8 20.5V22L11.5 21L15 22V20.5L13 19V13.5L21 16Z" fill="#249748"/>
+                            <g clip-path="url(#clip0_322_2227)">
+                                <path d="M19 9.3V4H16V6.6L12 3L2 12H5V20H10V14H14V20H19V12H22L19 9.3ZM10 10C10 8.9 10.9 8 12 8C13.1 8 14 8.9 14 10H10Z" fill="#249748"/>
                             </g>
                             <defs>
-                                <clipPath id="clip0_322_2149">
+                                <clipPath id="clip0_322_2227">
                                     <rect width="24" height="24" fill="white"/>
                                 </clipPath>
                             </defs>
                         </svg>
-                        <p class="body-2">Chi tiêu trung bình của khách Việt dự kiến cho chuyến du lịch nước ngoài hè này khoảng <span>1.001-1.500 USD</span>, Với các điểm đến ngoài châu Á, người Việt sẵn sàng chi trả hơn <span>2.000</span> USD cho một chuyến đi.</p>
+                        <p class="body-2">Trung bình người Việt cần ít nhất <span>23,5 năm</span> có thu nhập để mua được nhà ở<span>50%</span> là các vụ tai nạn giao thông</p>
                     </div>
                     <div class="info-item">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                            <g clip-path="url(#clip0_322_2142)">
-                                <path d="M20.3334 8V20C20.3334 21.1 19.4334 22 18.3334 22H6.33337C5.23337 22 4.33337 21.1 4.33337 20V8C4.33337 6.14 5.61337 4.59 7.33337 4.14V2H10.3334V4H14.3334V2H17.3334V4.14C19.0534 4.59 20.3334 6.14 20.3334 8ZM6.33337 12V14H16.3334V16H18.3334V12H6.33337Z" fill="#249748"/>
+                            <g clip-path="url(#clip0_322_2210)">
+                                <path d="M8.3335 6C8.3335 3.79 10.1235 2 12.3335 2C14.5435 2 16.3335 3.79 16.3335 6C16.3335 8.21 14.5435 10 12.3335 10C10.1235 10 8.3335 8.21 8.3335 6ZM17.3335 22H18.3335C19.4335 22 20.3335 21.1 20.3335 20V15.22C20.3335 14.1 19.7235 13.07 18.7235 12.56C18.2935 12.34 17.8235 12.13 17.3335 11.94V22ZM12.6735 17L15.3335 11.33C14.4035 11.12 13.4035 11 12.3335 11C9.8035 11 7.6235 11.7 5.9435 12.56C4.9435 13.07 4.3335 14.1 4.3335 15.22V22H6.6735C6.4535 21.55 6.3335 21.04 6.3335 20.5C6.3335 18.57 7.9035 17 9.8335 17H12.6735ZM10.3335 22L11.7435 19H9.8335C9.0035 19 8.3335 19.67 8.3335 20.5C8.3335 21.33 9.0035 22 9.8335 22H10.3335Z" fill="#249748"/>
                             </g>
                             <defs>
-                                <clipPath id="clip0_322_2142">
-                                    <rect width="24" height="24" fill="white" transform="translate(0.333374)"/>
+                                <clipPath id="clip0_322_2210">
+                                    <rect width="24" height="24" fill="white" transform="translate(0.333496)"/>
                                 </clipPath>
                             </defs>
                         </svg>
-                        <p class="body-2"><span>26 triệu</span> ký gửi bị thất lạc trên toàn cầu. Trong đó, có đến <span>80%</span> kiện hành lý ký gửi bị chậm trễ, <span>7%</span> bị mất cắp và <span>13%</span> bị hư hại.</p>
+                        <p class="body-2">Trên địa bàn cả nước xảy ra <span>3.193 vụ cháy</span>, nổ, làm <span>85 người chết</span> và <span>87 người bị thương</span> chỉ trong 9 tháng đầu năm 2024 (Theo báo cáo của Tổng cục Thống kê trong 9 tháng đầu năm 2024)</p>
                     </div>
                     <div class="info-item">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                            <g clip-path="url(#clip0_322_2156)">
-                                <path d="M12.6666 1L3.66663 5V11C3.66663 16.55 7.50663 21.74 12.6666 23C17.8266 21.74 21.6666 16.55 21.6666 11V5L12.6666 1ZM10.6666 17L6.66663 13L8.07663 11.59L10.6666 14.17L17.2566 7.58L18.6666 9L10.6666 17Z" fill="#249748"/>
+                            <g clip-path="url(#clip0_322_2223)">
+                                <path d="M14.1665 0.669922C14.1665 0.669922 14.9065 3.31992 14.9065 5.46992C14.9065 7.52992 13.5565 9.19992 11.4965 9.19992C9.4265 9.19992 7.8665 7.52992 7.8665 5.46992L7.8965 5.10992C5.8765 7.50992 4.6665 10.6199 4.6665 13.9999C4.6665 18.4199 8.2465 21.9999 12.6665 21.9999C17.0865 21.9999 20.6665 18.4199 20.6665 13.9999C20.6665 8.60992 18.0765 3.79992 14.1665 0.669922ZM12.3765 18.9999C10.5965 18.9999 9.1565 17.5999 9.1565 15.8599C9.1565 14.2399 10.2065 13.0999 11.9665 12.7399C13.7365 12.3799 15.5665 11.5299 16.5865 10.1599C16.9765 11.4499 17.1765 12.8099 17.1765 14.1999C17.1765 16.8499 15.0265 18.9999 12.3765 18.9999Z" fill="#249748"/>
                             </g>
                             <defs>
-                                <clipPath id="clip0_322_2156">
-                                    <rect width="24" height="24" fill="white" transform="translate(0.666626)"/>
+                                <clipPath id="clip0_322_2223">
+                                    <rect width="24" height="24" fill="white" transform="translate(0.666504)"/>
                                 </clipPath>
                             </defs>
                         </svg>
-                        <p class="body-2">Bảo hiểm du lịch được xem là điều kiện <span>bắt buộc</span> trước khi nhập cảnh tại một số nước bên cạnh: giấy tờ về thông tin cá nhân, chứng minh thu nhập, lịch trình điểm đến, đặt phòng khách, đặt vé máy bay,...</p>
+                        <p class="body-2">Thiệt hại từ các vụ cháy, nổ ước tính <span>217,4 tỷ</span> đồng</p>
                     </div>
                     <button class="toggle-btn-info sub-title-2" onclick="toggleItems()">
                         <span class="toggle-text">Xem thêm</span>
@@ -224,30 +223,28 @@
         <section id="gioi-thieu" class="about-wrapper">
             <div class="about-container">
                 <h4 class="bold">GIỚI THIỆU SẢN PHẨM</h4>
-                <div class="about-items-wrapper">
+                <div class="about-items-wrapper custom-about-items-wrapper">
                     <div class="about-item">
-                        <img src="../../assets/images/foreign-travel-about-1.svg" />
+                        <img src="../../assets/images/house-about-1.svg" />
                         <div class="info-text">
-                            <p class="body-2">Những chuyến du lịch, công tác,... sẽ đem lại cho bạn những trải nghiệm hữu ích cùng nhiều kỉ niệm đẹp. Tuy nhiên với các chuyến đi đến đến các vùng đất khác nhau luôn có thể phát sinh các tình huống hay các rủi ro bất ngờ. Bảo hiểm du lịch toàn cầu đến từ Bảo hiểm AAA sẽ luôn là người bạn đồng hành trong chặng đường chinh phục những vùng đất mới</p>
+                            <p class="body-2">Với mỗi người Việt, ngôi nhà không chỉ là tài sản vật chất mà còn là tổ ấm chứa đựng giá trị tinh thần to lớn. Bảo hiểm nhà tư nhân của AAA sẵn sàng đồng hành để bù đắp một phần chi phí sửa chữa, thay thế hoặc xây mới ngôi nhà, giúp bạn có một điểm tựa tài chính vững khi không may có sự cố xảy ra.</p>
                         </div>
                     </div>
                     <div class="about-item">
-                        <img src="../../assets/images/foreign-travel-about-2.svg" />
+                        <img src="../../assets/images/house-about-2.svg" />
                         <div class="info-text">
-                            <p class="body-2">Bảo Hiểm AAA sẽ trả tiền bảo hiểm cho các trường hợp sau, với điều kiện sự kiện bảo hiểm phải phát sinh trong thời hạn hiệu lực bảo hiểm:</p>
+                            <p class="body-2">Khi mua Bảo hiểm nhà tư nhân của Bảo hiểm AAA, khách hàng sẽ được bồi thường cho những tổn thất hoặc thiệt hại đối với Căn hộ/ Chung cư liền kề và tài sản bên trong phát sinh do những rủi ro thuộc phạm vi bảo hiểm trong quy tắc của Bảo hiểm AAA</p>
                             <ul>
-                                <li class="body-2">Tử vong do Tai nạn, Thương tật vĩnh viễn do Tai nạn</li>
-                                <li class="body-2">Di chuyển y tế khẩn cấp, Hồi hương thi hài hoặc mai táng, Chi phí y tế</li>
-                                <li class="body-2">Phương tiện  vận chuyển bị trì hoãn, Hành lý đến chậm, Hành lý cá nhân</li>
-                                <li class="body-2">Giấy tờ đi đường, Chi phí ăn ở, đi lại cho người đi cùng</li>
-                                <li class="body-2">Trách nhiệm cá nhân, Gia hạn hợp đồng bảo hiểm</li>
+                                <li class="bold body-2">Rủi ro chính: <span style="font-weight: 400">Hỏa hoạn (Cháy)</span></li>
+                                <li class="bold body-2 li-custom">Rủi ro phụ:</span></li>
+                                <ul class="ul-second">
+                                    <li class="body-2">Nổ</li>
+                                    <li class="body-2">Máy bay  và các phương tiện hàng không khác hoặc các thiết bị trên phương tiện đó rơi trúng</li>
+                                    <li class="body-2">Giông, Bão, Lụt</li>
+                                    <li class="body-2">Tràn nước từ các bể và thiết bị chứa nước hay đường ống dẫn nước</li>
+                                    <li class="body-2">Đâm va do xe cộ hay súc vật</li>
+                                </ul>
                             </ul>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <img src="../../assets/images/foreign-travel-about-3.svg" />
-                        <div class="info-text">
-                            <p class="body-2">Bảo hiểm du lịch toàn cầu là giấy tờ hợp lệ yêu cầu xin Visa du lịch, du học, thăm thân, công tác... tới các quốc gia như: Mỹ, Châu Âu, Nhật Bản, Úc...></p>
                         </div>
                     </div>
                     <button class="toggle-btn-about sub-title-2" onclick="toggleAboutItems()">
@@ -263,37 +260,50 @@
         <section id="uu-diem" class="outstanding-wrapper">
             <div class="outstanding-container">
                 <div class="outstanding-title">
-                    <h4 class="bold">Ưu điểm vượt trội của<br/>
-                        Bảo hiểm Du lịch nước ngoài</h4>
+                    <h4 class="bold">ƯU ĐIỂM VƯỢT TRỘI CỦA<br/>BẢO HIỂM NHÀ TƯ NHÂN</h4>
                     <p class="sub-title-1-bold">Điểm ưu việt chỉ có trong sản phẩm Bảo hiểm AAA</p>
                 </div>
                 <div class="outstanding-items-wrapper">
                     <div class="outstanding-item">
-                        <div class="icon-box"><img src="../../assets/images/outstanding-2.svg" /></div>
+                        <div class="icon-box"><img src="../../assets/images/outstanding-save.svg" /></div>
                         <div class="description-item">
-                            <p class="sub-title-1-bold">MỨC PHÍ TIẾT KIỆM, MỨC QUYỀN LỢI TỐI ĐALÊN ĐẾN 50,000 USD</p>
-                            <p class="body-2">Với mức phí chỉ từ : 0,44 USD/ngày (Phạm vi Châu Á) và 0,94 USD/ngày (Phạm vi Toàn Cầu) , mức quyền lợi tối đa lên đến 50,000 USD, từ đó giúp khách hàng có thể yên tâm tận hưởng chuyến đi mà không cần phải lo lắng về các vấn đề có thể phát sinh.</p>
+                            <p class="sub-title-1-bold">MỨC PHÍ BẢO HIỂM CẠNH TRANH CHỈ TỪ 300.000 VNĐ</p>
+                            <p class="body-2">Mức phí hấp dẫn bậc nhất thị trường, chỉ từ 300.000 VNĐ. Mức tăng/giảm phí cạnh tranh thay đổi theo từng năm.</p>
+                        </div>
+                    </div>
+                    <div class="outstanding-item">
+                        <div class="icon-box"><img src="../../assets/images/outstanding-verified.svg" /></div>
+                        <div class="description-item">
+                            <p class="sub-title-1-bold">MIỄN PHÍ 100% CÁC QUYỀN LỢI RỦI RO PHỤ</p>
+                            <p class="body-2">Khi tham gia Bảo hiểm nhà tư nhân, khách hàng sẽ không cần phải trả thêm phí cho các rủi ro phụ.</p>
                         </div>
                     </div>
                     <div class="outstanding-item">
                         <div class="icon-box"><img src="../../assets/images/outstanding-book.svg" /></div>
                         <div class="description-item">
-                            <p class="sub-title-1-bold">THỦ TỤC CẤP BẢO HIỂM ONLINE ĐƠN GIẢN, TIỆN LỢI TRONG VÒNG 24H</p>
-                            <p class="body-2">Thủ tục cấp bảo hiểm đơn giản, nhanh chóng, thao tác thực hiện online dễ dàng, hỗ trợ giao chứng nhận tận nơi theo yêu cầu. </p>
+                            <p class="sub-title-1-bold">MUA BẢO HIỂM TRỰC TUYẾN ĐƠN GIẢN CHỈ TRONG 5 PHÚT</p>
+                            <p class="body-2">Thao tác nhanh chóng, bảo mật tuyệt đối , dễ dàng thực hiện mọi lúc mọi nơi.</p>
+                        </div>
+                    </div>
+                    <div class="outstanding-item">
+                        <div class="icon-box"><img src="../../assets/images/outstanding-admin-setting.svg" /></div>
+                        <div class="description-item">
+                            <p class="sub-title-1-bold">ĐẢM BẢO QUYỀN LỢI BẢO HIỂM TỐI ƯU CHO KHÁCH HÀNG</p>
+                            <p class="body-2">Thủ tục nhanh gọn, chuyên nghiệp, đảm bảo tối đa quyền lợi khách hàng.</p>
                         </div>
                     </div>
                     <div class="outstanding-item">
                         <div class="icon-box"><img src="../../assets/images/outstanding-iphone.svg" /></div>
                         <div class="description-item">
                             <p class="sub-title-1-bold">BỒI THƯỜNG NHANH CHÓNG, MINH BẠCH TỐI ĐA TRONG VÒNG 15 NGÀY</p>
-                            <p class="body-2">Thủ tục được tối ưu hóa, giúp khách hàng tiết kiệm thời gian.</p>
+                            <p class="body-2">Thủ tục nhanh gọn, chuyên nghiệp.</p>
                         </div>
                     </div>
                     <div class="outstanding-item">
-                        <div class="icon-box"><img src="../../assets/images/outstanding-emoji.svg" /></div>
+                        <div class="icon-box"><img src="../../assets/images/outstanding-6.svg" /></div>
                         <div class="description-item">
-                            <p class="sub-title-1-bold">QUÁ TRÌNH CẤP ĐƠN TIỆN LỢI KHÔNG CẦN PHẢI KIỂM TRA SỨC KHỎE</p>
-                            <p class="body-2">Tất cả các bước đều được thực hiện online đơn giản, dễ dàng, thuận tiện. Đặc biệt, khách hàng chỉ cần khai báo về tình trạng sức khỏe, không cần phải đến bệnh viện kiểm tra trước khi được cấp đơn.</p>
+                            <p class="sub-title-1-bold">SẴN SÀNG PHỤC VỤ 24/7</p>
+                            <p class="body-2">Đội ngũ CSKH luôn sẵn sàng giải đáp thắc mắc, hỗ trợ khách hàng 24/7.</p>
                         </div>
                     </div>
                     <button class="toggle-btn-outstanding sub-title-2" onclick="toggleOustandingItems()">
@@ -323,10 +333,10 @@
                             <div class="upload-container" id="uploadContainer">
                                 <input type="file" id="fileInput" class="file-input" accept="image/*" hidden />
                                 <div class="upload-icon" id="uploadIcon">
-                                    <img src="../../assets/images/upload-image1.svg" alt="Upload Icon" />
+                                    <img src="../../assets/images/house-upload-icon.svg" alt="Upload Icon" />
                                 </div>
                                 <div class="upload-text" id="uploadText">
-                                    <p class="title sub-title-1">CMND/CCCD <i style="font-weight: 400">hoặc</i> Hộ chiếu</span></p>
+                                    <p class="title sub-title-1">Giấy chứng nhận quyền sử dụng đất</p>
                                     <p class="description body-2">
                                         Thả ảnh vào đây hoặc <span id="uploadLink" class="upload-link">Tải lên</span> từ thiết bị của bạn để nhập thông tin nhanh.
                                     </p>
@@ -334,11 +344,11 @@
                             </div>
                             <div class="dg-input-wrap custom-input-wrapper">
                                 <div class="input-inner">
-                                    <input type="radio" id="nam" name="formCaculatorGender" value="1" checked aria-checked />
+                                    <input type="radio" id="nam" name="custormerGender" value="1" checked aria-checked />
                                     <label class="body-2" for="nam" title="Nam">Nam</label>
                                 </div>
                                 <div class="input-inner">
-                                    <input type="radio" id="nu" name="formCaculatorGender" value="2" />
+                                    <input type="radio" id="nu" name="custormerGender" value="2" />
                                     <label class="body-2" for="nu">Nữ</label>
                                 </div>
                             </div>
@@ -346,53 +356,28 @@
                             <div class="dg-input-wrap">
                                 <div class="input-inner__container">
                                     <div class="input-inner">
-                                        <input type="text" onfocusout="getCustormerByIdentifyHC()" required id="custormerIdentification" />
-                                        <input type="text" id="customerCode" hidden />
-                                        <label id="identificationLabel" class="title-note" title="Số CMT/CCCD/HC">Số CMT/CCCD/HC</label>
-                                    </div>
-                                    <div hidden class="help-text error" id="invalid_custormerIdentification">
-                                        <span>Bạn chưa nhập số CMT/CCCD/HC!</span>
-                                    </div>
-                                </div>
-                                <div class="input-inner__container">
-                                    <div class="input-inner">
-                                        <input type="text" required id="custormerName" />
-                                        <label id="nameLabel" class="title-note" title="Họ tên">Họ tên</label>
-                                    </div>
-                                    <div hidden class="help-text error" id="invalid_custormerName">
-                                        <span>Bạn chưa nhập họ tên!</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="dg-input-wrap">
-                                <div class="input-inner__container">
-                                    <div class="input-inner">
-                                        <select required id="formObjectRelationsShip">
+                                        <select name="dr-package-code" class="dr-package-code" required id="formObjectPackageCode">
                                         </select>
-                                        <label title="Mối quan hệ với người mua">Mối quan hệ với người mua</label>
+                                        <label title="Gói bảo hiểm" class="title-note">Gói bảo hiểm</label>
                                         <span class="input-icon">
-                                            <svg width="14" height="7" viewBox="0 0 15 8" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z" fill="currentColor"></path>
+                                            <svg width="14"
+                                                 height="7"
+                                                 viewBox="0 0 15 8"
+                                                 fill="currentColor"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
+                                                      fill="currentColor"></path>
                                             </svg>
                                         </span>
-                                    </div>
-                                    <div hidden class="help-text error" id="invalid_formObjectRelationsShip">
-                                        <span>Bạn chưa chọn mối quan hệ với người mua!</span>
-                                    </div>
-                                    <div hidden class="help-text error" id="invalid_duplicate_formObjectRelationsShip">
-                                        <span>Đã có mối quan hệ "Bản thân" trong danh sách NĐBH</span>
                                     </div>
                                 </div>
                                 <div class="input-inner__container">
                                     <div class="input-inner">
-                                        <input type="date" required id="formObjectBirthDay" onfocusout="onChangeFormObjectDoB()" />
-                                        <label title="Ngày sinh" aria-required class="title-note">Ngày sinh</label>
-                                        <span class="input-icon">
-                                            <svg width="18" height="20" viewBox="0 0 18 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M16 2H15V0H13V2H5V0H3V2H2C0.89 2 0 2.9 0 4V18C0 19.1 0.89 20 2 20H16C17.1 20 18 19.1 18 18V4C18 2.9 17.1 2 16 2ZM16 18H2V8H16V18ZM16 6H2V4H16V6ZM4 10H9V15H4V10Z" fill="currentColor" />
-                                            </svg>
-                                        </span>
+                                        <input id="formObjectYearBuilt" required type="number" min="1900" max="2022" step="1" value="2022" />
+                                        <label title="Năm sản xuất" class="title-note">Năm sử dụng</label>
+                                    </div>
+                                    <div hidden class="help-text error" id="invalid_formObjectYearBuilt">
+                                        <span>Bạn chưa nhập năm sử dụng ngôi nhà!</span>
                                     </div>
                                 </div>
                             </div>
@@ -400,21 +385,41 @@
                             <div class="dg-input-wrap">
                                 <div class="input-inner__container">
                                     <div class="input-inner">
-                                        <input type="text" Phone id="formObjectPhone" />
-                                        <label class="title-note" title="Số điện thoại">Số điện thoại</label>
-                                    </div>
-                                    <div hidden class="help-text error" id="invalid_formObjectPhone">
-                                        <span>Bạn chưa nhập Số điện thoại người được bảo hiểm!</span>
+                                        <select class="has-value" name="loai-nha" required id="formObjectHouseType">
+                                            <option value=1 checked>Chung cư</option>
+                                            <option value=2>Nhà liền kề</option>
+                                            <option value=3>Biệt thự</option>
+                                        </select>
+                                        <label class="title-note" title="Loại nhà">Loại nhà</label>
+                                        <span class="input-icon">
+                                                <svg width="14"
+                                                     height="7"
+                                                     viewBox="0 0 15 8"
+                                                     fill="currentColor"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
+                                                          fill="currentColor"></path>
+                                                </svg>
+                                            </span>
                                     </div>
                                 </div>
                                 <div class="input-inner__container">
                                     <div class="input-inner">
-                                        <input type="text" Email id="formObjectEmail" />
-                                        <label class="title-note" title="Email">Email</label>
-                                    </div>
-
-                                    <div hidden class="help-text error" id="invalid_formObjectEmail">
-                                        <span>Bạn chưa nhập Email người được bảo hiểm!</span>
+                                        <select class="has-value" name="kieu-so-huu" id="formObjectOwnerType">
+                                            <option value=1 checked>Chủ sở hữu</option>
+                                            <option value=2>Người thuê nhà</option>
+                                        </select>
+                                        <label title="Kiểu sở hữu">Kiểu sở hữu</label>
+                                        <span class="input-icon">
+                                                <svg width="14"
+                                                     height="7"
+                                                     viewBox="0 0 15 8"
+                                                     fill="currentColor"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
+                                                          fill="currentColor"></path>
+                                                </svg>
+                                            </span>
                                     </div>
                                 </div>
                             </div>
@@ -422,8 +427,40 @@
                             <div class="dg-input-wrap">
                                 <div class="input-inner__container">
                                     <div class="input-inner">
-                                        <input type="text" id="formObjectAddress" />
-                                        <label title="Địa chỉ">Địa chỉ</label>
+                                        <select class="has-value" name="md-sd" required id="formObjectBusinessHouseType">
+                                            <option value=1 checked>Thương mại</option>
+                                            <option value=2>Dân Cư</option>
+                                        </select>
+                                        <label class="title-note" title="Mục đích sử dụng">Mục đích sử dụng</label>
+                                        <span class="input-icon">
+                                                <svg width="14"
+                                                     height="7"
+                                                     viewBox="0 0 15 8"
+                                                     fill="currentColor"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
+                                                          fill="currentColor"></path>
+                                                </svg>
+                                            </span>
+                                    </div>
+                                </div>
+                                <div class="input-inner__container">
+                                    <div class="input-inner">
+                                        <select class="has-value" name="chua-chay" required id="formObjectFireFighting">
+                                            <option value=1 checked>Có chữa cháy tự động</option>
+                                            <option value=2>Không có chữa cháy tự động</option>
+                                        </select>
+                                        <label title="Chữa cháy">Chữa cháy</label>
+                                        <span class="input-icon">
+                                                <svg width="14"
+                                                     height="7"
+                                                     viewBox="0 0 15 8"
+                                                     fill="currentColor"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
+                                                          fill="currentColor"></path>
+                                                </svg>
+                                            </span>
                                     </div>
                                 </div>
                             </div>
@@ -431,84 +468,36 @@
                             <div class="dg-input-wrap">
                                 <div class="input-inner__container">
                                     <div class="input-inner">
-                                        <input class="dob" type="date" lang="vi" id="formCaculatorTravelStartday" />
-                                        <label class="title-note" title="Ngày đi">Ngày đi</label>
+                                        <select id="formObjectTimeDuration" class="has-value">
+                                            <option value="1" checked>1 năm</option>
+                                        </select>
+                                        <label title="Thời hạn bảo hiểm">Thời hạn bảo hiểm</label>
                                         <span class="input-icon">
-                                            <svg
-                                                    width="18"
-                                                    height="20"
-                                                    viewBox="0 0 18 20"
-                                                    fill="currentColor"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                              <path
-                                                      d="M16 2H15V0H13V2H5V0H3V2H2C0.89 2 0 2.9 0 4V18C0 19.1 0.89 20 2 20H16C17.1 20 18 19.1 18 18V4C18 2.9 17.1 2 16 2ZM16 18H2V8H16V18ZM16 6H2V4H16V6ZM4 10H9V15H4V10Z"
-                                                      fill="currentColor"
-                                              />
-                                            </svg>
-                                        </span>
+                                                <svg width="14"
+                                                     height="7"
+                                                     viewBox="0 0 15 8"
+                                                     fill="currentColor"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
+                                                          fill="currentColor"></path>
+                                                </svg>
+                                            </span>
                                     </div>
                                 </div>
                                 <div class="input-inner__container">
                                     <div class="input-inner">
-                                        <input class="dob" type="date" lang="vi" id="formCaculatorTravelExitday" />
-                                        <label class="title-note" title="Ngày về">Ngày về</label>
+                                        <input type="date" class="datepicker" required id="formObjectStartDate" />
+                                        <label class="title-note" title="Ngày hiệu lực">Ngày hiệu lực</label>
                                         <span class="input-icon">
-                                            <svg
-                                                    width="18"
-                                                    height="20"
-                                                    viewBox="0 0 18 20"
-                                                    fill="currentColor"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                              <path
-                                                      d="M16 2H15V0H13V2H5V0H3V2H2C0.89 2 0 2.9 0 4V18C0 19.1 0.89 20 2 20H16C17.1 20 18 19.1 18 18V4C18 2.9 17.1 2 16 2ZM16 18H2V8H16V18ZM16 6H2V4H16V6ZM4 10H9V15H4V10Z"
-                                                      fill="currentColor"
-                                              />
-                                            </svg>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="info-package-wrapper">
-                                <p class="sub-title-1-bold">Thông tin gói bảo hiểm</p>
-                                <div>
-                                    <p>Chi tiết quyền lợi</p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
-                                        <g clip-path="url(#clip0_7_4582)">
-                                            <path d="M9 2C4.86 2 1.5 5.36 1.5 9.5C1.5 13.64 4.86 17 9 17C13.14 17 16.5 13.64 16.5 9.5C16.5 5.36 13.14 2 9 2ZM9.75 12.5C9.75 12.9142 9.41421 13.25 9 13.25C8.58579 13.25 8.25 12.9142 8.25 12.5V9.5C8.25 9.08579 8.58579 8.75 9 8.75C9.41421 8.75 9.75 9.08579 9.75 9.5V12.5ZM9.75 6.5C9.75 6.91421 9.41421 7.25 9 7.25C8.58579 7.25 8.25 6.91421 8.25 6.5C8.25 6.08579 8.58579 5.75 9 5.75C9.41421 5.75 9.75 6.08579 9.75 6.5Z" fill="#249748"/>
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_7_4582">
-                                                <rect width="18" height="18" fill="white" transform="translate(0 0.5)"/>
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <div class="dg-input-wrap">
-                                <div class="input-inner__container">
-                                    <div class="input-inner">
-                                        <select id="formCaculatorPackage"></select>
-                                        <label class="title-note" title="Gói bảo hiểm">Gói bảo hiểm</label>
-                                        <span class="input-icon">
-                                            <svg width="14" height="7" viewBox="0 0 15 8" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z" fill="currentColor"></path>
-                                            </svg>
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="input-inner__container">
-                                    <div class="input-inner">
-                                        <select required id="formObjectCoverage"></select>
-                                        <label class="title-note" title="Khu vực đến">Khu vực đến</label>
-                                        <span class="input-icon">
-                                            <svg width="14" height="7" viewBox="0 0 15 8" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z" fill="currentColor"></path>
-                                            </svg>
-                                        </span>
+                                                <svg width="18"
+                                                     height="20"
+                                                     viewBox="0 0 18 20"
+                                                     fill="currentColor"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M16 2H15V0H13V2H5V0H3V2H2C0.89 2 0 2.9 0 4V18C0 19.1 0.89 20 2 20H16C17.1 20 18 19.1 18 18V4C18 2.9 17.1 2 16 2ZM16 18H2V8H16V18ZM16 6H2V4H16V6ZM4 10H9V15H4V10Z"
+                                                          fill="#637381" />
+                                                </svg>
+                                            </span>
                                     </div>
                                 </div>
                             </div>
@@ -516,24 +505,38 @@
                             <div class="dg-input-wrap">
                                 <div class="input-inner__container">
                                     <div class="input-inner">
-                                        <select required id="formObjectCoverageFrom"></select>
-                                        <label class="title-note" title="Nơi đi">Nơi đi</label>
-                                        <span class="input-icon">
-                                            <svg width="14" height="7" viewBox="0 0 15 8" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z" fill="currentColor"></path>
-                                            </svg>
-                                        </span>
+                                        <input type="text" data-type="currency" required onfocusout="caculatorFeeHousePackage()" id="formObjectPrice" />
+                                        <label class="title-note" title="Giá trị ngôi nhà">Giá trị ngôi nhà</label>
+                                    </div>
+                                    <div hidden class="help-text error" id="invalid_formObjectPrice">
+                                        <span>Bạn chưa nhập giá trị ngôi nhà!</span>
                                     </div>
                                 </div>
                                 <div class="input-inner__container">
                                     <div class="input-inner">
-                                        <select required id="formObjectCoverageTo"></select>
-                                        <label class="title-note" title="Nơi đến">Nơi đến</label>
+                                        <select class="has-value" required onfocusout="caculatorFeeHousePackage()" id="formObjectFloor">
+                                            <option value="1" selected>1</option>
+                                            <option value="2" selected>2</option>
+                                            <option value="3" selected>3</option>
+                                            <option value="4" selected>4</option>
+                                            <option value="5" selected>5</option>
+                                            <option value="6" selected>6</option>
+                                            <option value="7" selected>7</option>
+                                        </select>
+                                        <label class="title-note" title="Số tầng">Số tầng</label>
                                         <span class="input-icon">
-                                            <svg width="14" height="7" viewBox="0 0 15 8" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z" fill="currentColor"></path>
+                                            <svg width="14"
+                                                 height="7"
+                                                 viewBox="0 0 15 8"
+                                                 fill="currentColor"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
+                                                      fill="currentColor"></path>
                                             </svg>
                                         </span>
+                                    </div>
+                                    <div hidden class="help-text error" id="invalid_formObjectFloor">
+                                        <span>Bạn chưa nhập số tầng của ngôi nhà!</span>
                                     </div>
                                 </div>
                             </div>
@@ -541,8 +544,13 @@
                             <div class="dg-input-wrap">
                                 <div class="input-inner__container">
                                     <div class="input-inner">
-                                        <input disabled type="text" readonly id="formObjectSumFee" />
-                                        <label class="title-note" title="Tổng phí bảo hiểm (VNĐ)">Tổng phí bảo hiểm (VNĐ)</label>
+                                        <input type="text" readonly disabled id="formObjectSumFee" />
+                                        <label title="Phí bảo hiểm ">Phí bảo hiểm</label>
+                                        <span class="input-icon">
+                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.00008 0.666504C4.40008 0.666504 0.666748 4.39984 0.666748 8.99984C0.666748 13.5998 4.40008 17.3332 9.00008 17.3332C13.6001 17.3332 17.3334 13.5998 17.3334 8.99984C17.3334 4.39984 13.6001 0.666504 9.00008 0.666504ZM9.83341 13.1665H8.16675V8.1665H9.83341V13.1665ZM9.83341 6.49984H8.16675V4.83317H9.83341V6.49984Z" fill="currentColor"></path>
+                                            </svg>
+                                        </span>
                                     </div>
                                     <div hidden class="help-text error" id="invalid_Fee">
                                         <span>Số tiền bảo hiểm không đúng!</span>
@@ -550,50 +558,58 @@
                                 </div>
                             </div>
 
-                            <div class="main-interest-wrapper">
-                                <p class="main-interest-title body-2" title="Quyền lợi chính">Quyền lợi chính</p>
-                                <div class="main-interest-content" id="divQLChinh">
-                                    <!--List-item-->
-                                    <div class="main-interest-item body-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                            <g clip-path="url(#clip0_7_4519)">
-                                                <path d="M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM10.09 16.72L6.29 12.91L7.77 11.43L10.09 13.76L15.94 7.89L17.42 9.37L10.09 16.72Z" fill="#249748"/>
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_7_4519">
-                                                    <rect width="24" height="24" fill="white"/>
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                        Điều trị nội trú, phẫu thuật do ốm đau bệnh tật & thai sản
+                            <div class="info-package-wrapper">
+                                <p class="sub-title-1-bold">Thông tin chủ nhà</p>
+                            </div>
+
+                            <div class="dg-input-wrap">
+                                <div class="input-inner__container">
+                                    <div class="input-inner">
+                                        <input type="text" id="tenantName" />
+                                        <label class="title-note" title="Họ tên">Họ tên</label>
                                     </div>
-                                    <div class="main-interest-item body-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                            <g clip-path="url(#clip0_7_4519)">
-                                                <path d="M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM10.09 16.72L6.29 12.91L7.77 11.43L10.09 13.76L15.94 7.89L17.42 9.37L10.09 16.72Z" fill="#249748"/>
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_7_4519">
-                                                    <rect width="24" height="24" fill="white"/>
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                        Điều trị nội trú, phẫu thuật do ốm đau bệnh tật & thai sản
+                                    <div hidden class="help-text error" id="invalid_HouseTenant">
+                                        <span>Bạn chưa nhập họ tên chủ ngôi nhà!</span>
                                     </div>
-                                    <div class="main-interest-item body-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                            <g clip-path="url(#clip0_7_4519)">
-                                                <path d="M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM10.09 16.72L6.29 12.91L7.77 11.43L10.09 13.76L15.94 7.89L17.42 9.37L10.09 16.72Z" fill="#249748"/>
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_7_4519">
-                                                    <rect width="24" height="24" fill="white"/>
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                        Điều trị nội trú, phẫu thuật do ốm đau bệnh tật & thai sản
+                                </div>
+                                <div class="input-inner__container">
+                                    <div class="input-inner">
+                                        <input type="text" id="AddressTenant" />
+                                        <label class="title-note" required title="Địa chỉ">Địa chỉ</label>
                                     </div>
-                                    <!--List-item-->
+                                    <div hidden class="help-text error" id="invalid_Address_Tenant">
+                                        <span>Bạn chưa nhập Địa chỉ ngôi nhà!</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dg-input-wrap">
+                                <div class="input-inner__container" id="div_formObjectStartDate">
+                                    <div class="input-inner" id="autocomplete-wrapper">
+                                    <input type="text" required id="custormerAddressCities" autocomplete="off" />
+                                    <label class="title-note" title="Địa chỉ">Tỉnh/Thành phố</label>
+                                </div>
+                                    <div hidden class="help-text error" id="invalid_custormerAddressCities">
+                                        <span>Bạn chưa chọn tỉnh/thành phố!</span>
+                                    </div>
+                                </div>
+                                <div class="input-inner__container">
+                                    <div class="input-inner" id="autocomplete-district-wrapper">
+                                        <input type="text" required id="custormerAddressDistricts" autocomplete="off" />
+                                        <label class="title-note" title="Địa chỉ">Quận/Huyện</label>
+                                    </div>
+                                    <div hidden class="help-text error" id="invalid_custormerAddressDistricts">
+                                        <span>Bạn chưa chọn quận huyện!</span>
+                                    </div>
+                                </div>
+                                <div class="input-inner__container">
+                                    <div class="input-inner" id="autocomplete-ward-wrapper">
+                                        <input type="text" required id="custormerAddressWards" autocomplete="off" />
+                                        <label class="title-note" title="Địa chỉ">Xã/Phường</label>
+                                    </div>
+                                    <div hidden class="help-text error" id="invalid_custormerAddressWards">
+                                        <span>Bạn chưa chọn xã phường!</span>
+                                    </div>
                                 </div>
                             </div>
 
@@ -611,34 +627,39 @@
                                         </defs>
                                     </svg>
                                 </button>
-                                <button class="default-btn button" id="continueBuyStep2">Thêm người</button>
                             </div>
                         </div>
                     </div>
                     <div class="list-registered-wrapper">
                         <div class="list-registered-container">
                             <div class="list-registered-header">
-                                <h6 class="bold">Danh sách người được bảo hiểm</h6>
+                                <h6 class="bold">Thông tin gói bảo hiểm</h6>
                             </div>
-                            <div class="list-registered-content">
-                                <div class="list-registered-item">
-                                    <div class="list-registered-item-content">
-                                        <p class="body-1">Phạm Thu Hảo</p>
-                                        <p class="caption-1">22/12/1998</p>
-                                        <p class="body-1">5,000,000 đ</p>
+                            <div class="list-wrapper">
+                                <div class="list-benefit-wrapper">
+                                    <p class="body-2 bold">Danh sách quyền lợi</p>
+                                    <div class="list-item">
+                                        <div class="item body-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <g clip-path="url(#clip0_249_5175)">
+                                                    <path d="M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM10.09 16.72L6.29 12.91L7.77 11.43L10.09 13.76L15.94 7.89L17.42 9.37L10.09 16.72Z" fill="#249748"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_249_5175">
+                                                        <rect width="24" height="24" fill="white"/>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                            <p>Quyền lợi 1</p>
+                                        </div>
                                     </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <g clip-path="url(#clip0_1_14126)">
-                                            <path d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM15.59 7L12 10.59L8.41 7L7 8.41L10.59 12L7 15.59L8.41 17L12 13.41L15.59 17L17 15.59L13.41 12L17 8.41L15.59 7Z" fill="#637381"/>
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_1_14126">
-                                                <rect width="24" height="24" fill="white"/>
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
                                 </div>
-                                <span hidden class="body-2 dg-person-list" style="">Danh sách người được bảo hiểm trống!</span>
+                                <div class="list-risk-wrapper">
+                                    <p class="body-2 bold">Danh rủi ro</p>
+                                    <div class="list-item body-2">
+                                        <i>Trống</i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -660,20 +681,38 @@
                             </div>
                         </div>
                         <div id="product-questions" data-topic="topic1" class="questions-list">
-                            <!-- Thêm các câu hỏi khác tại đây -->
                             <div class="question-container">
                                 <div class="question">
                                     <button class="sub-title-2 bold" onclick="toggleAnswer(this)">
-                                        Không có dữ liệu
+                                        Tôi có thể mua bảo hiểm thay cho những người khác không?
                                         <span class="icon-arrow">
                                           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                             <path d="M10.0004 12.9179C9.8057 12.9183 9.61701 12.8505 9.46708 12.7262L4.46708 8.55956C4.1127 8.26501 4.06419 7.73894 4.35874 7.38456C4.6533 7.03018 5.17936 6.98167 5.53374 7.27623L10.0004 11.0096L14.4671 7.40956C14.6392 7.26975 14.86 7.20433 15.0806 7.2278C15.3011 7.25126 15.5032 7.36166 15.6421 7.53456C15.7964 7.70777 15.8715 7.93746 15.8493 8.16836C15.8272 8.39926 15.7098 8.61048 15.5254 8.75123L10.5254 12.7762C10.3712 12.8808 10.1863 12.9307 10.0004 12.9179Z" fill="#212B36"/>
                                           </svg>
                                         </span>
                                     </button>
-
+                                    <div class="answer body-2">
+                                        Bạn có thể mua bảo hiểm thay cho những người thân trong gia đình bao gồm: vợ/ chồng, bố mẹ, bố mẹ vợ/ chồng, con với điều kiện Bạn phải được sự ủy quyền của chủ sở hữu nhà hoặc bên thuê đứng tên trên hợp đồng thuê nhà trong trường hợp nhà thuê và/hoặc có quyền lợi và nghĩa vụ liên quan.
+                                    </div>
                                 </div>
                             </div>
+                            <div class="question-container">
+                                <div class="question">
+                                    <button class="sub-title-2 bold" onclick="toggleAnswer(this)">
+                                        Nếu tôi là người thuê nhà thì tôi có được mua bảo hiểm cho phần Ngôi nhà không?
+                                        <span class="icon-arrow">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M10.0004 12.9179C9.8057 12.9183 9.61701 12.8505 9.46708 12.7262L4.46708 8.55956C4.1127 8.26501 4.06419 7.73894 4.35874 7.38456C4.6533 7.03018 5.17936 6.98167 5.53374 7.27623L10.0004 11.0096L14.4671 7.40956C14.6392 7.26975 14.86 7.20433 15.0806 7.2278C15.3011 7.25126 15.5032 7.36166 15.6421 7.53456C15.7964 7.70777 15.8715 7.93746 15.8493 8.16836C15.8272 8.39926 15.7098 8.61048 15.5254 8.75123L10.5254 12.7762C10.3712 12.8808 10.1863 12.9307 10.0004 12.9179Z" fill="#212B36"/>
+                                          </svg>
+                                        </span>
+                                    </button>
+                                    <div class="answer body-2">
+                                        Bạn có thể mua bảo hiểm cho phần Ngôi nhà nếu bạn có quyền lợi bảo hiểm đối với Ngôi nhà đó, cụ thể hơn là trong Hợp đồng thuê nhà quy định rõ rằng bạn phải chịu trách nhiệm trông coi và có trách nhiệm đối với các thiệt hại vật chất trong quá tình sử dụng Ngôi nhà.<br/>
+                                        Ngoài ra, bạn có thể mua bảo hiểm cho các tài sản bên trong nhà thuộc sở hữu hoặc thuộc trách nhiệm của bạn.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Thêm các câu hỏi khác tại đây -->
                             <button class="toggle-button sub-title-2" data-topic="topic1" onclick="toggleQuestions('topic1')">
                                 Xem thêm
                                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
@@ -686,7 +725,7 @@
                             <div class="question-container">
                                 <div class="question">
                                     <button class="sub-title-2 bold" onclick="toggleAnswer(this)">
-                                        Trong trường hợp dự định đi du lịch qua nhiều quốc gia trong cùng một chuyến đi thì nên chọn Nơi đến như thế nào để có thể nhận báo giá và đặt bảo hiểm chính xác?
+                                        Cổng, hàng rào và hệ thống an ninh ngôi nhà được bảo hiểm theo phần Ngôi nhà hay tài sản bên trong?
                                         <span class="icon-arrow">
                                           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                             <path d="M10.0004 12.9179C9.8057 12.9183 9.61701 12.8505 9.46708 12.7262L4.46708 8.55956C4.1127 8.26501 4.06419 7.73894 4.35874 7.38456C4.6533 7.03018 5.17936 6.98167 5.53374 7.27623L10.0004 11.0096L14.4671 7.40956C14.6392 7.26975 14.86 7.20433 15.0806 7.2278C15.3011 7.25126 15.5032 7.36166 15.6421 7.53456C15.7964 7.70777 15.8715 7.93746 15.8493 8.16836C15.8272 8.39926 15.7098 8.61048 15.5254 8.75123L10.5254 12.7762C10.3712 12.8808 10.1863 12.9307 10.0004 12.9179Z" fill="#212B36"/>
@@ -694,61 +733,9 @@
                                         </span>
                                     </button>
                                     <div class="answer body-2">
-                                        Có 2 vùng địa lý được dùng làm căn cứ tính phí bảo hiểm như sau:<br/>
-                                        - Châu Á: Các nước trong khu vực Châu Á.<br/>
-                                        Ngoài trừ những nước thuộc khu vực Tây Á như sau: Syria, Israel, Jordan, Liban, Iran, Iraq, Ả Rập, Saudi, Các tiểu vương quốc Ả Rập, Thống nhất, Bah-rain, Qatar, Oman, Yemen, Kuwait,<br/>
-                                        - Toàn Cầu: bao gồm các nước Châu Á, và các nước còn lại.<br/>
-                                        Khi chọn mua bảo hiểm du lịch, bạn nên căn cứ vào điểm đến xa nhất để chọn Nơi đến phù hợp:<br/>
-                                        Ví dụ:<br/>
-                                        - Nếu bạn dự định đến Hong Kong và Mỹ, bạn nên chọn vùng “Toàn cầu”.<br/>
-                                        - Hoặc nếu bạn đến Lào, Campuchia và Brunei, bạn nên chọn vùng “Châu Á
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="question-container">
-                                <div class="question">
-                                    <button class="sub-title-2 bold" onclick="toggleAnswer(this)">
-                                        Thời hạn bảo hiểm tối đa cho một chuyến đi là bao lâu?
-                                        <span class="icon-arrow">
-                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                            <path d="M10.0004 12.9179C9.8057 12.9183 9.61701 12.8505 9.46708 12.7262L4.46708 8.55956C4.1127 8.26501 4.06419 7.73894 4.35874 7.38456C4.6533 7.03018 5.17936 6.98167 5.53374 7.27623L10.0004 11.0096L14.4671 7.40956C14.6392 7.26975 14.86 7.20433 15.0806 7.2278C15.3011 7.25126 15.5032 7.36166 15.6421 7.53456C15.7964 7.70777 15.8715 7.93746 15.8493 8.16836C15.8272 8.39926 15.7098 8.61048 15.5254 8.75123L10.5254 12.7762C10.3712 12.8808 10.1863 12.9307 10.0004 12.9179Z" fill="#212B36"/>
-                                          </svg>
-                                        </span>
-                                    </button>
-                                    <div class="answer body-2">
-                                        Tối đa 60 ngày/1 năm
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="question-container">
-                                <div class="question">
-                                    <button class="sub-title-2 bold" onclick="toggleAnswer(this)">
-                                        Hiệu lực bảo hiểm được tính như thế nào?
-                                        <span class="icon-arrow">
-                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                            <path d="M10.0004 12.9179C9.8057 12.9183 9.61701 12.8505 9.46708 12.7262L4.46708 8.55956C4.1127 8.26501 4.06419 7.73894 4.35874 7.38456C4.6533 7.03018 5.17936 6.98167 5.53374 7.27623L10.0004 11.0096L14.4671 7.40956C14.6392 7.26975 14.86 7.20433 15.0806 7.2278C15.3011 7.25126 15.5032 7.36166 15.6421 7.53456C15.7964 7.70777 15.8715 7.93746 15.8493 8.16836C15.8272 8.39926 15.7098 8.61048 15.5254 8.75123L10.5254 12.7762C10.3712 12.8808 10.1863 12.9307 10.0004 12.9179Z" fill="#212B36"/>
-                                          </svg>
-                                        </span>
-                                    </button>
-                                    <div class="answer body-2">
-                                        Hiệu lực bảo hiểm bắt đầu từ thời điểm hoàn tất thủ tục xuất cảnh tại Việt Nam và kết thúc vào thời điểm hoàn tất thủ tục nhập cảnh vào Việt Nam hoặc Quê hương của Người được bảo hiểm, tùy theo thời điểm nào sớm hơn sẽ được áp dụng:<br/>
-                                        - Thời gian Chuyến đi hoặc<br/>
-                                        - Thời hạn bảo hiểm
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="question-container">
-                                <div class="question">
-                                    <button class="sub-title-2 bold" onclick="toggleAnswer(this)">
-                                        Nếu không xin được visa để thực hiện chuyến đi thì có được hủy hợp đồng bảo hiểm không?
-                                        <span class="icon-arrow">
-                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                            <path d="M10.0004 12.9179C9.8057 12.9183 9.61701 12.8505 9.46708 12.7262L4.46708 8.55956C4.1127 8.26501 4.06419 7.73894 4.35874 7.38456C4.6533 7.03018 5.17936 6.98167 5.53374 7.27623L10.0004 11.0096L14.4671 7.40956C14.6392 7.26975 14.86 7.20433 15.0806 7.2278C15.3011 7.25126 15.5032 7.36166 15.6421 7.53456C15.7964 7.70777 15.8715 7.93746 15.8493 8.16836C15.8272 8.39926 15.7098 8.61048 15.5254 8.75123L10.5254 12.7762C10.3712 12.8808 10.1863 12.9307 10.0004 12.9179Z" fill="#212B36"/>
-                                          </svg>
-                                        </span>
-                                    </button>
-                                    <div class="answer body-2">
-                                        Phát sinh chủ yếu với bên công ty lữ hành nên ít phát sinh các trường hợp hủy tour vì không cấp được visa.
+                                        Cổng và hàng rào thuộc về giá trị xây dựng ban đầu của Ngôi nhà sẽ được bảo hiểm theo Phần Ngôi nhà.<br/>
+                                        Hệ thống an ninh bảo vệ Ngôi nhà nếu nằm trong khuôn viên ngôi nhà được bảo hiểm thì sẽ được bảo hiểm theo Phần Tài sản bên trong.<br/>
+                                        Tuy nhiên, bạn lưu ý nếu các hệ thống an ninh này là các trang thiết bị lắp đặt ngoài trời thì sẽ không thuộc phạm vi bảo hiểm Giông, Bão, Lũ lụt trừ trường hợp các thiết bị này được lắp đặt bên trong Ngôi nhà.
                                     </div>
                                 </div>
                             </div>
@@ -764,7 +751,7 @@
                             <div class="question-container">
                                 <div class="question">
                                     <button class="sub-title-2 bold" onclick="toggleAnswer(this)">
-                                        Có bảo lãnh thanh toán viện phí cho các điều trị y tế ở nước ngoài không?
+                                        Hồ sơ bồi thường bao gồm những giấy tờ/ chứng từ gì?
                                         <span class="icon-arrow">
                                           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                             <path d="M10.0004 12.9179C9.8057 12.9183 9.61701 12.8505 9.46708 12.7262L4.46708 8.55956C4.1127 8.26501 4.06419 7.73894 4.35874 7.38456C4.6533 7.03018 5.17936 6.98167 5.53374 7.27623L10.0004 11.0096L14.4671 7.40956C14.6392 7.26975 14.86 7.20433 15.0806 7.2278C15.3011 7.25126 15.5032 7.36166 15.6421 7.53456C15.7964 7.70777 15.8715 7.93746 15.8493 8.16836C15.8272 8.39926 15.7098 8.61048 15.5254 8.75123L10.5254 12.7762C10.3712 12.8808 10.1863 12.9307 10.0004 12.9179Z" fill="#212B36"/>
@@ -772,7 +759,15 @@
                                         </span>
                                     </button>
                                     <div class="answer body-2">
-                                        Không có dịch vụ bảo lãnh thanh toán viện phí ở nước ngoài. Người được bảo hiểm có thể tự chọn nơi điều trị và lấy chứng từ y tế cùng hóa đơn về để làm thủ tục đòi bồi thường cho Công ty bảo hiểm hoàn trả sau.
+                                        -  Giấy chứng nhận quyền sở hữu đất, hợp đồng mua/thuê nhà<br/>
+                                        - Người được bảo hiểm giữ nguyên hiện trường và ngay lập tức thông báo tổn thất cho Bảo hiểm AAA, môi giới hoặc các đại lý/chi nhánh của Bảo hiểm AAA đã được ghi rõ trong đơn bảo hiểm (nếu có) để có sự hỗ trợ và phương án giải quyết<br/>
+                                        - Thư khiếu nại<br/>
+                                        - Biên bản giám định xác định mức độ thiệt hại<br/>
+                                        - Kết luận điều tra nguyên nhân sự cố (Công an, Cơ quan chức năng, Chuyên gia…)<br/>
+                                        - Hồ sơ ban đầu liên quan đến tài sản tổn thất ( hợp đồng, hóa đơn mua bán, bản vẽ kỹ thuật)<br/>
+                                        - Báo giá/ Hợp đồng/Chứng từ/Hóa đơn thanh toán chi phí sửa chữa/ thay thế/ khắc
+                                        phục<br/>
+                                        - Các chứng từ khác theo yêu cầu tùy trường hợp<br/>
                                     </div>
                                 </div>
                             </div>
@@ -969,7 +964,5 @@
         </div>
     </footer>
     <script src="../../scripts/index.js"></script>
-    <script src="../../scripts/travelGlobal.js"></script>
 </body>
 </html>
-

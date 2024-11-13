@@ -73,8 +73,10 @@
     }
   }
   .date-select {
-    min-width: 193px;
     flex: 1;
+    label {
+      white-space: nowrap;
+    }
     @media only screen and (max-width: 640px) {
       min-width: unset;
     }
@@ -87,8 +89,8 @@
     }
   }
   .fee-input {
-    min-width: 193px;
     flex: 1;
+    min-width: 148px;
     @media only screen and (max-width: 640px) {
       min-width: unset;
     }
@@ -557,7 +559,7 @@
               .description {
                 color: $text-color-2;
                 > span {
-                  color: #1C0EC5;
+                  color: $primary-color;
                   text-decoration: underline;
                   cursor: pointer;
                 }
@@ -684,6 +686,27 @@
           .list-registered-header {
             padding: 20px 0 20px 18px;
             border-bottom: 1px solid #919EAB3D;
+          }
+          .list-wrapper {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            .list-benefit-wrapper, .list-risk-wrapper {
+              display: flex;
+              flex-direction: column;
+              gap: 16px;
+              .list-item {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                .item {
+                  display: flex;
+                  gap: 16px;
+                  align-items: center;
+                }
+              }
+            }
           }
           .list-registered-content {
             padding: 24px;

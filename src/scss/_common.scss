@@ -59,7 +59,7 @@ input,
 select,
 textarea {
   &:focus,
-  &.has-value {
+  &.has-value, &.default-has-value {
     ~ .required::after {
       content: "*";
     }
@@ -80,6 +80,7 @@ textarea {
 
     &:focus,
     &.has-value,
+    &.default-has-value,
     &#ma-giam-gia {
       ~ label {
         content: "*";
@@ -475,11 +476,11 @@ input[required] {
       appearance: none;
       -webkit-appearance: none;
       background-color: #fff;
-
+      &.default-has-value:not([type="checkbox"]):not([type="radio"]) ~ label,
       &:focus:not([type="checkbox"]):not([type="radio"]) ~ label,
       &.has-value:not([type="checkbox"]):not([type="radio"]) ~ label {
-        transform: translateY(-1rem) scale(0.75);
-        top: 0.3rem;
+        transform: translateY(-1rem) scale(0.75) !important;
+        top: 0.3rem !important;
       }
     }
   }

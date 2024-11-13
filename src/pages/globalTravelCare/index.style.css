@@ -1,0 +1,16 @@
+.package-select {
+    min-width: 192px !important;
+}
+
+.date-select {
+    min-width: 157px !important;
+}
+
+@media only screen and (max-width: 640px) {
+    .package-select {
+        min-width: unset !important;
+    }
+    .gender-select {
+        min-width: unset !important;
+    }
+}

@@ -53,18 +53,22 @@ header {
   font-size: 14px;
 }
 
-input:focus, input.has-value,
+input:focus, input.has-value, input.default-has-value,
 select:focus,
 select.has-value,
+select.default-has-value,
 textarea:focus,
-textarea.has-value {
+textarea.has-value,
+textarea.default-has-value {
   width: fit-content;
 }
-input:focus ~ .required::after, input.has-value ~ .required::after,
+input:focus ~ .required::after, input.has-value ~ .required::after, input.default-has-value ~ .required::after,
 select:focus ~ .required::after,
 select.has-value ~ .required::after,
+select.default-has-value ~ .required::after,
 textarea:focus ~ .required::after,
-textarea.has-value ~ .required::after {
+textarea.has-value ~ .required::after,
+textarea.default-has-value ~ .required::after {
   content: "*";
 }
 input:not([type=checkbox]):not([type=radio]) ~ label,
@@ -82,12 +86,14 @@ select:not([type=checkbox]):not([type=radio])[disabled] ~ label,
 textarea:not([type=checkbox]):not([type=radio])[disabled] ~ label {
   background-color: #fafafa !important;
 }
-input:not([type=checkbox]):not([type=radio]):focus ~ label, input:not([type=checkbox]):not([type=radio]).has-value ~ label, input:not([type=checkbox]):not([type=radio])#ma-giam-gia ~ label,
+input:not([type=checkbox]):not([type=radio]):focus ~ label, input:not([type=checkbox]):not([type=radio]).has-value ~ label, input:not([type=checkbox]):not([type=radio]).default-has-value ~ label, input:not([type=checkbox]):not([type=radio])#ma-giam-gia ~ label,
 select:not([type=checkbox]):not([type=radio]):focus ~ label,
 select:not([type=checkbox]):not([type=radio]).has-value ~ label,
+select:not([type=checkbox]):not([type=radio]).default-has-value ~ label,
 select:not([type=checkbox]):not([type=radio])#ma-giam-gia ~ label,
 textarea:not([type=checkbox]):not([type=radio]):focus ~ label,
 textarea:not([type=checkbox]):not([type=radio]).has-value ~ label,
+textarea:not([type=checkbox]):not([type=radio]).default-has-value ~ label,
 textarea:not([type=checkbox]):not([type=radio])#ma-giam-gia ~ label {
   content: "*";
   width: fit-content;
@@ -443,25 +449,33 @@ input[required] ~ .title-note:after {
   -webkit-appearance: none;
   background-color: #fff;
 }
-.dg-input-wrap:has(input[type=text]) input:focus:not([type=checkbox]):not([type=radio]) ~ label, .dg-input-wrap:has(input[type=text]) input.has-value:not([type=checkbox]):not([type=radio]) ~ label,
+.dg-input-wrap:has(input[type=text]) input.default-has-value:not([type=checkbox]):not([type=radio]) ~ label, .dg-input-wrap:has(input[type=text]) input:focus:not([type=checkbox]):not([type=radio]) ~ label, .dg-input-wrap:has(input[type=text]) input.has-value:not([type=checkbox]):not([type=radio]) ~ label,
+.dg-input-wrap:has(input[type=text]) select.default-has-value:not([type=checkbox]):not([type=radio]) ~ label,
 .dg-input-wrap:has(input[type=text]) select:focus:not([type=checkbox]):not([type=radio]) ~ label,
 .dg-input-wrap:has(input[type=text]) select.has-value:not([type=checkbox]):not([type=radio]) ~ label,
+.dg-input-wrap:has(input[type=text]) textarea.default-has-value:not([type=checkbox]):not([type=radio]) ~ label,
 .dg-input-wrap:has(input[type=text]) textarea:focus:not([type=checkbox]):not([type=radio]) ~ label,
-.dg-input-wrap:has(input[type=text]) textarea.has-value:not([type=checkbox]):not([type=radio]) ~ label, .dg-input-wrap:has(input[type=date]) input:focus:not([type=checkbox]):not([type=radio]) ~ label, .dg-input-wrap:has(input[type=date]) input.has-value:not([type=checkbox]):not([type=radio]) ~ label,
+.dg-input-wrap:has(input[type=text]) textarea.has-value:not([type=checkbox]):not([type=radio]) ~ label, .dg-input-wrap:has(input[type=date]) input.default-has-value:not([type=checkbox]):not([type=radio]) ~ label, .dg-input-wrap:has(input[type=date]) input:focus:not([type=checkbox]):not([type=radio]) ~ label, .dg-input-wrap:has(input[type=date]) input.has-value:not([type=checkbox]):not([type=radio]) ~ label,
+.dg-input-wrap:has(input[type=date]) select.default-has-value:not([type=checkbox]):not([type=radio]) ~ label,
 .dg-input-wrap:has(input[type=date]) select:focus:not([type=checkbox]):not([type=radio]) ~ label,
 .dg-input-wrap:has(input[type=date]) select.has-value:not([type=checkbox]):not([type=radio]) ~ label,
+.dg-input-wrap:has(input[type=date]) textarea.default-has-value:not([type=checkbox]):not([type=radio]) ~ label,
 .dg-input-wrap:has(input[type=date]) textarea:focus:not([type=checkbox]):not([type=radio]) ~ label,
-.dg-input-wrap:has(input[type=date]) textarea.has-value:not([type=checkbox]):not([type=radio]) ~ label, .dg-input-wrap:has(select) input:focus:not([type=checkbox]):not([type=radio]) ~ label, .dg-input-wrap:has(select) input.has-value:not([type=checkbox]):not([type=radio]) ~ label,
+.dg-input-wrap:has(input[type=date]) textarea.has-value:not([type=checkbox]):not([type=radio]) ~ label, .dg-input-wrap:has(select) input.default-has-value:not([type=checkbox]):not([type=radio]) ~ label, .dg-input-wrap:has(select) input:focus:not([type=checkbox]):not([type=radio]) ~ label, .dg-input-wrap:has(select) input.has-value:not([type=checkbox]):not([type=radio]) ~ label,
+.dg-input-wrap:has(select) select.default-has-value:not([type=checkbox]):not([type=radio]) ~ label,
 .dg-input-wrap:has(select) select:focus:not([type=checkbox]):not([type=radio]) ~ label,
 .dg-input-wrap:has(select) select.has-value:not([type=checkbox]):not([type=radio]) ~ label,
+.dg-input-wrap:has(select) textarea.default-has-value:not([type=checkbox]):not([type=radio]) ~ label,
 .dg-input-wrap:has(select) textarea:focus:not([type=checkbox]):not([type=radio]) ~ label,
-.dg-input-wrap:has(select) textarea.has-value:not([type=checkbox]):not([type=radio]) ~ label, .dg-input-wrap:has(textarea) input:focus:not([type=checkbox]):not([type=radio]) ~ label, .dg-input-wrap:has(textarea) input.has-value:not([type=checkbox]):not([type=radio]) ~ label,
+.dg-input-wrap:has(select) textarea.has-value:not([type=checkbox]):not([type=radio]) ~ label, .dg-input-wrap:has(textarea) input.default-has-value:not([type=checkbox]):not([type=radio]) ~ label, .dg-input-wrap:has(textarea) input:focus:not([type=checkbox]):not([type=radio]) ~ label, .dg-input-wrap:has(textarea) input.has-value:not([type=checkbox]):not([type=radio]) ~ label,
+.dg-input-wrap:has(textarea) select.default-has-value:not([type=checkbox]):not([type=radio]) ~ label,
 .dg-input-wrap:has(textarea) select:focus:not([type=checkbox]):not([type=radio]) ~ label,
 .dg-input-wrap:has(textarea) select.has-value:not([type=checkbox]):not([type=radio]) ~ label,
+.dg-input-wrap:has(textarea) textarea.default-has-value:not([type=checkbox]):not([type=radio]) ~ label,
 .dg-input-wrap:has(textarea) textarea:focus:not([type=checkbox]):not([type=radio]) ~ label,
 .dg-input-wrap:has(textarea) textarea.has-value:not([type=checkbox]):not([type=radio]) ~ label {
-  transform: translateY(-1rem) scale(0.75);
-  top: 0.3rem;
+  transform: translateY(-1rem) scale(0.75) !important;
+  top: 0.3rem !important;
 }
 
 .custom-about-items-wrapper {
@@ -1298,8 +1312,10 @@ footer .copyright-wrapper > div > a:hover {
   width: 100%;
 }
 .custom-input-wrap .date-select {
-  min-width: 193px;
   flex: 1;
+}
+.custom-input-wrap .date-select label {
+  white-space: nowrap;
 }
 @media only screen and (max-width: 640px) {
   .custom-input-wrap .date-select {
@@ -1314,8 +1330,8 @@ footer .copyright-wrapper > div > a:hover {
   width: 100%;
 }
 .custom-input-wrap .fee-input {
-  min-width: 193px;
   flex: 1;
+  min-width: 148px;
 }
 @media only screen and (max-width: 640px) {
   .custom-input-wrap .fee-input {
@@ -1814,7 +1830,7 @@ footer .copyright-wrapper > div > a:hover {
   color: #637381;
 }
 .register-insurance-wrapper .register-insurance-container .register-form-content-wrapper .register-form-wrapper .content-form .upload-container .upload-text .description > span {
-  color: #1C0EC5;
+  color: #249748;
   text-decoration: underline;
   cursor: pointer;
 }
@@ -1932,6 +1948,27 @@ footer .copyright-wrapper > div > a:hover {
 .register-insurance-wrapper .register-insurance-container .register-form-content-wrapper .list-registered-wrapper .list-registered-container .list-registered-header {
   padding: 20px 0 20px 18px;
   border-bottom: 1px solid rgba(145, 158, 171, 0.2392156863);
+}
+.register-insurance-wrapper .register-insurance-container .register-form-content-wrapper .list-registered-wrapper .list-registered-container .list-wrapper {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.register-insurance-wrapper .register-insurance-container .register-form-content-wrapper .list-registered-wrapper .list-registered-container .list-wrapper .list-benefit-wrapper, .register-insurance-wrapper .register-insurance-container .register-form-content-wrapper .list-registered-wrapper .list-registered-container .list-wrapper .list-risk-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.register-insurance-wrapper .register-insurance-container .register-form-content-wrapper .list-registered-wrapper .list-registered-container .list-wrapper .list-benefit-wrapper .list-item, .register-insurance-wrapper .register-insurance-container .register-form-content-wrapper .list-registered-wrapper .list-registered-container .list-wrapper .list-risk-wrapper .list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.register-insurance-wrapper .register-insurance-container .register-form-content-wrapper .list-registered-wrapper .list-registered-container .list-wrapper .list-benefit-wrapper .list-item .item, .register-insurance-wrapper .register-insurance-container .register-form-content-wrapper .list-registered-wrapper .list-registered-container .list-wrapper .list-risk-wrapper .list-item .item {
+  display: flex;
+  gap: 16px;
+  align-items: center;
 }
 .register-insurance-wrapper .register-insurance-container .register-form-content-wrapper .list-registered-wrapper .list-registered-container .list-registered-content {
   padding: 24px;

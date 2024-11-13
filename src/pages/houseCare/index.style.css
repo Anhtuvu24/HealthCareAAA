@@ -1,0 +1,35 @@
+.package-select {
+    min-width: 296px !important;
+}
+
+.gender-select {
+    min-width: 148px !important;
+}
+
+@media only screen and (max-width: 640px) {
+    .package-select {
+        min-width: unset !important;
+    }
+    .gender-select {
+        min-width: unset !important;
+    }
+}
+
+.li-custom {
+    margin-bottom: unset !important;
+}
+
+.ul-second {
+    list-style-type: disc;
+    padding-left: 24px;
+    margin: 0;
+}
+
+.ul-second li:not(:last-child) {
+    text-align: justify;
+    margin-bottom: 16px;
+}
+
+.custom-about-items-wrapper .about-item {
+    max-width: unset;
+}

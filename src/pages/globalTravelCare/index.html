@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Du lịch toàn cầu</title>
     <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="./index.style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -84,7 +85,7 @@
                             </div>
                         </div>
 
-                        <div class="input-inner__container gender-select">
+                        <div class="input-inner__container package-select">
                             <div class="input-inner">
                                 <select required id="formObjectCoverage-1">
                                 </select>
@@ -136,6 +137,16 @@
                                       />
                                     </svg>
                                 </span>
+                            </div>
+                        </div>
+
+                        <div class="input-inner__container fee-input">
+                            <div class="input-inner">
+                                <input type="text" disabled readonly id="formObjectSumFee-1" />
+                                <label title="Tổng phí bảo hiểm">Tổng phí bảo hiểm</label>
+                                <div hidden class="help-text error" id="invalid_Fee-1">
+                                    <span>Số tiền bảo hiểm không đúng!</span>
+                                </div>
                             </div>
                         </div>
 
