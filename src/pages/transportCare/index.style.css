@@ -5,7 +5,7 @@
     max-width: 352px;
     border: 1px solid #919EAB52;
     border-radius: 8px;
-    padding: 8px;
+    padding: 12px 14px;
     display: flex;
     flex-wrap: nowrap;
     gap: 4px;
@@ -29,12 +29,23 @@ label {
 
 .tag {
     background-color: #F5F6F9;
-    padding: 4px 8px;
+    padding: 4px 10px 4px 8px;
     border-radius: 8px;
     font-size: 14px;
     display: flex;
     align-items: center;
     white-space: nowrap;
+    max-width: 100px;
+    min-width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tag-content {
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .tag .tag-close {
@@ -76,6 +87,10 @@ label {
     display: none; /* Ban đầu ẩn */
 }
 
+.dropdown-list.open {
+    display: block;
+}
+
 .dropdown-list li {
     padding: 12px 16px;
     cursor: pointer;
@@ -85,22 +100,7 @@ label {
     background-color: #f0f0f0;
 }
 
-.unique-dropdown.active .dropdown-list {
-    display: block; /* Hiển thị dropdown khi có class active */
-}
 
-.custom-list-checkbox li {
-    display: inline-flex;
-    padding: 12px 16px;
-    width: 100%;
-    justify-content: space-between;
-}
-input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
-    margin-right: 8px;
-    border: 1px solid #ddd; /* Thêm border để dễ dàng nhận biết */
-}
 
 /*Custom*/
 .banner-wrapper {

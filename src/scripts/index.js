@@ -502,6 +502,26 @@ window.addEventListener('load', () => {
   }
 });
 
+// Chọn các phần tử modal và nút đóng
+const modal = document.querySelector('.modal');
+const closeIcon = document.querySelector('.close-icon');
+
+// Hàm đóng modal
+function closeModal_1() {
+  modal.style.display = 'none';
+}
+
+// Sự kiện click vào modal để đóng khi click ngoài modal-content
+modal.addEventListener('click', (event) => {
+  // Kiểm tra nếu phần tử được click không phải là modal-content và không nằm bên trong modal-content
+  if (!event.target.closest('.modal-content')) {
+    closeModal_1();
+  }
+});
+
+// Sự kiện click vào icon close
+closeIcon.addEventListener('click', closeModal_1);
+
 
   // Scroll to sections
   const links = document.querySelectorAll("a:not([data-redirect])");

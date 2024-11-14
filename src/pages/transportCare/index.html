@@ -25,6 +25,33 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/vn.js"></script>
 </head>
 <body>
+    <div class="modal">
+        <div class="modal-content">
+            <div class="close-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <g opacity="0.64" clip-path="url(#clip0_473_2567)">
+                    <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="black"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_473_2567">
+                      <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+            </div>
+            <img src="../../assets/images/empty-image.svg"/>
+            <div class="modal-description">
+                <p class="sub-title-1-bold">Tiêu đề thông báo</p>
+                <p class="body-2">
+                    Lorem Ipsuis simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                </p>
+            </div>
+            <div class="group-btn-modal">
+                <button class="primary-btn">Action 1</button>
+                <button class="default-btn">Action 2</button>
+            </div>
+        </div>
+    </div>
     <header>
         <div class="header-wrapper">
             <img src="../../assets/images/logo-aaa.svg">
@@ -417,8 +444,8 @@
 
                             <div class="dg-input-wrap">
                                 <div class="input-inner__container">
-                                    <div class="tag-selector">
-                                        <div class="tag-container">
+                                    <div id="dk_main" class="tag-selector">
+                                        <div id="dg_ls_dk_main_select" class="tag-container">
                                             <!-- Các tag sẽ được thêm vào đây khi người dùng chọn -->
                                         </div>
                                         <input type="text" class="tag-input default-has-value" value="" placeholder="Chọn" autocomplete="off">
@@ -434,16 +461,18 @@
                                     </div>
                                 </div>
                                 <div class="input-inner__container">
-                                    <div class="unique-dropdown tag-selector">
-                                        <div class="input-inner">
-                                            <label class="title-note" title="Rủi ro">Rủi ro</label>
-                                            <span class="dropdown-icon">
+                                    <div id="rr" class="tag-selector unique-dropdown">
+                                        <div id="dg_ls_dk_rr_select" class="tag-container">
+                                            <!-- Các tag sẽ được thêm vào đây khi người dùng chọn -->
+                                        </div>
+                                        <input type="text" class="tag-input default-has-value" value="" placeholder="Rủi ro" autocomplete="off">
+                                        <span class="dropdown-icon">
                                             <!-- Biểu tượng dropdown -->
                                             <svg width="14" height="7" viewBox="0 0 15 8" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                              <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z" fill="currentColor"></path>
+                                                <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z" fill="currentColor"></path>
                                             </svg>
                                         </span>
-                                        </div>
+                                        <label class="title-note" title="Rủi ro">Rủi ro</label>
                                         <ul id="dg_ls_rr" class="dropdown-list custom-list-checkbox">
                                             <li>
                                                 <p>Rủi ro 001</p>
@@ -453,26 +482,26 @@
                                                 <p>Rủi ro 002</p>
                                                 <input style="appearance: auto" type="checkbox" name="risk" value="Rủi ro 002" />
                                             </li>
-
                                             <!-- Thêm các mục tùy chọn khác -->
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="input-inner__container">
-                                    <div class="input-inner">
-                                        <select name="loai-nha" id="dkbs">
-                                        </select>
-                                        <label class="title-note" title="Điều khoản bổ sung">Điều khoản bổ sung</label>
-                                        <span class="input-icon">
-                                            <svg width="14"
-                                                 height="7"
-                                                 viewBox="0 0 15 8"
-                                                 fill="currentColor"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
-                                                      fill="currentColor"></path>
+                                    <div id="dk_bs" class="tag-selector">
+                                        <div id="dkbs_select" class="tag-container">
+                                            <!-- Các tag sẽ được thêm vào đây khi người dùng chọn -->
+                                        </div>
+                                        <input type="text" class="tag-input default-has-value" value="" placeholder="Chọn" autocomplete="off">
+                                        <span class="dropdown-icon">
+                                            <!-- Biểu tượng dropdown -->
+                                            <svg width="14" height="7" viewBox="0 0 15 8" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z" fill="currentColor"></path>
                                             </svg>
                                         </span>
+                                        <label class="title-note" title="Điều khoản bổ sung">Điều khoản bổ sung</label>
+                                        <ul id="dkbs_list" class="dropdown-list">
+                                            <!-- Các mục chọn của dropdown sẽ thêm vào đây khi cần -->
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
