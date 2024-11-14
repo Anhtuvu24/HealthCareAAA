@@ -368,7 +368,8 @@ document.querySelectorAll("input[type='date']:not(.dob)").forEach(input => {
 
 document.querySelectorAll("input[type='date'].dob").forEach(input => {
   flatpickr(input, {
-    locale: "vn"
+    locale: "vn",
+    maxDate: "today",
   });
 });
 
