@@ -14,3 +14,26 @@
         min-width: unset !important;
     }
 }
+
+.header-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.group-btn {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.group-btn div {
+    color: #212B36;
+    display: flex;
+    gap: 8px;
+}
+
+.group-btn div p:hover {
+    color: #000;
+    cursor: pointer;
+}

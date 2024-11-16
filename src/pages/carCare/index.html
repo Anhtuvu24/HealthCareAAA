@@ -44,7 +44,7 @@
                     <a href="#tra-cuu" rel="noopener noreferrer">Tra cứu</a>
                 </li>
                 <li>
-                    <button>Bảo lãnh viện phí</button>
+                    <button class="primary-btn">Bảo lãnh viện phí</button>
                 </li>
             </ul>
         </nav>
@@ -322,7 +322,7 @@
                             <div class="upload-container" id="uploadContainer">
                                 <input type="file" id="fileInput" class="file-input" accept="image/*" hidden />
                                 <div class="upload-icon" id="uploadIcon">
-                                    <img src="../../assets/images/upload-image1.svg" alt="Upload Icon" />
+                                    <img src="../../assets/images/upload-image-car.svg" alt="Upload Icon" />
                                 </div>
                                 <div class="upload-text" id="uploadText">
                                     <p class="title sub-title-1">Giấy chứng nhận đăng ký xe<br/>
@@ -587,12 +587,6 @@
                                     Bảo hiểm TNDS Bắt buộc về người và tài sản
                                 </label>
                             </div>
-                            <div class="bonus-interest-item body-2">
-                                <input type="checkbox" id="formObjectCheckBBTaiSan_temp" />
-                                <label for="formObjectCheckBBTaiSan_temp" title="Bảo hiểm TNDS Bắt buộc về tài sản">
-                                    Bảo hiểm TNDS Bắt buộc về tài sản
-                                </label>
-                            </div>
 
                             <div class="dg-input-wrap">
                                 <div class="input-inner__container">
@@ -630,6 +624,13 @@
                                         <span>Số tiền bảo hiểm không đúng!</span>
                                     </div>
                                 </div>
+                            </div>
+
+                            <div class="bonus-interest-item body-2">
+                                <input type="checkbox" id="formObjectCheckBBTaiSan_temp" />
+                                <label for="formObjectCheckBBTaiSan_temp" title="Bảo hiểm TNDS Bắt buộc về tài sản">
+                                    Bảo hiểm tai nạn LPX và Người ngồi trên xe
+                                </label>
                             </div>
 
                             <div class="info-package-wrapper">
@@ -700,7 +701,7 @@
                                 </div>
                             </div>
 
-                            <div class="btn-groups">
+                            <div class="btn-groups only-button">
                                 <button class="primary-btn button">
                                     Tiếp tục
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
@@ -714,9 +715,11 @@
                                         </defs>
                                     </svg>
                                 </button>
+                                <div class="transparent-div"></div>
+                                <div class="transparent-div"></div>
                             </div>
 
-                            <p class="body-2 note">Lưu ý: Đối với xe mới chưa có biển số xe, Quý khách vui lòng nhập đủ số khung và số máy</p>
+                            <p class="body-2 note"><span class="note-text bold">Lưu ý</span>: Đối với xe mới chưa có biển số xe, Quý khách vui lòng nhập đủ số khung và số máy</p>
                         </div>
                     </div>
                 </div>

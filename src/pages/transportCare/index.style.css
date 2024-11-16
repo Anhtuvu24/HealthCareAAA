@@ -1,8 +1,20 @@
+.custom-input-wrap-transport {
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.input-inner__container {
+    max-width: 100%;
+}
+.tag-wrapper {
+    max-width: 100%;
+}
+
 .tag-selector {
     position: relative;
-    width: 100%;
+    width: auto;
     height: 100%;
-    max-width: 352px;
+    max-width: 100%;
+    min-width: 352px;
     border: 1px solid #919EAB52;
     border-radius: 8px;
     padding: 12px 14px;
@@ -10,6 +22,13 @@
     flex-wrap: nowrap;
     gap: 4px;
 }
+
+@media only screen and (max-width: 640px) {
+    .tag-selector {
+        min-width: unset;
+    }
+}
+
 .tag-container {
     display: flex;
     flex-wrap: nowrap;

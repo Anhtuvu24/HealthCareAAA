@@ -177,6 +177,7 @@
         }
 
         &:hover {
+          scale: 1.01;
           cursor: pointer;
           box-shadow: 0px 0px 2px 0px rgba(145, 158, 171, 0.20), 0px 12px 24px -4px rgba(145, 158, 171, 0.12);
         }
@@ -358,6 +359,7 @@
       h4 {
         color: $primary-color;
         margin-bottom: 8px;
+        text-transform: uppercase;
       }
       p {
         color: $text-color;
@@ -388,6 +390,7 @@
         gap: 32px;
         transition: all 0.3s ease;
         &:hover {
+          scale: 1.01;
           box-shadow: 0px 0px 2px 0px rgba(145, 158, 171, 0.20), 0px 12px 24px -4px rgba(145, 158, 171, 0.12);
         }
         .icon-box {
@@ -582,6 +585,8 @@
               align-items: center;
               gap: 8px;
               p {
+                font-size: 14px;
+                font-family: "Open Sans";
                 color: $primary-color;
               }
             }
@@ -731,7 +736,45 @@
           }
         }
       }
-
+    }
+    .custom-register-form-content-wrapper {
+      .register-form-wrapper {
+        box-shadow: 0px 0px 2px 0px rgba(145, 158, 171, 0.20), 0px 12px 24px -4px rgba(145, 158, 171, 0.12);
+      }
+      .custom-order-wrapper {
+        flex: 1;
+        display: flex;
+        gap: 24px;
+        flex-direction: column;
+        font-family: "Open Sans";
+        .list-registered-container {
+          box-shadow: 0px 0px 2px 0px rgba(145, 158, 171, 0.20), 0px 12px 24px -4px rgba(145, 158, 171, 0.12);
+        }
+        .accept-content {
+          display: flex;
+          width: 100%;
+          .accept-description {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+          }
+        }
+        .btn-groups-custom {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          button {
+            width: 100%;
+            padding: 11px 22px;
+            &:first-child {
+              color: $white-color;
+            }
+            &:last-child {
+              color: $text-color;
+            }
+          }
+        }
+      }
     }
   }
 }

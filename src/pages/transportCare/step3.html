@@ -25,33 +25,33 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/vn.js"></script>
 </head>
 <body>
-    <div class="modal">
-        <div class="modal-content">
-            <div class="close-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <g opacity="0.64" clip-path="url(#clip0_473_2567)">
-                    <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="black"/>
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_473_2567">
-                      <rect width="24" height="24" fill="white"/>
-                    </clipPath>
-                  </defs>
-                </svg>
-            </div>
-            <img src="../../assets/images/empty-image.svg"/>
-            <div class="modal-description">
-                <p class="sub-title-1-bold">Tiêu đề thông báo</p>
-                <p class="body-2">
-                    Lorem Ipsuis simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                </p>
-            </div>
-            <div class="group-btn-modal">
-                <button class="primary-btn">Action 1</button>
-                <button class="default-btn">Action 2</button>
-            </div>
-        </div>
-    </div>
+<!--    <div class="modal">-->
+<!--        <div class="modal-content">-->
+<!--            <div class="close-icon">-->
+<!--                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">-->
+<!--                  <g opacity="0.64" clip-path="url(#clip0_473_2567)">-->
+<!--                    <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="black"/>-->
+<!--                  </g>-->
+<!--                  <defs>-->
+<!--                    <clipPath id="clip0_473_2567">-->
+<!--                      <rect width="24" height="24" fill="white"/>-->
+<!--                    </clipPath>-->
+<!--                  </defs>-->
+<!--                </svg>-->
+<!--            </div>-->
+<!--            <img src="../../assets/images/empty-image.svg"/>-->
+<!--            <div class="modal-description">-->
+<!--                <p class="sub-title-1-bold">Tiêu đề thông báo</p>-->
+<!--                <p class="body-2">-->
+<!--                    Lorem Ipsuis simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.-->
+<!--                </p>-->
+<!--            </div>-->
+<!--            <div class="group-btn-modal">-->
+<!--                <button class="primary-btn">Action 1</button>-->
+<!--                <button class="default-btn">Action 2</button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
     <header>
         <div class="header-wrapper">
             <img src="../../assets/images/logo-aaa.svg">
@@ -190,18 +190,20 @@
         <section class="register-insurance-wrapper" id="goi-bao-hiem">
             <div class="register-insurance-container">
                 <h4 class="bold">ĐĂNG KÝ MUA BẢO HIỂM</h4>
-                <div class="register-form-content-wrapper">
+                <div class="register-form-content-wrapper custom-register-form-content-wrapper">
                     <div class="register-form-wrapper">
                         <div class="header-form">
-                            <p class="sub-title-1-bold">Thông tin xe</p>
+                            <p class="sub-title-1-bold">Thông tin người mua</p>
                         </div>
                         <div class="content-form">
                             <div class="dg-input-wrap">
                                 <div class="input-inner__container">
                                     <div class="input-inner">
-                                        <select name="dr-package-code" class="dr-package-code" required id="formObjectPackageCode">
+                                        <select required id="formObjectSelectIndividual" class="has-value" onchange="selectDuration(this)">
+                                            <option value="2">Cá nhân</option>
+                                            <option value="1">Tổ chức</option>
                                         </select>
-                                        <label title="Gói bảo hiểm" class="title-note">Gói bảo hiểm</label>
+                                        <label title="Khách hàng là">Khách hàng là</label>
                                         <span class="input-icon">
                                             <svg width="14"
                                                  height="7"
@@ -216,40 +218,74 @@
                                 </div>
                                 <div class="input-inner__container">
                                     <div class="input-inner">
-                                        <select name="loai-nha" id="formObjectCurrency">
+                                        <input onfocusout="getCustormerByIdentifyHouse()" type="text" id="custormerIdentification" required />
+                                        <label class="title-note" title="Số CMT/CCCD">Số CMT/CCCD</label>
+                                    </div>
+                                    <div hidden class="help-text error" id="invalid_custormerIdentification">
+                                        <span>Bạn chưa nhập số CMT/CCCD!</span>
+                                    </div>
+                                </div>
+                            </div>
 
-                                        </select>
-                                        <label class="title-note" title="Nguyên tệ">Nguyên tệ</label>
+                            <div class="dg-input-wrap">
+                                <div class="input-inner__container">
+                                    <div class="input-inner">
+                                        <input type="text" required id="custormerName" />
+                                        <label class="title-note" title="Họ tên">Họ tên</label>
+                                    </div>
+                                    <div hidden class="help-text error" id="invalid_custormerName">
+                                        <span>Bạn chưa nhập họ tên!</span>
+                                    </div>
+                                </div>
+                                <div class="input-inner__container">
+                                    <div class="input-inner">
+                                        <input type="date" class="birthdaypicker dob" required id="custormerBirthday" />
+                                        <label class="title-note" title="Ngày sinh">Ngày sinh</label>
                                         <span class="input-icon">
-                                            <svg width="14"
-                                                 height="7"
-                                                 viewBox="0 0 15 8"
+                                            <svg width="18"
+                                                 height="20"
+                                                 viewBox="0 0 18 20"
                                                  fill="currentColor"
                                                  xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
-                                                      fill="currentColor"></path>
+                                                <path d="M16 2H15V0H13V2H5V0H3V2H2C0.89 2 0 2.9 0 4V18C0 19.1 0.89 20 2 20H16C17.1 20 18 19.1 18 18V4C18 2.9 17.1 2 16 2ZM16 18H2V8H16V18ZM16 6H2V4H16V6ZM4 10H9V15H4V10Z"
+                                                      fill="#637381" />
                                             </svg>
                                         </span>
                                     </div>
+                                    <div hidden class="help-text error" id="invalid_custormerBirthday">
+                                        <span>Bạn chưa nhập ngày sinh!</span>
+                                    </div>
                                 </div>
+                            </div>
+
+                            <div class="dg-input-wrap">
                                 <div class="input-inner__container">
-                                    <div class="input-inner">
-                                        <select name="loai-nha" required id="formObjectCSDGType">
-                                            <option value=1 checked>100% CFR</option>
-                                            <option value=2>110% CFR</option>
-                                            <option value=3>100% CIF</option>
+                                    <div class="input-inner" id="GenderCustormer">
+                                        <select id="custormerGender" required class="has-value">
+                                            <option value="1" checked>Nam</option>
+                                            <option value="2">Nữ</option>
                                         </select>
-                                        <label class="title-note" title="Cơ sở định giá">Cơ sở định giá</label>
+                                        <label class="title-note" title="Giới tính">Giới tính</label>
                                         <span class="input-icon">
-                                            <svg width="14"
-                                                 height="7"
-                                                 viewBox="0 0 15 8"
-                                                 fill="currentColor"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
-                                                      fill="currentColor"></path>
-                                            </svg>
-                                        </span>
+                                                <svg width="14"
+                                                     height="7"
+                                                     viewBox="0 0 15 8"
+                                                     fill="currentColor"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
+                                                          fill="currentColor"></path>
+                                                </svg>
+                                            </span>
+                                    </div>
+                                </div>
+
+                                <div class="input-inner__container">
+                                    <div class="input-inner" id="autocomplete-address-wrapper">
+                                        <input type="text" required id="custormerAddressName" autocomplete="off" />
+                                        <label class="title-note" title="Địa chỉ">Địa chỉ</label>
+                                    </div>
+                                    <div hidden class="help-text error" id="invalid_custormerAddressName">
+                                        <span>Bạn chưa nhập địa chỉ!</span>
                                     </div>
                                 </div>
                             </div>
@@ -257,289 +293,129 @@
                             <div class="dg-input-wrap">
                                 <div class="input-inner__container">
                                     <div class="input-inner">
-                                        <input type="text" onfocus="onFocusGoodsGroup()" required id="formObjectGoodsCode" />
-                                        <label class="title-note" title="Nhóm hàng">Nhóm hàng</label>
+                                        <input type="text" required Email id="custormerEmail" />
+                                        <label class="title-note" title="Email">Email</label>
                                     </div>
-
-                                    <div hidden class="help-text error" id="invalid_formObjectGoodsCode">
-                                        <span>Bạn chưa chọn Nhóm!</span>
-                                    </div>
-                                </div>
-                                <div class="input-inner__container">
-                                    <div class="input-inner">
-                                        <input type="text" required id="formObjectGoodsName" />
-                                        <label class="title-note" title="Tên hàng hóa">Tên hàng hóa</label>
-                                    </div>
-
-                                    <div hidden class="help-text error" id="invalid_formObjectGoodsName">
-                                        <span>Bạn chưa nhập Tên hàng hóa!</span>
+                                    <div hidden class="help-text error" id="invalid_custormerEmail">
+                                        <span>Bạn chưa nhập Email!</span>
                                     </div>
                                 </div>
 
                                 <div class="input-inner__container">
                                     <div class="input-inner">
-                                        <select class="has-value" name="kieu-so-huu" id="formObjectTripNumber">
-                                            <option value=0 checked>1 Chuyến</option>
-                                            <option value=1>Nhiều chuyến </option>
-                                        </select>
-                                        <label class="title-note" title="Số lần giao hàng">Số lần giao hàng</label>
-                                        <span class="input-icon">
-                                         <svg width="14"
-                                              height="7"
-                                              viewBox="0 0 15 8"
-                                              fill="currentColor"
-                                              xmlns="http://www.w3.org/2000/svg">
-                                              <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
-                                                      fill="currentColor"></path>
-                                            </svg>
-                                        </span>
+                                        <input type="text" required Phone id="custormerPhone" />
+                                        <label class="title-note" title="Số điện thoại">Số điện thoại</label>
+                                    </div>
+                                    <div hidden class="help-text error" id="invalid_custormerPhone">
+                                        <span>Bạn chưa nhập số điện thoại!</span>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="dg-input-wrap">
                                 <div class="input-inner__container">
-                                    <div class="input-inner">
-                                        <select class="has-value" name="md-sd" id="formObjectConvey">
-                                            <option value=0 checked>Không</option>
-                                            <option value=1>Có</option>
-                                        </select>
-                                        <label class="title-note" title="Chuyển tải">Chuyển tải</label>
-                                        <span class="input-icon">
-                                            <svg width="14"
-                                                 height="7"
-                                                 viewBox="0 0 15 8"
-                                                 fill="currentColor"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
-                                                      fill="currentColor"></path>
-                                            </svg>
-                                        </span>
+                                    <div class="input-inner" id="autocomplete-wrapper">
+                                        <input type="text" required id="custormerAddressCities" autocomplete="off" />
+                                        <label class="title-note" title="Địa chỉ">Tỉnh/Thành phố</label>
+                                    </div>
+                                    <div hidden class="help-text error" id="invalid_custormerAddressCities">
+                                        <span>Bạn chưa nhập địa chỉ!</span>
                                     </div>
                                 </div>
 
                                 <div class="input-inner__container">
-                                    <div class="input-inner">
-                                        <select class="has-value" name="md-sd" required id="formObjectVChuyenType">
-                                            <option value=1 checked>Đường sông</option>
-                                            <option value=2>Đường sắt</option>
-                                        </select>
-                                        <label class="title-note" title="Hình thức vận chuyển ">Hình thức vận chuyển</label>
-                                        <span class="input-icon">
-                                            <svg width="14"
-                                                 height="7"
-                                                 viewBox="0 0 15 8"
-                                                 fill="currentColor"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
-                                                      fill="currentColor"></path>
-                                            </svg>
-                                        </span>
+                                    <div class="input-inner" id="autocomplete-district-wrapper">
+                                        <input type="text" required id="custormerAddressDistricts" autocomplete="off" />
+                                        <label class="title-note" title="Địa chỉ">Quận/Huyện</label>
                                     </div>
-                                </div>
-
-                                <div class="input-inner__container">
-                                    <div class="input-inner">
-                                        <select id="formObjectPackingType" class="has-value">
-                                            <option value="1" checked>Container</option>
-                                            <option value="2">Đóng kiện</option>
-                                        </select>
-                                        <label class="title-note" title="Phương thức đóng gói">Phương thức đóng gói</label>
-                                        <span class="input-icon">
-                                            <svg width="14"
-                                                 height="7"
-                                                 viewBox="0 0 15 8"
-                                                 fill="currentColor"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z"
-                                                      fill="currentColor"></path>
-                                            </svg>
-                                        </span>
+                                    <div hidden class="help-text error" id="invalid_custormerAddressDistricts">
+                                        <span>Bạn chưa nhập địa chỉ!</span>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="dg-input-wrap">
                                 <div class="input-inner__container">
-                                    <div class="input-inner">
-                                        <input type="text" data-type="currency" id="formObjectWeightOrQuantity" required onfocusout="calcuTotalCost()" />
-                                        <label title="Trọng tải/Số lượng" class="title-note">Trọng tải/Số lượng</label>
+                                    <div class="input-inner" id="autocomplete-ward-wrapper">
+                                        <input type="text" required id="custormerAddressWards" autocomplete="off" />
+                                        <label class="title-note" title="Địa chỉ">Xã/Phường</label>
                                     </div>
-                                    <div hidden class="help-text error" id="invalid_formObjectWeightOrQuantity">
-                                        <span>Bạn chưa nhập Trọng tải/Số lượng!</span>
-                                    </div>
-                                </div>
-
-                                <div class="input-inner__container">
-                                    <div class="input-inner">
-                                        <input type="text" id="formObjectUnitOfcalculation" />
-                                        <label class="title-note" title="Đơn vị tính">Đơn vị tính</label>
-                                    </div>
-                                    <div hidden class="help-text error" id="invalid_formObjectUnitOfcalculation">
-                                        <span>Bạn chưa nhập Đơn vị tính!</span>
+                                    <div hidden class="help-text error" id="invalid_custormerAddressWards">
+                                        <span>Bạn chưa nhập địa chỉ!</span>
                                     </div>
                                 </div>
-
                                 <div class="input-inner__container">
                                     <div class="input-inner">
-                                        <input type="text" data-type="currency" id="formObjectPrice" onfocusout="calcuTotalCost()" />
-                                        <label class="title-note" id="lbl_gia_thanh" title="Giá thành">Giá thành</label>
-                                    </div>
-
-                                    <div hidden class="help-text error" id="invalid_formObjectPrice">
-                                        <span>Bạn chưa nhập Giá thành!</span>
+                                        <input type="text" id="custormerNote" />
+                                        <label class="title-note" title="Ghi chú">Ghi chú</label>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="dg-input-wrap">
-                                <div class="input-inner__container">
-                                    <div class="input-inner">
-                                        <input type="text" readonly disabled data-type="currency" id="formObjectTotalCost" />
-                                        <label class="title-note" id="lbl_tong_tien_hang" title="Tổng tiền hàng">Tổng tiền hàng</label>
-                                    </div>
-
-                                    <div hidden class="help-text error" id="invalid_formObjectTotalCost">
-                                        <span>Bạn chưa nhập Tổng tiền hàng!</span>
-                                    </div>
+                            <div class="upload-container" id="uploadContainer">
+                                <input type="file" id="fileInput" class="file-input" accept="image/*" hidden />
+                                <div class="upload-icon" id="uploadIcon">
+                                    <img src="../../assets/images/upload-image1.svg" alt="Upload Icon" />
                                 </div>
-
-                                <div class="input-inner__container">
-                                    <div class="input-inner">
-                                        <input type="text" data-type="currency" id="formObjectFees" onfocusout="caculatorFeeCargoPackage()" />
-                                        <label class="title-note" id="lbl_cuoi_phi" title="Cước phí">Cước phí</label>
-                                    </div>
-                                </div>
-
-                                <div class="input-inner__container">
-                                    <div class="input-inner">
-                                        <input type="text" disabled data-type="currency" id="formObjectTiGia" />
-                                        <label class="title-note" title="Tỉ giá">Tỉ giá</label>
-                                    </div>
-
-                                    <div hidden class="help-text error" id="invalid_formObjectTiGia">
-                                        <span>Bạn chưa nhập Tỉ giá!</span>
-                                    </div>
+                                <div class="upload-text" id="uploadText">
+                                    <p class="title sub-title-1">
+                                        Tệp đính kèm<br/>
+                                        <span style="font-size: 12px; font-style: italic; color: #919EAB">(Hợp đồng mua bán, hóa đơn, packining list, ...)</span>
+                                    </p>
+                                    <p class="description body-2">
+                                        Thả ảnh vào đây hoặc <span id="uploadLink" class="upload-link">Tải lên</span> từ thiết bị của bạn để nhập thông tin nhanh.
+                                    </p>
                                 </div>
                             </div>
-
-                            <div class="dg-input-wrap">
-                                <div class="input-inner__container">
-                                    <div class="input-inner">
-                                        <input type="text" disabled id="formObjectRateFee" />
-                                        <label class="title-note" title="Tỉ lệ phí">Tỉ lệ phí</label>
+                        </div>
+                    </div>
+                    <div class="list-registered-wrapper custom-order-wrapper">
+                        <div class="list-registered-container">
+                            <div class="list-registered-header">
+                                <h6 class="bold">Thông tin đơn hàng</h6>
+                            </div>
+                            <div class="list-registered-content">
+                                <div class="infos-order">
+                                    <div class="info-order-item">
+                                        <p class="body-2">Gói bảo hiểm</p>
+                                        <p class="body-1">Bảo hiểm hàng hóa Xuất nhập khẩu</p>
                                     </div>
-                                </div>
-                                <div class="input-inner__container">
-
-                                </div>
-                                <div class="input-inner__container">
-
+                                    <div class="info-order-item">
+                                        <p class="body-2">Tên hàng hóa</p>
+                                        <p class="body-1">Hàng hóa đông lạnh</p>
+                                    </div>
+                                    <div class="info-order-item">
+                                        <p class="body-2">Vận chuyển</p>
+                                        <p class="body-1">Đường hiển</p>
+                                    </div>
+                                    <div class="info-order-item">
+                                        <p class="body-2">Tổng tiền hàng</p>
+                                        <p class="body-1">1,000,000,000 vnđ</p>
+                                    </div>
+                                    <div class="info-order-item">
+                                        <p class="body-2">Phí vận chuyển</p>
+                                        <p class="body-1">50,000,000 vnđ</p>
+                                    </div>
+                                    <p class="body-2 italic">Xem giấy yêu cầu (Bản nháp)</p>
                                 </div>
                             </div>
-
-                            <div class="info-package-wrapper">
-                                <p class="sub-title-1-bold">Thông tin điều khoản</p>
+                        </div>
+                        <div class="accept-content">
+                            <div>
+                                <input type="checkbox" id="paymentCheck">
                             </div>
-
-                            <div class="dg-input-wrap custom-input-wrap-transport">
-                                <div class="input-inner__container">
-                                    <div class="tag-wrapper">
-                                        <div id="dk_main" class="tag-selector">
-                                            <div id="dg_ls_dk_main_select" class="tag-container">
-                                                <!-- Các tag sẽ được thêm vào đây khi người dùng chọn -->
-                                            </div>
-                                            <input type="text" class="tag-input default-has-value" value="" placeholder="Chọn" autocomplete="off">
-                                            <span class="dropdown-icon">
-                                            <!-- Biểu tượng dropdown -->
-                                            <svg width="14" height="7" viewBox="0 0 15 8" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                              <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z" fill="currentColor"></path>
-                                            </svg>
-                                        </span>
-                                            <label class="title-note">Điều khoản chính</label>
-                                            <ul id="dg_ls_dk_main" class="dropdown-list">
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="input-inner__container">
-                                    <div id="rr" class="tag-selector unique-dropdown">
-                                        <div id="dg_ls_dk_rr_select" class="tag-container">
-                                            <!-- Các tag sẽ được thêm vào đây khi người dùng chọn -->
-                                        </div>
-                                        <input type="text" class="tag-input default-has-value" value="" placeholder="Rủi ro" autocomplete="off">
-                                        <span class="dropdown-icon">
-                                            <!-- Biểu tượng dropdown -->
-                                            <svg width="14" height="7" viewBox="0 0 15 8" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z" fill="currentColor"></path>
-                                            </svg>
-                                        </span>
-                                        <label class="title-note" title="Rủi ro">Rủi ro</label>
-                                        <ul id="dg_ls_rr" class="dropdown-list custom-list-checkbox">
-                                            <li>
-                                                <p>Rủi ro 001</p>
-                                                <input style="appearance: auto" type="checkbox" name="risk" value="Rủi ro 001" />
-                                            </li>
-                                            <li>
-                                                <p>Rủi ro 002</p>
-                                                <input style="appearance: auto" type="checkbox" name="risk" value="Rủi ro 002" />
-                                            </li>
-                                            <!-- Thêm các mục tùy chọn khác -->
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="input-inner__container">
-                                    <div id="dk_bs" class="tag-selector">
-                                        <div id="dkbs_select" class="tag-container">
-                                            <!-- Các tag sẽ được thêm vào đây khi người dùng chọn -->
-                                        </div>
-                                        <input type="text" class="tag-input default-has-value" value="" placeholder="Chọn" autocomplete="off">
-                                        <span class="dropdown-icon">
-                                            <!-- Biểu tượng dropdown -->
-                                            <svg width="14" height="7" viewBox="0 0 15 8" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.0003 7.50128C6.76665 7.50173 6.54021 7.42036 6.3603 7.27128L0.360298 2.27128C-0.0649608 1.91781 -0.123164 1.28653 0.230298 0.861275C0.583761 0.436016 1.21504 0.377813 1.6403 0.731275L7.0003 5.21128L12.3603 0.891275C12.5669 0.723505 12.8318 0.645006 13.0965 0.673159C13.3611 0.701313 13.6036 0.833795 13.7703 1.04128C13.9554 1.24913 14.0456 1.52475 14.019 1.80183C13.9924 2.07892 13.8516 2.33238 13.6303 2.50128L7.6303 7.33127C7.44521 7.45679 7.2234 7.51665 7.0003 7.50128Z" fill="currentColor"></path>
-                                            </svg>
-                                        </span>
-                                        <label class="title-note" title="Điều khoản bổ sung">Điều khoản bổ sung</label>
-                                        <ul id="dkbs_list" class="dropdown-list">
-                                            <!-- Các mục chọn của dropdown sẽ thêm vào đây khi cần -->
-                                        </ul>
-                                    </div>
-                                </div>
+                            <div class="accept-description">
+                                <p class="body-2">
+                                    Tôi cam kết đã cung cấp đầy đủ, trung thực thông tin liên quan đến đối tượng bảo hiểm cho Tổng Công ty Cổ phần Bảo hiểm AAA ("Bảo hiểm AAA") theo quy định pháp luật kinh doanh bảo hiểm.
+                                </p>
+                                <p class="body-2">
+                                    Tôi xác nhận đã đọc đầy đủ, hiểu rõ các nội dung về <span>Quy tắc/ điều khoản bảo hiểm </span> và đồng ý chấp thuận Bảo hiểm AAA được phép quản lý và sử dụng dữ liệu cá nhân tuân thủ quy định pháp luật hiện hành.
+                                </p>
                             </div>
-
-                            <div class="dg-input-wrap">
-                                <div class="input-inner__container">
-                                    <div class="input-inner">
-                                        <input type="text" disabled id="totalFeeEcargo" />
-                                        <label class="title-note" title="Tổng phí bảo hiểm">Tổng phí bảo hiểm</label>
-                                    </div>
-                                </div>
-                                <div class="input-inner__container">
-
-                                </div>
-                                <div class="input-inner__container">
-
-                                </div>
-                            </div>
-
-                            <div class="btn-groups only-button">
-                                <button class="primary-btn button">
-                                    Tiếp tục
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                                        <g clip-path="url(#clip0_268_2174)">
-                                            <path d="M10.4998 6L9.08984 7.41L13.6698 12L9.08984 16.59L10.4998 18L16.4998 12L10.4998 6Z" fill="#E8EAED"/>
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_268_2174">
-                                                <rect width="24" height="24" fill="white" transform="translate(0.5)"/>
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                </button>
-                                <div class="transparent-div"></div>
-                                <div class="transparent-div"></div>
-                            </div>
+                        </div>
+                        <div class="btn-groups-custom">
+                            <button class="primary-btn" id="submitButton" disabled>Gửi thông tin</button>
+                            <button class="default-btn">Quay lại</button>
                         </div>
                     </div>
                 </div>

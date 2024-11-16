@@ -1,6 +1,6 @@
 // Danh sách điều khoản theo id
 const dropdownOptionsById = {
-    'dk_main': ['Option A1 long long long', 'Option B1', 'Option C1', 'Option D1'],
+    'dk_main': ['Option A1 long long long', 'Option B1 long', 'Option B1 lon', 'Option B1 lon', 'Option B1 lng', 'Option C1', 'Option D1'],
     'rr': ['Option A2', 'Option B2', 'Option C2', 'Option D2'],
     'dk_bs': ['Option A3', 'Option B3', 'Option C3', 'Option D3'],
 };
@@ -89,5 +89,38 @@ tagSelectors.forEach((tagSelector) => {
         selectedTags = selectedTags.filter(tag => tag !== value);
         tagElement.remove();
         updateDropdown();
+    }
+});
+
+// Khởi tạo flatpickr cho formCaculatorTravelStartday
+const startDateInput1 = flatpickr("#formObjectStartDate", {
+    dateFormat: "Y-m-d",
+    locale: "vn",
+    minDate: "today",
+    onChange: function(selectedDates) {
+        if (selectedDates.length > 0) {
+            exitDateInput1.set("minDate", selectedDates[0]);
+        }
+    }
+});
+
+const exitDateInput1 = flatpickr("#formObjectExpireDate", {
+    dateFormat: "Y-m-d",
+    locale: "vn",
+    minDate: "today"
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const checkbox = document.getElementById("paymentCheck");
+    const submitButton = document.getElementById("submitButton");
+    if (checkbox && submitButton) {
+        // Lắng nghe sự kiện thay đổi trạng thái checkbox
+        checkbox.addEventListener("change", () => {
+            if (checkbox.checked) {
+                submitButton.disabled = false; // Bật nút "Gửi thông tin"
+            } else {
+                submitButton.disabled = true; // Tắt nút "Gửi thông tin"
+            }
+        });
     }
 });
