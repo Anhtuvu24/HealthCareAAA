@@ -757,6 +757,15 @@
             display: flex;
             flex-direction: column;
             gap: 8px;
+            p {
+              span {
+                color: $primary-color;
+                &:hover {
+                  cursor: pointer;
+                  text-decoration: underline;
+                }
+              }
+            }
           }
         }
         .btn-groups-custom {

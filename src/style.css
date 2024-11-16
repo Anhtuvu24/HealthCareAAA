@@ -2152,6 +2152,13 @@ footer .copyright-wrapper > div > a:hover {
   flex-direction: column;
   gap: 8px;
 }
+.register-insurance-wrapper .register-insurance-container .custom-register-form-content-wrapper .custom-order-wrapper .accept-content .accept-description p span {
+  color: #249748;
+}
+.register-insurance-wrapper .register-insurance-container .custom-register-form-content-wrapper .custom-order-wrapper .accept-content .accept-description p span:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
 .register-insurance-wrapper .register-insurance-container .custom-register-form-content-wrapper .custom-order-wrapper .btn-groups-custom {
   display: flex;
   flex-direction: column;
