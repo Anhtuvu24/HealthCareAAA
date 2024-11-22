@@ -920,26 +920,26 @@ const uploadLink = document.getElementById('uploadLink');
 const uploadIcon = document.getElementById('uploadIcon');
 
 // Khi click vào khu vực upload hoặc link, mở file input
-uploadContainer.addEventListener('click', () => fileInput.click());
-uploadLink.addEventListener('click', (event) => {
+uploadContainer?.addEventListener('click', () => fileInput.click());
+uploadLink?.addEventListener('click', (event) => {
   event.preventDefault();
   fileInput.click();
 });
 
 // Xử lý khi người dùng chọn tệp qua input
-fileInput.addEventListener('change', (event) => handleFiles(event));
+fileInput?.addEventListener('change', (event) => handleFiles(event));
 
 // Xử lý sự kiện kéo thả
-uploadContainer.addEventListener('dragover', (event) => {
+uploadContainer?.addEventListener('dragover', (event) => {
   event.preventDefault();
   uploadContainer.classList.add('drag-over');
 });
 
-uploadContainer.addEventListener('dragleave', () => {
+uploadContainer?.addEventListener('dragleave', () => {
   uploadContainer.classList.remove('drag-over');
 });
 
-uploadContainer.addEventListener('drop', (event) => {
+uploadContainer?.addEventListener('drop', (event) => {
   event.preventDefault();
   uploadContainer.classList.remove('drag-over');
   handleFiles(event);
@@ -963,3 +963,23 @@ if (modal) {
 if (closeIcon) {
   closeIcon.addEventListener('click', closeModal_1);
 }
+
+function checkScreenWidth() {
+  if (window.innerWidth <= 640) {
+    const uploadI = document.getElementsByClassName('upload-icon')
+    if (uploadI) {
+      uploadI.style.display = 'none';
+    }
+  } else {
+    const uploadI = document.getElementsByClassName('upload-icon')
+    if (uploadI) {
+      uploadI.style.display = 'block';
+    }
+  }
+}
+
+// Check the screen width when the page loads
+window.onload = checkScreenWidth;
+
+// Check the screen width whenever the window is resized
+window.onresize = checkScreenWidth;

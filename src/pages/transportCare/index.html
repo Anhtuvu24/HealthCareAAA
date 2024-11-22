@@ -70,9 +70,9 @@
                     <li>
                         <a href="#tra-cuu" rel="noopener noreferrer">Tra cứu</a>
                     </li>
-                    <li>
-                        <button class="primary-btn">Bảo lãnh viện phí</button>
-                    </li>
+<!--                    <li>-->
+<!--                        <button class="primary-btn">Bảo lãnh viện phí</button>-->
+<!--                    </li>-->
                 </ul>
             </nav>
             <button class="menu-toggle" onclick="toggleMenu()">
@@ -152,7 +152,7 @@
                         </div>
                     </div>
                     <div class="outstanding-item">
-                        <div class="icon-box"><img src="../../assets/images/outstanding-iphone.svg" /></div>
+                        <div class="icon-box"><img src="../../assets/images/outstanding-clock.svg" /></div>
                         <div class="description-item">
                             <p class="sub-title-1-bold">BỒI THƯỜNG NHANH CHÓNG, CHÍNH XÁC, MINH BẠCH</p>
                             <p class="body-2">Thủ tục được tối ưu hóa, giúp khách hàng tiết kiệm thời gian.</p>
@@ -554,8 +554,8 @@
                         <div class="topics">
                             <div class="topics-list">
                                 <button class="body-2 active-topic" onclick="showQuestions('product-questions')">Câu hỏi về sản phẩm</button>
-                                <button class="body-2" onclick="showQuestions('profession-questions')">Câu hỏi về ngiệp vụ</button>
                                 <button class="body-2" onclick="showQuestions('claim-questions')">Câu hỏi về bồi thường</button>
+                                <button class="body-2" onclick="showQuestions('profession-questions')">Câu hỏi về ngiệp vụ</button>
                                 <!--                <button class="body-2" onclick="showQuestions('support-questions')">Câu hỏi khi cần hỗ trợ</button>-->
                             </div>
                         </div>
@@ -577,6 +577,51 @@
                         </div>
                         <div id="profession-questions" data-topic="topic2" class="questions-list" style="display: none;">
                             <!-- Câu hỏi và câu trả lời về nghiệp vụ -->
+                            <div class="question-container">
+                                <div class="question">
+                                    <button class="sub-title-2 bold" onclick="toggleAnswer(this)">
+                                        Phạm vi & đối tượng bảo hiểm hàng hóa vận chuyển?
+                                        <span class="icon-arrow">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M10.0004 12.9179C9.8057 12.9183 9.61701 12.8505 9.46708 12.7262L4.46708 8.55956C4.1127 8.26501 4.06419 7.73894 4.35874 7.38456C4.6533 7.03018 5.17936 6.98167 5.53374 7.27623L10.0004 11.0096L14.4671 7.40956C14.6392 7.26975 14.86 7.20433 15.0806 7.2278C15.3011 7.25126 15.5032 7.36166 15.6421 7.53456C15.7964 7.70777 15.8715 7.93746 15.8493 8.16836C15.8272 8.39926 15.7098 8.61048 15.5254 8.75123L10.5254 12.7762C10.3712 12.8808 10.1863 12.9307 10.0004 12.9179Z" fill="#212B36"/>
+                                          </svg>
+                                        </span>
+                                    </button>
+                                    <div class="answer body-2">
+                                        Đối tượng được bảo hiểm là hàng hóa được vận chuyển bằng đường biển, đường bộ hoặc đường hàng không từ cảng tới cảng, từ kho tới kho hoặc từ nơi sản xuất đến nơi phân phối hoặc đến các công trình xây dựng hoặc lắp đặt<br/><br/>
+
+                                        Rủi ro được bảo hiểm là các các rủi ro bất ngờ và không lường trước như cháy, nổ,thiên tai, phương tiện vận tải bị lật, chìm đắm, đâm va hay mắc cạn, hy sinh tổn thất chung, và những rủi ro khác phát sinh trong quá trình vận chuyển bằng đường biển, đường bộ hoặc đường hàng không, bao gồm cả trong thời gian lưu kho tạm thời thuộc hành trình vận chuyển tại bất kỳ nơi nào trong nước cũng như trên thế giới."
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-container">
+                                <div class="question">
+                                    <button class="sub-title-2 bold" onclick="toggleAnswer(this)">
+                                        Nghiệp vụ bảo hiểm hàng hoá bao gồm những gì?
+                                        <span class="icon-arrow">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M10.0004 12.9179C9.8057 12.9183 9.61701 12.8505 9.46708 12.7262L4.46708 8.55956C4.1127 8.26501 4.06419 7.73894 4.35874 7.38456C4.6533 7.03018 5.17936 6.98167 5.53374 7.27623L10.0004 11.0096L14.4671 7.40956C14.6392 7.26975 14.86 7.20433 15.0806 7.2278C15.3011 7.25126 15.5032 7.36166 15.6421 7.53456C15.7964 7.70777 15.8715 7.93746 15.8493 8.16836C15.8272 8.39926 15.7098 8.61048 15.5254 8.75123L10.5254 12.7762C10.3712 12.8808 10.1863 12.9307 10.0004 12.9179Z" fill="#212B36"/>
+                                          </svg>
+                                        </span>
+                                    </button>
+                                    <div class="answer body-2">
+                                        Bảo hiểm hàng hoá vận chuyển nội địa<br/>
+                                        Bảo hiểm hàng hóa vận chuyển xuất nhập khẩu đường biển<br/>
+                                        Bảo hiểm hàng hóa vận chuyển nhập khẩu đường bộ<br/>
+                                        Bảo hiểm hàng hóa vận chuyển nhập khẩu đường sắt<br/>
+                                        Bảo hiểm hàng hóa vận chuyển nhập khẩu  đường hàng không
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="toggle-button sub-title-2" data-topic="topic2" onclick="toggleQuestions('topic2')">
+                                Xem thêm
+                                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                                    <path d="M10.5004 12.9179C10.3057 12.9183 10.117 12.8505 9.96708 12.7262L4.96708 8.55956C4.6127 8.26501 4.56419 7.73894 4.85874 7.38456C5.1533 7.03018 5.67936 6.98167 6.03374 7.27623L10.5004 11.0096L14.9671 7.40956C15.1392 7.26975 15.36 7.20433 15.5806 7.2278C15.8011 7.25126 16.0032 7.36166 16.1421 7.53456C16.2964 7.70777 16.3715 7.93746 16.3493 8.16836C16.3272 8.39926 16.2098 8.61048 16.0254 8.75123L11.0254 12.7762C10.8712 12.8808 10.6863 12.9307 10.5004 12.9179Z" fill="#249748"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div id="claim-questions" data-topic="topic3" class="questions-list" style="display: none;">
+                            <!-- Câu hỏi và câu trả lời về bồi thường -->
                             <div class="question-container">
                                 <div class="question">
                                     <button class="sub-title-2 bold" onclick="toggleAnswer(this)">
@@ -628,43 +673,7 @@
                             <div class="question-container">
                                 <div class="question">
                                     <button class="sub-title-2 bold" onclick="toggleAnswer(this)">
-                                        Phạm vi & đối tượng bảo hiểm hàng hóa vận chuyển?
-                                        <span class="icon-arrow">
-                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                            <path d="M10.0004 12.9179C9.8057 12.9183 9.61701 12.8505 9.46708 12.7262L4.46708 8.55956C4.1127 8.26501 4.06419 7.73894 4.35874 7.38456C4.6533 7.03018 5.17936 6.98167 5.53374 7.27623L10.0004 11.0096L14.4671 7.40956C14.6392 7.26975 14.86 7.20433 15.0806 7.2278C15.3011 7.25126 15.5032 7.36166 15.6421 7.53456C15.7964 7.70777 15.8715 7.93746 15.8493 8.16836C15.8272 8.39926 15.7098 8.61048 15.5254 8.75123L10.5254 12.7762C10.3712 12.8808 10.1863 12.9307 10.0004 12.9179Z" fill="#212B36"/>
-                                          </svg>
-                                        </span>
-                                    </button>
-                                    <div class="answer body-2">
-                                        Đối tượng được bảo hiểm là hàng hóa được vận chuyển bằng đường biển, đường bộ hoặc đường hàng không từ cảng tới cảng, từ kho tới kho hoặc từ nơi sản xuất đến nơi phân phối hoặc đến các công trình xây dựng hoặc lắp đặt<br/><br/>
-
-                                        Rủi ro được bảo hiểm là các các rủi ro bất ngờ và không lường trước như cháy, nổ,thiên tai, phương tiện vận tải bị lật, chìm đắm, đâm va hay mắc cạn, hy sinh tổn thất chung, và những rủi ro khác phát sinh trong quá trình vận chuyển bằng đường biển, đường bộ hoặc đường hàng không, bao gồm cả trong thời gian lưu kho tạm thời thuộc hành trình vận chuyển tại bất kỳ nơi nào trong nước cũng như trên thế giới."
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="question-container">
-                                <div class="question">
-                                    <button class="sub-title-2 bold" onclick="toggleAnswer(this)">
-                                        Nghiệp vụ bảo hiểm hàng hoá bao gồm những gì?
-                                        <span class="icon-arrow">
-                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                            <path d="M10.0004 12.9179C9.8057 12.9183 9.61701 12.8505 9.46708 12.7262L4.46708 8.55956C4.1127 8.26501 4.06419 7.73894 4.35874 7.38456C4.6533 7.03018 5.17936 6.98167 5.53374 7.27623L10.0004 11.0096L14.4671 7.40956C14.6392 7.26975 14.86 7.20433 15.0806 7.2278C15.3011 7.25126 15.5032 7.36166 15.6421 7.53456C15.7964 7.70777 15.8715 7.93746 15.8493 8.16836C15.8272 8.39926 15.7098 8.61048 15.5254 8.75123L10.5254 12.7762C10.3712 12.8808 10.1863 12.9307 10.0004 12.9179Z" fill="#212B36"/>
-                                          </svg>
-                                        </span>
-                                    </button>
-                                    <div class="answer body-2">
-                                        Bảo hiểm hàng hoá vận chuyển nội địa<br/>
-                                        Bảo hiểm hàng hóa vận chuyển xuất nhập khẩu đường biển<br/>
-                                        Bảo hiểm hàng hóa vận chuyển nhập khẩu đường bộ<br/>
-                                        Bảo hiểm hàng hóa vận chuyển nhập khẩu đường sắt<br/>
-                                        Bảo hiểm hàng hóa vận chuyển nhập khẩu  đường hàng không
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="question-container">
-                                <div class="question">
-                                    <button class="sub-title-2 bold" onclick="toggleAnswer(this)">
-                                        Trường họp xảy ra tổn thất thì cần khai báo các thông tin gì và ở đâu?
+                                        Trường hợp xảy ra tổn thất thì cần khai báo các thông tin gì và ở đâu?
                                         <span class="icon-arrow">
                                           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                             <path d="M10.0004 12.9179C9.8057 12.9183 9.61701 12.8505 9.46708 12.7262L4.46708 8.55956C4.1127 8.26501 4.06419 7.73894 4.35874 7.38456C4.6533 7.03018 5.17936 6.98167 5.53374 7.27623L10.0004 11.0096L14.4671 7.40956C14.6392 7.26975 14.86 7.20433 15.0806 7.2278C15.3011 7.25126 15.5032 7.36166 15.6421 7.53456C15.7964 7.70777 15.8715 7.93746 15.8493 8.16836C15.8272 8.39926 15.7098 8.61048 15.5254 8.75123L10.5254 12.7762C10.3712 12.8808 10.1863 12.9307 10.0004 12.9179Z" fill="#212B36"/>
@@ -718,23 +727,6 @@
                                         12. Các chứng từ liên quan khác: Hợp đồng mua bán (trong trường hợp Người được bảo hiểm mua bảo hiểm theo hợp đồng mua bán); Chứng nhận số lượng hàng tại cảng xếp hàng (nếu tổn thất liên quan đến thiếu hụt số lượng) và hoặc Giấy chứng nhận chất lượng tại nơi đi (nếu tổn thất liên quan đến chất lượng); Hồ sơ liên quan đến phương tiện vận chuyển nội địa (trường hợp hàng vận chuyển nội địa trong lãnh thổ Việt Nam),...<br/>
                                         Nếu Người được bảo hiểm thiếu một trong những chứng từ trên thì tùy theo từng trường hợp mà Người bảo hiểm có thể chế tài một phần hoặc toàn bộ số tiền bồi thường.<br/>
                                     </div>
-                                </div>
-                            </div>
-                            <button class="toggle-button sub-title-2" data-topic="topic2" onclick="toggleQuestions('topic2')">
-                                Xem thêm
-                                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
-                                    <path d="M10.5004 12.9179C10.3057 12.9183 10.117 12.8505 9.96708 12.7262L4.96708 8.55956C4.6127 8.26501 4.56419 7.73894 4.85874 7.38456C5.1533 7.03018 5.67936 6.98167 6.03374 7.27623L10.5004 11.0096L14.9671 7.40956C15.1392 7.26975 15.36 7.20433 15.5806 7.2278C15.8011 7.25126 16.0032 7.36166 16.1421 7.53456C16.2964 7.70777 16.3715 7.93746 16.3493 8.16836C16.3272 8.39926 16.2098 8.61048 16.0254 8.75123L11.0254 12.7762C10.8712 12.8808 10.6863 12.9307 10.5004 12.9179Z" fill="#249748"/>
-                                </svg>
-                            </button>
-                        </div>
-                        <div id="claim-questions" data-topic="topic3" class="questions-list" style="display: none;">
-                            <!-- Câu hỏi và câu trả lời về bồi thường -->
-                            <div class="question-container">
-                                <div class="question">
-                                    <button class="sub-title-2 bold" onclick="toggleAnswer(this)">
-                                        Không có dữ liệu
-                                    </button>
-
                                 </div>
                             </div>
                             <!-- Nút Xem thêm/Ẩn bớt -->

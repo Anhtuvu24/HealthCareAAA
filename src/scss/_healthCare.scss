@@ -15,10 +15,16 @@
   .banner-container {
     width: 100%;
     max-width: 1140px;
+    @media only screen and (max-width: 640px) {
+      padding: 0 !important;
+    }
     .quote-info-wrapper {
       width: 100%;
       h5 {
         color: $secondary-color-4;
+        @media only screen and (max-width: 640px) {
+          padding: 0 16px !important;
+        }
       }
       > div {
         display: flex;
@@ -26,6 +32,7 @@
         padding: 16px 16px 12px 16px;
         @media only screen and (max-width: 640px) {
           align-items: unset;
+          padding: 16px 8px 12px 8px;
         }
         gap: 16px;
         border-radius: 8px;
@@ -492,6 +499,12 @@
   .register-insurance-container {
     width: 100%;
     max-width: $max-width;
+    @media only screen and (max-width: 640px) {
+      padding: 0 !important;
+      h4 {
+        padding: 0 16px !important;
+      }
+    }
     > h4 {
       color: $primary-color;
       margin-bottom: 24px;
@@ -524,6 +537,9 @@
           display: flex;
           flex-direction: column;
           gap: 24px;
+          @media only screen and (max-width: 640px) {
+            padding: 24px 8px;
+          }
           .upload-container {
             display: flex;
             gap: 80px;
@@ -535,6 +551,7 @@
             border-radius: 8px;
             @media only screen and (max-width: 640px) {
               padding: 16px;
+              justify-content: flex-start;
               .upload-icon {
                 display: none;
               }
@@ -697,6 +714,9 @@
             display: flex;
             flex-direction: column;
             gap: 24px;
+            @media only screen and (max-width: 640px) {
+              padding: 24px 8px !important;
+            }
             .list-benefit-wrapper, .list-risk-wrapper {
               display: flex;
               flex-direction: column;
@@ -715,6 +735,9 @@
           }
           .list-registered-content {
             padding: 24px;
+            @media only screen and (max-width: 640px) {
+              padding: 24px 8px;
+            }
             .list-registered-item {
               padding: 16px;
               border: 1px dashed $secondary-color;
@@ -802,11 +825,12 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-    @media only screen and (max-width: 640px) {
-      gap: 24px;
-    }
     @media only screen and (max-width: 1155px) {
       padding: 0 24px;
+    }
+    @media only screen and (max-width: 640px) {
+      gap: 24px;
+      padding: 0 16px;
     }
     > h4 {
       color: $primary-color;

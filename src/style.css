@@ -1384,11 +1384,21 @@ footer .copyright-wrapper > div > a:hover {
   width: 100%;
   max-width: 1140px;
 }
+@media only screen and (max-width: 640px) {
+  .banner-wrapper .banner-container {
+    padding: 0 !important;
+  }
+}
 .banner-wrapper .banner-container .quote-info-wrapper {
   width: 100%;
 }
 .banner-wrapper .banner-container .quote-info-wrapper h5 {
   color: #006837;
+}
+@media only screen and (max-width: 640px) {
+  .banner-wrapper .banner-container .quote-info-wrapper h5 {
+    padding: 0 16px !important;
+  }
 }
 .banner-wrapper .banner-container .quote-info-wrapper > div {
   display: flex;
@@ -1403,6 +1413,7 @@ footer .copyright-wrapper > div > a:hover {
 @media only screen and (max-width: 640px) {
   .banner-wrapper .banner-container .quote-info-wrapper > div {
     align-items: unset;
+    padding: 16px 8px 12px 8px;
   }
 }
 
@@ -1884,6 +1895,14 @@ footer .copyright-wrapper > div > a:hover {
   width: 100%;
   max-width: 1140px;
 }
+@media only screen and (max-width: 640px) {
+  .register-insurance-wrapper .register-insurance-container {
+    padding: 0 !important;
+  }
+  .register-insurance-wrapper .register-insurance-container h4 {
+    padding: 0 16px !important;
+  }
+}
 .register-insurance-wrapper .register-insurance-container > h4 {
   color: #249748;
   margin-bottom: 24px;
@@ -1923,6 +1942,11 @@ footer .copyright-wrapper > div > a:hover {
   flex-direction: column;
   gap: 24px;
 }
+@media only screen and (max-width: 640px) {
+  .register-insurance-wrapper .register-insurance-container .register-form-content-wrapper .register-form-wrapper .content-form {
+    padding: 24px 8px;
+  }
+}
 .register-insurance-wrapper .register-insurance-container .register-form-content-wrapper .register-form-wrapper .content-form .upload-container {
   display: flex;
   gap: 80px;
@@ -1936,6 +1960,7 @@ footer .copyright-wrapper > div > a:hover {
 @media only screen and (max-width: 640px) {
   .register-insurance-wrapper .register-insurance-container .register-form-content-wrapper .register-form-wrapper .content-form .upload-container {
     padding: 16px;
+    justify-content: flex-start;
   }
   .register-insurance-wrapper .register-insurance-container .register-form-content-wrapper .register-form-wrapper .content-form .upload-container .upload-icon {
     display: none;
@@ -2094,6 +2119,11 @@ footer .copyright-wrapper > div > a:hover {
   flex-direction: column;
   gap: 24px;
 }
+@media only screen and (max-width: 640px) {
+  .register-insurance-wrapper .register-insurance-container .register-form-content-wrapper .list-registered-wrapper .list-registered-container .list-wrapper {
+    padding: 24px 8px !important;
+  }
+}
 .register-insurance-wrapper .register-insurance-container .register-form-content-wrapper .list-registered-wrapper .list-registered-container .list-wrapper .list-benefit-wrapper, .register-insurance-wrapper .register-insurance-container .register-form-content-wrapper .list-registered-wrapper .list-registered-container .list-wrapper .list-risk-wrapper {
   display: flex;
   flex-direction: column;
@@ -2111,6 +2141,11 @@ footer .copyright-wrapper > div > a:hover {
 }
 .register-insurance-wrapper .register-insurance-container .register-form-content-wrapper .list-registered-wrapper .list-registered-container .list-registered-content {
   padding: 24px;
+}
+@media only screen and (max-width: 640px) {
+  .register-insurance-wrapper .register-insurance-container .register-form-content-wrapper .list-registered-wrapper .list-registered-container .list-registered-content {
+    padding: 24px 8px;
+  }
 }
 .register-insurance-wrapper .register-insurance-container .register-form-content-wrapper .list-registered-wrapper .list-registered-container .list-registered-content .list-registered-item {
   padding: 16px;
@@ -2193,14 +2228,15 @@ footer .copyright-wrapper > div > a:hover {
   flex-direction: column;
   gap: 40px;
 }
-@media only screen and (max-width: 640px) {
-  .questions-answers-wrapper .questions-answers-container {
-    gap: 24px;
-  }
-}
 @media only screen and (max-width: 1155px) {
   .questions-answers-wrapper .questions-answers-container {
     padding: 0 24px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .questions-answers-wrapper .questions-answers-container {
+    gap: 24px;
+    padding: 0 16px;
   }
 }
 .questions-answers-wrapper .questions-answers-container > h4 {
@@ -2372,12 +2408,17 @@ footer .copyright-wrapper > div > a:hover {
 }
 @media only screen and (max-width: 640px) {
   .register-insurance-wrapper-custom .register-insurance-container {
-    padding: 0 16px;
+    padding: 0;
   }
 }
 .register-insurance-wrapper-custom .register-insurance-container > h4 {
   color: #249748;
   margin-bottom: 16px;
+}
+@media only screen and (max-width: 640px) {
+  .register-insurance-wrapper-custom .register-insurance-container > h4 {
+    padding: 0 16px;
+  }
 }
 .register-insurance-wrapper-custom .register-insurance-container .paid-content-wrapper {
   display: flex;
@@ -2437,6 +2478,11 @@ footer .copyright-wrapper > div > a:hover {
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+@media only screen and (max-width: 640px) {
+  .register-insurance-wrapper-custom .register-insurance-container .paid-content-wrapper .register-form-content-wrapper .register-form-content-container .register-form-wrapper .register-form-container .content-form {
+    padding: 24px 8px;
+  }
 }
 @media only screen and (max-width: 640px) {
   .register-insurance-wrapper-custom .register-insurance-container .paid-content-wrapper .register-form-content-wrapper .register-form-content-container .register-form-wrapper .register-form-container .content-form .custom-input-wrapper {
@@ -2564,6 +2610,11 @@ footer .copyright-wrapper > div > a:hover {
 .register-insurance-wrapper-custom .register-insurance-container .paid-content-wrapper .register-form-content-wrapper .register-form-content-container .list-registered-wrapper .list-registered-container .list-registered-content {
   padding: 24px;
 }
+@media only screen and (max-width: 640px) {
+  .register-insurance-wrapper-custom .register-insurance-container .paid-content-wrapper .register-form-content-wrapper .register-form-content-container .list-registered-wrapper .list-registered-container .list-registered-content {
+    padding: 24px 8px;
+  }
+}
 .register-insurance-wrapper-custom .register-insurance-container .paid-content-wrapper .register-form-content-wrapper .register-form-content-container .list-registered-wrapper .list-registered-container .list-registered-content .list-registered-item {
   display: flex;
   flex-direction: column;
@@ -2627,6 +2678,11 @@ footer .copyright-wrapper > div > a:hover {
 .register-insurance-wrapper-custom .register-insurance-container .paid-content-wrapper .order-infor-wrapper .order-infor-container .order-infor-content {
   padding: 24px;
 }
+@media only screen and (max-width: 640px) {
+  .register-insurance-wrapper-custom .register-insurance-container .paid-content-wrapper .order-infor-wrapper .order-infor-container .order-infor-content {
+    padding: 24px 8px;
+  }
+}
 .register-insurance-wrapper-custom .register-insurance-container .paid-content-wrapper .order-infor-wrapper .order-infor-container .order-infor-content .fee h5, .register-insurance-wrapper-custom .register-insurance-container .paid-content-wrapper .order-infor-wrapper .order-infor-container .order-infor-content .total-fee h5 {
   color: #249748;
   font-family: "Raleway", sans-serif !important;
@@ -2658,6 +2714,11 @@ footer .copyright-wrapper > div > a:hover {
 .register-insurance-wrapper-custom .register-insurance-container .paid-content-wrapper .order-infor-wrapper .checkbox-issue-invoice {
   display: flex;
   align-items: center;
+}
+@media only screen and (max-width: 640px) {
+  .register-insurance-wrapper-custom .register-insurance-container .paid-content-wrapper .order-infor-wrapper .checkbox-issue-invoice {
+    padding: 0 8px;
+  }
 }
 .register-insurance-wrapper-custom .register-insurance-container .paid-content-wrapper .order-infor-wrapper .checkbox-issue-invoice input[type=checkbox] {
   appearance: none;
@@ -2691,10 +2752,20 @@ footer .copyright-wrapper > div > a:hover {
   flex-direction: column;
   gap: 16px;
 }
+@media only screen and (max-width: 640px) {
+  .register-insurance-wrapper-custom .register-insurance-container .paid-content-wrapper .order-infor-wrapper .infor-invoice {
+    padding: 0 8px;
+  }
+}
 .register-insurance-wrapper-custom .register-insurance-container .paid-content-wrapper .order-infor-wrapper .btn-groups {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+@media only screen and (max-width: 640px) {
+  .register-insurance-wrapper-custom .register-insurance-container .paid-content-wrapper .order-infor-wrapper .btn-groups {
+    padding: 0 8px;
+  }
 }
 .register-insurance-wrapper-custom .register-insurance-container .paid-content-wrapper .order-infor-wrapper .btn-groups button {
   padding: 11px 22px;
@@ -2802,6 +2873,11 @@ h4 {
   font-size: 40px;
   font-weight: 400;
   line-height: 140%; /* 56px */
+}
+@media only screen and (max-width: 640px) {
+  h4 {
+    font-size: 27px !important;
+  }
 }
 
 .h4-bold {

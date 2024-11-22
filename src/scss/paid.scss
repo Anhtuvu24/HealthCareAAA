@@ -13,11 +13,14 @@
       padding: 0 24px;
     }
     @media only screen and (max-width: 640px) {
-      padding: 0 16px;
+      padding: 0;
     }
     > h4 {
       color: $primary-color;
       margin-bottom: 16px;
+      @media only screen and (max-width: 640px) {
+        padding: 0 16px;
+      }
     }
     .paid-content-wrapper {
       display: flex;
@@ -64,6 +67,9 @@
                 display: flex;
                 flex-direction: column;
                 gap: 24px;
+                @media only screen and (max-width: 640px) {
+                  padding: 24px 8px;
+                }
                 .custom-input-wrapper {
                   @media only screen and (max-width: 640px) {
                     flex-direction: row !important;
@@ -192,6 +198,9 @@
               }
               .list-registered-content {
                 padding: 24px;
+                @media only screen and (max-width: 640px) {
+                  padding: 24px 8px;
+                }
                 .list-registered-item {
                   display: flex;
                   flex-direction: column;
@@ -253,6 +262,9 @@
           }
           .order-infor-content {
             padding: 24px;
+            @media only screen and (max-width: 640px) {
+              padding: 24px 8px;
+            }
             .fee, .total-fee {
               h5 {
                 color: $primary-color;
@@ -292,6 +304,9 @@
         .checkbox-issue-invoice {
           display: flex;
           align-items: center;
+          @media only screen and (max-width: 640px) {
+            padding: 0 8px;
+          }
           input[type="checkbox"] {
             appearance: none;
             -webkit-appearance: none;
@@ -326,11 +341,17 @@
           display: flex;
           flex-direction: column;
           gap: 16px;
+          @media only screen and (max-width: 640px) {
+            padding: 0 8px;
+          }
         }
         .btn-groups {
           display: flex;
           flex-direction: column;
           gap: 8px;
+          @media only screen and (max-width: 640px) {
+            padding: 0 8px;
+          }
           button {
             padding: 11px 22px;
             display: flex;
