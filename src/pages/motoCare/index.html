@@ -522,8 +522,8 @@
                         <div class="topics">
                             <div class="topics-list">
                                 <button class="body-2 active-topic" onclick="showQuestions('product-questions')">Câu hỏi về sản phẩm TNDS xe máy</button>
-                                <button class="body-2" onclick="showQuestions('profession-questions')">Câu hỏi về ngiệp vụ</button>
                                 <button class="body-2" onclick="showQuestions('claim-questions')">Câu hỏi về bồi thường</button>
+                                <button class="body-2" onclick="showQuestions('profession-questions')">Câu hỏi về ngiệp vụ</button>
                                 <!--                <button class="body-2" onclick="showQuestions('support-questions')">Câu hỏi khi cần hỗ trợ</button>-->
                             </div>
                         </div>
@@ -591,6 +591,21 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="question-container">
+                                <div class="question">
+                                    <button class="sub-title-2 bold" onclick="toggleAnswer(this)">
+                                        Khi được cấp Giấy chứng nhận bảo hiểm điện tử, chủ xe có thể được cung cấp Giấy chứng nhận bảo hiểm bản in hay không?
+                                        <span class="icon-arrow">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M10.0004 12.9179C9.8057 12.9183 9.61701 12.8505 9.46708 12.7262L4.46708 8.55956C4.1127 8.26501 4.06419 7.73894 4.35874 7.38456C4.6533 7.03018 5.17936 6.98167 5.53374 7.27623L10.0004 11.0096L14.4671 7.40956C14.6392 7.26975 14.86 7.20433 15.0806 7.2278C15.3011 7.25126 15.5032 7.36166 15.6421 7.53456C15.7964 7.70777 15.8715 7.93746 15.8493 8.16836C15.8272 8.39926 15.7098 8.61048 15.5254 8.75123L10.5254 12.7762C10.3712 12.8808 10.1863 12.9307 10.0004 12.9179Z" fill="#212B36"/>
+                                          </svg>
+                                        </span>
+                                    </button>
+                                    <div class="answer body-2">
+                                        Khi khách hàng có nhu cầu sử dụng bản in, Bảo hiểm AAA sẽ cung cấp cho khách hàng bản in trên Giấy chứng nhận bảo hiểm được truy xuất từ chương trình cấp đơn bảo hiểm điện tử.
+                                    </div>
+                                </div>
+                            </div>
                             <!-- Thêm các câu hỏi khác tại đây -->
                             <button class="toggle-button sub-title-2" data-topic="topic1" onclick="toggleQuestions('topic1')">
                                 Xem thêm
@@ -604,134 +619,53 @@
                             <div class="question-container">
                                 <div class="question">
                                     <button class="sub-title-2 bold" onclick="toggleAnswer(this)">
-                                        Tôi chỉ mua Quyền lợi bảo hiểm bổ sung của sản phẩm bảo hiểm sức khỏe 5.0 có được không?
+                                        Có thể mua Bảo hiểm TNDS xe cơ giới với thời hạn bảo hiểm từ 1 đến 3 năm?
                                         <span class="icon-arrow">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M10.0004 12.9179C9.8057 12.9183 9.61701 12.8505 9.46708 12.7262L4.46708 8.55956C4.1127 8.26501 4.06419 7.73894 4.35874 7.38456C4.6533 7.03018 5.17936 6.98167 5.53374 7.27623L10.0004 11.0096L14.4671 7.40956C14.6392 7.26975 14.86 7.20433 15.0806 7.2278C15.3011 7.25126 15.5032 7.36166 15.6421 7.53456C15.7964 7.70777 15.8715 7.93746 15.8493 8.16836C15.8272 8.39926 15.7098 8.61048 15.5254 8.75123L10.5254 12.7762C10.3712 12.8808 10.1863 12.9307 10.0004 12.9179Z" fill="#212B36"/>
-                      </svg>
-                    </span>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M10.0004 12.9179C9.8057 12.9183 9.61701 12.8505 9.46708 12.7262L4.46708 8.55956C4.1127 8.26501 4.06419 7.73894 4.35874 7.38456C4.6533 7.03018 5.17936 6.98167 5.53374 7.27623L10.0004 11.0096L14.4671 7.40956C14.6392 7.26975 14.86 7.20433 15.0806 7.2278C15.3011 7.25126 15.5032 7.36166 15.6421 7.53456C15.7964 7.70777 15.8715 7.93746 15.8493 8.16836C15.8272 8.39926 15.7098 8.61048 15.5254 8.75123L10.5254 12.7762C10.3712 12.8808 10.1863 12.9307 10.0004 12.9179Z" fill="#212B36"/>
+                                          </svg>
+                                        </span>
                                     </button>
                                     <div class="answer body-2">
-                                        Bạn cần phải tham gia Quyền lợi bảo hiểm chính từ Bảo hiểm sức khỏe 5.0 thì bạn mới có thể lựa chọn thêm Quyền lợi bổ sung.
+                                        Bạn có thể lựa chọn mua Bảo hiểm TNDS xe cơ giới theo như cầu như sau:<br/>
+                                        - Thời hạn bảo hiểm tối thiểu là 1 năm<br/>
+                                        - Thời hạn bảo hiểm tối đa là 3 năm
                                     </div>
                                 </div>
                             </div>
                             <div class="question-container">
                                 <div class="question">
                                     <button class="sub-title-2 bold" onclick="toggleAnswer(this)">
-                                        Mức phí bảo hiểm sức khỏe 5.0 như thế nào? Có áp dụng phí theo độ tuổi hay không?
+                                        Chủ xe môtô mua Bảo hiểm bắt buộc TNDS của chủ xe cơ giới sẽ được quyền lợi gì?
                                         <span class="icon-arrow">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M10.0004 12.9179C9.8057 12.9183 9.61701 12.8505 9.46708 12.7262L4.46708 8.55956C4.1127 8.26501 4.06419 7.73894 4.35874 7.38456C4.6533 7.03018 5.17936 6.98167 5.53374 7.27623L10.0004 11.0096L14.4671 7.40956C14.6392 7.26975 14.86 7.20433 15.0806 7.2278C15.3011 7.25126 15.5032 7.36166 15.6421 7.53456C15.7964 7.70777 15.8715 7.93746 15.8493 8.16836C15.8272 8.39926 15.7098 8.61048 15.5254 8.75123L10.5254 12.7762C10.3712 12.8808 10.1863 12.9307 10.0004 12.9179Z" fill="#212B36"/>
-                      </svg>
-                    </span>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M10.0004 12.9179C9.8057 12.9183 9.61701 12.8505 9.46708 12.7262L4.46708 8.55956C4.1127 8.26501 4.06419 7.73894 4.35874 7.38456C4.6533 7.03018 5.17936 6.98167 5.53374 7.27623L10.0004 11.0096L14.4671 7.40956C14.6392 7.26975 14.86 7.20433 15.0806 7.2278C15.3011 7.25126 15.5032 7.36166 15.6421 7.53456C15.7964 7.70777 15.8715 7.93746 15.8493 8.16836C15.8272 8.39926 15.7098 8.61048 15.5254 8.75123L10.5254 12.7762C10.3712 12.8808 10.1863 12.9307 10.0004 12.9179Z" fill="#212B36"/>
+                                          </svg>
+                                        </span>
                                     </button>
                                     <div class="answer body-2">
-                                        Mức phí bảo hiểm sức khỏe được áp dụng theo biểu phí Bảo hiểm AAA ban hành. Phí bảo hiểm cá nhân: Dựa trên độ tuổi và hạng tham gia bảo hiểm.
+                                        Khi chủ xe môtô mua Bảo hiểm bắt buộc TNDS của chủ xe cơ giới và thực hiện đúng, đủ theo quy định thì sẽ được bồi thường cho thiệt hại đối với bên thứ ba bị gây ra bởi xe tham gia bảo hiểm:<br/><br/>
+
+                                        Mức chi trả tồi đa quyền lợi bảo hiểm cho thiệt hại về người là 150.000.000/VNĐ cho mỗi nạn nhân trong 1 vụ tai nạn. Quyền lợi chi trả được quy định cụ thể tại Nghị định 67/2023/NĐ-CP ngày 06/09/2023<br/>
+                                        Nếu phát sinh thiệt hại về tài sản của các bên thứ ba thì sẽ được chi trả theo chi phí khắc phục thực tế, hợp lý và mức độ lỗi của các bên. Số tiền bồi thường tối đa cho thiệt hại về tài sản là 50.000.000 VNĐ/vụ<br/>
                                     </div>
                                 </div>
                             </div>
                             <div class="question-container">
                                 <div class="question">
                                     <button class="sub-title-2 bold" onclick="toggleAnswer(this)">
-                                        Lợi ích khi mua sản phẩm bảo hiểm sức khỏe 5.0 theo gia đình/ nhóm?
+                                        Khi xảy ra tai nạn, người điều khiển xe cần phải làm gì ?
                                         <span class="icon-arrow">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M10.0004 12.9179C9.8057 12.9183 9.61701 12.8505 9.46708 12.7262L4.46708 8.55956C4.1127 8.26501 4.06419 7.73894 4.35874 7.38456C4.6533 7.03018 5.17936 6.98167 5.53374 7.27623L10.0004 11.0096L14.4671 7.40956C14.6392 7.26975 14.86 7.20433 15.0806 7.2278C15.3011 7.25126 15.5032 7.36166 15.6421 7.53456C15.7964 7.70777 15.8715 7.93746 15.8493 8.16836C15.8272 8.39926 15.7098 8.61048 15.5254 8.75123L10.5254 12.7762C10.3712 12.8808 10.1863 12.9307 10.0004 12.9179Z" fill="#212B36"/>
-                      </svg>
-                    </span>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M10.0004 12.9179C9.8057 12.9183 9.61701 12.8505 9.46708 12.7262L4.46708 8.55956C4.1127 8.26501 4.06419 7.73894 4.35874 7.38456C4.6533 7.03018 5.17936 6.98167 5.53374 7.27623L10.0004 11.0096L14.4671 7.40956C14.6392 7.26975 14.86 7.20433 15.0806 7.2278C15.3011 7.25126 15.5032 7.36166 15.6421 7.53456C15.7964 7.70777 15.8715 7.93746 15.8493 8.16836C15.8272 8.39926 15.7098 8.61048 15.5254 8.75123L10.5254 12.7762C10.3712 12.8808 10.1863 12.9307 10.0004 12.9179Z" fill="#212B36"/>
+                                          </svg>
+                                        </span>
                                     </button>
                                     <div class="answer body-2">
-                                        Bảo hiểm AAA với chính sách giảm phí bảo hiểm cho khách hàng mua bảo hiểm sức khỏe 5.0 theo gia đình/nhóm?<br/>
-                                        - Gia đình/nhóm: 03 người (Giảm 3%)<br/>
-                                        - Gia đình/nhóm: 04 người (Giảm 4%)<br/>
-                                        - Gia đình/nhóm: từ 05 người trở lên (Giảm 5%)
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="question-container">
-                                <div class="question">
-                                    <button class="sub-title-2 bold" onclick="toggleAnswer(this)">
-                                        Hợp đồng Bảo hiểm sức khoẻ 5.0 sẽ được gửi đến khách hàng như thế nào?
-                                        <span class="icon-arrow">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M10.0004 12.9179C9.8057 12.9183 9.61701 12.8505 9.46708 12.7262L4.46708 8.55956C4.1127 8.26501 4.06419 7.73894 4.35874 7.38456C4.6533 7.03018 5.17936 6.98167 5.53374 7.27623L10.0004 11.0096L14.4671 7.40956C14.6392 7.26975 14.86 7.20433 15.0806 7.2278C15.3011 7.25126 15.5032 7.36166 15.6421 7.53456C15.7964 7.70777 15.8715 7.93746 15.8493 8.16836C15.8272 8.39926 15.7098 8.61048 15.5254 8.75123L10.5254 12.7762C10.3712 12.8808 10.1863 12.9307 10.0004 12.9179Z" fill="#212B36"/>
-                      </svg>
-                    </span>
-                                    </button>
-                                    <div class="answer body-2">
-                                        Bảo hiểm AAA có nhiều hình thức nhận HĐBH<br/>
-                                        1. Nhân viên Bảo hiểm  AAA sẽ trao HĐBH tận tay khách hàng<br/>
-                                        2. Bảo hiểm AAA sẽ gửi HĐBH cho KH qua đường bưu điện<br/>
-                                        3. Bảo hiểm AAA gửi HĐBH bằng mã QR hoặc qua đường link tra cứu https://tracuu.aaa.com.vn/<br/>
-                                        4. Bảo hiểm AAA gửi HĐBH điện tử cho khách hàng qua email đã cung cấp.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="question-container">
-                                <div class="question">
-                                    <button class="sub-title-2 bold" onclick="toggleAnswer(this)">
-                                        Điều kiện tham gia Bảo hiểm sức khoẻ 5.0?
-                                        <span class="icon-arrow">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M10.0004 12.9179C9.8057 12.9183 9.61701 12.8505 9.46708 12.7262L4.46708 8.55956C4.1127 8.26501 4.06419 7.73894 4.35874 7.38456C4.6533 7.03018 5.17936 6.98167 5.53374 7.27623L10.0004 11.0096L14.4671 7.40956C14.6392 7.26975 14.86 7.20433 15.0806 7.2278C15.3011 7.25126 15.5032 7.36166 15.6421 7.53456C15.7964 7.70777 15.8715 7.93746 15.8493 8.16836C15.8272 8.39926 15.7098 8.61048 15.5254 8.75123L10.5254 12.7762C10.3712 12.8808 10.1863 12.9307 10.0004 12.9179Z" fill="#212B36"/>
-                      </svg>
-                    </span>
-                                    </button>
-                                    <div class="answer body-2">
-                                        a) Người được bảo hiểm là mọi công dân Việt Nam hoặc người nước ngoài cư trú tại Việt Nam từ 15 ngày tuổi đến 60 tuổi (tính theo lần sinh nhật gần nhất). Người được bảo hiểm được tham gia đến 70 tuổi với điều kiện tham gia liên tục tại Bảo hiểm AAA từ năm 60 tuổi.<br />
-                                        b) Bảo hiểm AAA không nhận bảo hiểm và không chịu trách nhiệm đối với các trường hợp sau:<br />
-                                        - Người đang bị bệnh tâm thần, bệnh phong, ung thư.<br />
-                                        - Người bị tàn tật hoặc thương tật vĩnh viễn từ 50% trở lên.<br />
-                                        - Người đang trong thời gian điều trị bệnh tật hoặc thương tật.<br />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="question-container hidden">
-                                <div class="question">
-                                    <button class="sub-title-2 bold" onclick="toggleAnswer(this)">
-                                        Có bắt buộc các Người được bảo hiểm trong một hợp đồng phải tham gia cùng một chương trình bảo hiểm không?
-                                        <span class="icon-arrow">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M10.0004 12.9179C9.8057 12.9183 9.61701 12.8505 9.46708 12.7262L4.46708 8.55956C4.1127 8.26501 4.06419 7.73894 4.35874 7.38456C4.6533 7.03018 5.17936 6.98167 5.53374 7.27623L10.0004 11.0096L14.4671 7.40956C14.6392 7.26975 14.86 7.20433 15.0806 7.2278C15.3011 7.25126 15.5032 7.36166 15.6421 7.53456C15.7964 7.70777 15.8715 7.93746 15.8493 8.16836C15.8272 8.39926 15.7098 8.61048 15.5254 8.75123L10.5254 12.7762C10.3712 12.8808 10.1863 12.9307 10.0004 12.9179Z" fill="#212B36"/>
-                      </svg>
-                    </span>
-                                    </button>
-                                    <div class="answer body-2">
-                                        Không.<br/>
-                                        - Chương trình nhóm, gia đình: Các thành viên trong nhóm có thể lựa chọn hạng bảo hiểm khác nhau từ A1 đến A5<br/>
-                                        - Chương trình Doanh nghiệp/Tổ chức: chương trình áp dụng cho từng nhóm đối tượng khác nhau. Người phụ thuộc không được quyền lựa chọn chương trình cao hơn<br/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="question-container hidden">
-                                <div class="question">
-                                    <button class="sub-title-2 bold" onclick="toggleAnswer(this)">
-                                        Khi tôi chọn tham gia gói quyền lợi chính là A2 nhưng về quyền lợi bổ sung là A4 thì có được không?
-                                        <span class="icon-arrow">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M10.0004 12.9179C9.8057 12.9183 9.61701 12.8505 9.46708 12.7262L4.46708 8.55956C4.1127 8.26501 4.06419 7.73894 4.35874 7.38456C4.6533 7.03018 5.17936 6.98167 5.53374 7.27623L10.0004 11.0096L14.4671 7.40956C14.6392 7.26975 14.86 7.20433 15.0806 7.2278C15.3011 7.25126 15.5032 7.36166 15.6421 7.53456C15.7964 7.70777 15.8715 7.93746 15.8493 8.16836C15.8272 8.39926 15.7098 8.61048 15.5254 8.75123L10.5254 12.7762C10.3712 12.8808 10.1863 12.9307 10.0004 12.9179Z" fill="#212B36"/>
-                      </svg>
-                    </span>
-                                    </button>
-                                    <div class="answer body-2">
-                                        Không, tham gia quyền lợi chính theo chương trình nào thì lựa chọn quyền lợi bổ sung theo chương trình đó.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="question-container hidden">
-                                <div class="question">
-                                    <button class="sub-title-2 bold" onclick="toggleAnswer(this)">
-                                        Trong quá trình hợp đồng có hiệu lực, khi thấy không muốn tham gia nữa thì tôi có thể yêu cầu huỷ hợp đồng được không?
-                                        <span class="icon-arrow">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M10.0004 12.9179C9.8057 12.9183 9.61701 12.8505 9.46708 12.7262L4.46708 8.55956C4.1127 8.26501 4.06419 7.73894 4.35874 7.38456C4.6533 7.03018 5.17936 6.98167 5.53374 7.27623L10.0004 11.0096L14.4671 7.40956C14.6392 7.26975 14.86 7.20433 15.0806 7.2278C15.3011 7.25126 15.5032 7.36166 15.6421 7.53456C15.7964 7.70777 15.8715 7.93746 15.8493 8.16836C15.8272 8.39926 15.7098 8.61048 15.5254 8.75123L10.5254 12.7762C10.3712 12.8808 10.1863 12.9307 10.0004 12.9179Z" fill="#212B36"/>
-                      </svg>
-                    </span>
-                                    </button>
-                                    <div class="answer body-2">
-                                        Được phép hủy hợp đồng Bảo hiểm<br />
-                                        Trường hợp Người được bảo hiểm đề nghị chấm dứt bảo hiểm trước thời hạn, Bảo hiểm AAA sẽ hoàn trả 80% phí bảo hiểm của thời gian còn lại với điều kiện trong thời gian hiệu lực của Hợp đồng/Giấy chứng nhận bảo hiểm chưa có yêu cầu nào được Bảo hiểm AAA trả tiền bảo hiểm<br/>
+                                        1. Bình tĩnh, trấn an bản thân, kiểm tra tình trạng sức khỏe của mình và những người bị nạn. Tham gia hỗ trợ cứu chữa nếu có người bị thương;<br/>
+                                        2. Bảo vệ hiện trường và đưa người bị thương nặng đi cấp cứu<br/>
+                                        3. Báo cho cơ quan chức năng nếu tai nạn nghiêm trọng.<br/>
+                                        4. Gọi ngay số điện thoại 1900 54 54 35 để được hướng dẫn và hỗ trợ
                                     </div>
                                 </div>
                             </div>
@@ -747,7 +681,7 @@
                             <div class="question-container">
                                 <div class="question">
                                     <button class="sub-title-2 bold" onclick="toggleAnswer(this)">
-                                        Chủ xe môtô mua Bảo hiểm bắt buộc TNDS của chủ xe cơ giới sẽ được quyền lợi gì?
+                                        Bảo hiểm AAA sẽ hỗ trợ trong tình huống tai nạn nghiêm trọng như thế nào?
                                         <span class="icon-arrow">
                                           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                             <path d="M10.0004 12.9179C9.8057 12.9183 9.61701 12.8505 9.46708 12.7262L4.46708 8.55956C4.1127 8.26501 4.06419 7.73894 4.35874 7.38456C4.6533 7.03018 5.17936 6.98167 5.53374 7.27623L10.0004 11.0096L14.4671 7.40956C14.6392 7.26975 14.86 7.20433 15.0806 7.2278C15.3011 7.25126 15.5032 7.36166 15.6421 7.53456C15.7964 7.70777 15.8715 7.93746 15.8493 8.16836C15.8272 8.39926 15.7098 8.61048 15.5254 8.75123L10.5254 12.7762C10.3712 12.8808 10.1863 12.9307 10.0004 12.9179Z" fill="#212B36"/>
@@ -755,9 +689,24 @@
                                         </span>
                                     </button>
                                     <div class="answer body-2">
-                                        Khi chủ xe môtô mua Bảo hiểm bắt buộc TNDS của chủ xe cơ giới và thực hiện đúng, đủ theo quy định thì sẽ được bồi thường cho thiệt hại đối với bên thứ ba bị gây ra bởi xe tham gia bảo hiểm:<br/><br/>
-                                        Mức chi trả tồi đa quyền lợi bảo hiểm cho thiệt hại về người là 150.000.000/VNĐ cho mỗi nạn nhân trong 1 vụ tai nạn. Quyền lợi chi trả được quy định cụ thể tại Nghị định 67/2023/NĐ-CP ngày 06/09/2023<br/>
-                                        Nếu phát sinh thiệt hại về tài sản của các bên thứ ba thì sẽ được chi trả theo chi phí khắc phục thực tế, hợp lý và mức độ lỗi của các bên. Số tiền bồi thường tối đa cho thiệt hại về tài sản là 50.000.000 VNĐ/vụ
+                                        Trong vòng 3 ngày, nếu tai nạn thuộc trách nhiệm, Bảo hiểm AAA sẽ tạm ứng bồi thường như sau:<br/>
+                                        a. Nếu nạn nhân bị tử vong: 70% mức bồi thường đối với tử vong<br/>
+                                        b: Nấu nạn nhân phải đi cấp cứu và điều trị: 50% mức bồi thường tương ứng thương tật được quy định tại Nghị định 67/2023/NĐ-CP ngày 06/09/2023
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-container">
+                                <div class="question">
+                                    <button class="sub-title-2 bold" onclick="toggleAnswer(this)">
+                                        Nếu chủ xe không có tiền để chi trả ngay cho nạn nhân thì Bảo hiểm AAA sẽ làm như thế nào?
+                                        <span class="icon-arrow">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M10.0004 12.9179C9.8057 12.9183 9.61701 12.8505 9.46708 12.7262L4.46708 8.55956C4.1127 8.26501 4.06419 7.73894 4.35874 7.38456C4.6533 7.03018 5.17936 6.98167 5.53374 7.27623L10.0004 11.0096L14.4671 7.40956C14.6392 7.26975 14.86 7.20433 15.0806 7.2278C15.3011 7.25126 15.5032 7.36166 15.6421 7.53456C15.7964 7.70777 15.8715 7.93746 15.8493 8.16836C15.8272 8.39926 15.7098 8.61048 15.5254 8.75123L10.5254 12.7762C10.3712 12.8808 10.1863 12.9307 10.0004 12.9179Z" fill="#212B36"/>
+                                          </svg>
+                                        </span>
+                                    </button>
+                                    <div class="answer body-2">
+                                        Trên cơ sở xác định vụ việc, nếu thuộc trách nhiệm bảo hiểm thì Bảo hiểm AAA sẽ có thể chi trả trực tiếp cho nạn nhân theo số tiền bồi thường cho chủ xe
                                     </div>
                                 </div>
                             </div>
