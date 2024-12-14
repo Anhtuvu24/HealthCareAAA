@@ -396,22 +396,6 @@ function handleFiles(event) {
   }
 }
 
-
-// Logic input-label
-document.addEventListener("DOMContentLoaded", function () {
-  const inputs = document.querySelectorAll("input, select");
-  for (let input of inputs) {
-    input.addEventListener("blur", function (e) {
-      const { value } = e.target;
-      if (value) {
-        this.classList.add("has-value");
-      } else {
-        this.classList.remove("has-value");
-      }
-    });
-  }
-});
-
   // Utils
   let throttleTimer = false;
   function throttle(cb, time = 250) {
@@ -967,16 +951,34 @@ if (closeIcon) {
 function checkScreenWidth() {
   if (window.innerWidth <= 640) {
     const uploadI = document.getElementsByClassName('upload-icon')
-    if (uploadI) {
+    if (uploadI && uploadI.style) {
       uploadI.style.display = 'none';
     }
   } else {
     const uploadI = document.getElementsByClassName('upload-icon')
-    if (uploadI) {
+    if (uploadI && uploadI.style) {
       uploadI.style.display = 'block';
     }
   }
 }
+
+// Logic input-label
+document.addEventListener("DOMContentLoaded", function () {
+  const inputs = document.querySelectorAll("input, select");
+  for (let input of inputs) {
+    if (input.value) {
+      input.classList.add("has-value");
+    }
+    input.addEventListener("blur", function (e) {
+      const { value } = e.target;
+      if (value) {
+        this.classList.add("has-value");
+      } else {
+        this.classList.remove("has-value");
+      }
+    });
+  }
+});
 
 // Check the screen width when the page loads
 window.onload = checkScreenWidth;
