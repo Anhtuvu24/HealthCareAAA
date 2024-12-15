@@ -94,9 +94,10 @@ tagSelectors.forEach((tagSelector) => {
 
 // Khởi tạo flatpickr cho formCaculatorTravelStartday
 const startDateInput1 = flatpickr("#formObjectStartDate", {
-    dateFormat: "Y-m-d",
+    dateFormat: 'd/m/Y',
     locale: "vn",
     minDate: "today",
+    disableMobile: true,
     onChange: function(selectedDates) {
         if (selectedDates.length > 0) {
             exitDateInput1.set("minDate", selectedDates[0]);
@@ -105,10 +106,22 @@ const startDateInput1 = flatpickr("#formObjectStartDate", {
 });
 
 const exitDateInput1 = flatpickr("#formObjectExpireDate", {
-    dateFormat: "Y-m-d",
+    dateFormat: 'd/m/Y',
     locale: "vn",
-    minDate: "today"
+    minDate: "today",
+    disableMobile: true,
 });
+
+const startDate1 = startDateInput1.selectedDates[0];
+if (startDate1) {
+    exitDateInput1.set("minDate", startDate1);
+}
+
+// Lấy giá trị của exitDateInput1 và thiết lập maxDate cho startDateInput1
+const exitDate1 = exitDateInput1.selectedDates[0];
+if (exitDate1) {
+    startDateInput1.set("maxDate", exitDate1);
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     const checkbox = document.getElementById("paymentCheck");

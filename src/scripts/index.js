@@ -358,18 +358,21 @@ function toggleMenu() {
 }
 
 // Input date
-document.querySelectorAll("input[type='date']:not(.dob)").forEach(input => {
+document.querySelectorAll("input[type='text'].dateSelect").forEach(input => {
   flatpickr(input, {
-    dateFormat: "Y-m-d",
+    dateFormat: 'd/m/Y',
     locale: "vn",
-    minDate: "today"
+    minDate: "today",
+    disableMobile: true
   });
 });
 
-document.querySelectorAll("input[type='date'].dob").forEach(input => {
+document.querySelectorAll("input[type='text'].dob").forEach(input => {
   flatpickr(input, {
+    dateFormat: 'd/m/Y',
     locale: "vn",
     maxDate: "today",
+    disableMobile: true
   });
 });
 

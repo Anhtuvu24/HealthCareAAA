@@ -18,11 +18,6 @@
 
     <!-- Flatpickr CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-
-    <!-- Flatpickr JS -->
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <!-- Gói ngôn ngữ tiếng Việt cho Flatpickr -->
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/vn.js"></script>
 </head>
 <body>
 <!--    <div class="modal">-->
@@ -325,7 +320,7 @@
                             <div class="dg-input-wrap">
                                 <div class="input-inner__container">
                                     <div class="input-inner">
-                                        <input required type="date" class="datepicker" id="formObjectStartDate" />
+                                        <input required type="text" class="datepicker dateSelect" id="formObjectStartDate" />
                                         <label class="title-note" title="Ngày hiệu lực">Ngày khởi hành</label>
                                         <span class="input-icon">
                                             <svg width="18"
@@ -342,7 +337,7 @@
 
                                 <div class="input-inner__container">
                                     <div class="input-inner" id="endDate">
-                                        <input required type="date" class="datepicker" id="formObjectExpireDate" />
+                                        <input required type="text" class="datepicker dateSelect" id="formObjectExpireDate" />
                                         <label class="title-note" title="Ngày hiệu lực">Ngày đến</label>
                                         <span class="input-icon">
                                             <svg width="18"
@@ -783,6 +778,10 @@
             </div>
         </div>
     </footer>
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Gói ngôn ngữ tiếng Việt cho Flatpickr -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/vn.js"></script>
     <script src="../../scripts/index.js"></script>
     <script src="../../scripts/transport.js"></script>
 </body>

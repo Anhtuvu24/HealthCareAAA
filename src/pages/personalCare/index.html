@@ -17,11 +17,6 @@
 
     <!-- Flatpickr CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-
-    <!-- Flatpickr JS -->
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <!-- Gói ngôn ngữ tiếng Việt cho Flatpickr -->
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/vn.js"></script>
 </head>
     <body>
     <header>
@@ -99,7 +94,7 @@
 
                         <div class="input-inner__container date-select">
                             <div class="input-inner">
-                                <input class="dob" type="date" lang="vi" id="formCaculatorTravelStartday-1" />
+                                <input class="dateSelect" type="text" lang="vi" id="formCaculatorTravelStartday-1" />
                                 <label class="title-note" title="Ngày đi">Ngày đi</label>
                                 <span class="input-icon">
                                     <svg
@@ -120,7 +115,7 @@
 
                         <div class="input-inner__container date-select">
                             <div class="input-inner">
-                                <input class="dob" type="date" lang="vi" id="formCaculatorTravelExitday-1" />
+                                <input class="dateSelect" type="text" lang="vi" id="formCaculatorTravelExitday-1" />
                                 <label class="title-note" title="Ngày về">Ngày về</label>
                                 <span class="input-icon">
                                     <svg
@@ -397,7 +392,7 @@
                                 </div>
                                 <div class="input-inner__container">
                                     <div class="input-inner">
-                                        <input type="date" required id="formObjectBirthDay" onfocusout="onChangeFormObjectDoB()" />
+                                        <input class="dob" type="text" required id="formObjectBirthDay" onfocusout="onChangeFormObjectDoB()" />
                                         <label title="Ngày sinh" aria-required class="title-note">Ngày sinh</label>
                                         <span class="input-icon">
                                             <svg width="18" height="20" viewBox="0 0 18 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -442,7 +437,7 @@
                             <div class="dg-input-wrap">
                                 <div class="input-inner__container">
                                     <div class="input-inner">
-                                        <input class="dob" type="date" lang="vi" id="formCaculatorTravelStartday" />
+                                        <input class="dateSelect" type="text" lang="vi" id="formCaculatorTravelStartday" />
                                         <label class="title-note" title="Ngày đi">Ngày đi</label>
                                         <span class="input-icon">
                                             <svg
@@ -462,7 +457,7 @@
                                 </div>
                                 <div class="input-inner__container">
                                     <div class="input-inner">
-                                        <input class="dob" type="date" lang="vi" id="formCaculatorTravelExitday" />
+                                        <input class="dateSelect" type="text" lang="vi" id="formCaculatorTravelExitday" />
                                         <label class="title-note" title="Ngày về">Ngày về</label>
                                         <span class="input-icon">
                                             <svg
@@ -968,6 +963,10 @@
             </div>
         </div>
     </footer>
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Gói ngôn ngữ tiếng Việt cho Flatpickr -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/vn.js"></script>
     <script src="../../scripts/index.js"></script>
     <script src="../../scripts/travelGlobal.js"></script>
     </body>
